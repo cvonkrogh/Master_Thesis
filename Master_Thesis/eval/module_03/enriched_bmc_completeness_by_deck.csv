@@ -1,0 +1,51 @@
+deck_id,m2_fields_filled,m3_fields_filled,web_lift_fields,completeness_rate,full_bmc,m3_empty_fields
+Palta,7,7,0,0.778,False,"key_partners,cost_structure"
+Aura,5,9,4,1.0,True,
+Bespoken_spirits,5,6,1,0.667,False,"customer_segments,key_partners,cost_structure"
+Jobox,6,9,3,1.0,True,
+Macro,3,9,6,1.0,True,
+Sable,4,4,0,0.444,False,"customer_relationships,revenue_model,key_activities,key_partners,cost_structure"
+Sharpist,5,6,1,0.667,False,"customer_segments,key_resources,key_partners"
+Vision,7,8,1,0.889,False,key_partners
+morty,7,9,2,1.0,True,
+multus,2,7,5,0.778,False,"channels,cost_structure"
+8base,8,9,1,1.0,True,
+Ageras,7,7,0,0.778,False,"key_partners,cost_structure"
+AI Rudder,7,8,1,0.889,False,key_resources
+Audience Town,5,7,2,0.778,False,"key_partners,cost_structure"
+banxware,6,9,3,1.0,True,
+Blueocean,6,9,3,1.0,True,
+Calaxy,6,6,0,0.667,False,"key_resources,key_partners,cost_structure"
+Circular,6,6,0,0.667,False,"customer_segments,customer_relationships,cost_structure"
+Cowboy,6,9,3,1.0,True,
+EQL,7,8,1,0.889,False,revenue_model
+Fluence,8,8,0,0.889,False,key_partners
+Hello Heart,7,8,1,0.889,False,key_resources
+HTEC,3,7,4,0.778,False,"channels,key_activities"
+Ibble,7,8,1,0.889,False,cost_structure
+Influx,5,7,2,0.778,False,"customer_segments,revenue_model"
+lottielab,3,6,3,0.667,False,"key_resources,key_partners,cost_structure"
+Juro,6,9,3,1.0,True,
+Kryptomon,5,8,3,0.889,False,customer_relationships
+LiefergrŸn,7,7,0,0.778,False,"key_partners,cost_structure"
+Lollipop,7,9,2,1.0,True,
+Mojo,6,9,3,1.0,True,
+Mysten Labs,6,7,1,0.778,False,"customer_segments,customer_relationships"
+Origin,7,7,0,0.778,False,"key_resources,cost_structure"
+Ownwell,5,9,4,1.0,True,
+Pilgrim Soul,2,8,6,0.889,False,key_partners
+PlayPlay,3,7,4,0.778,False,"key_partners,cost_structure"
+Scipher Medicine,7,9,2,1.0,True,
+Tive,4,8,4,0.889,False,cost_structure
+Tomo,7,9,2,1.0,True,
+Waterplan,1,3,2,0.333,False,"channels,customer_relationships,key_resources,key_activities,key_partners,cost_structure"
+Experify,5,5,0,0.556,False,"customer_segments,revenue_model,key_activities,cost_structure"
+Mustard,5,5,0,0.556,False,"customer_segments,customer_relationships,key_activities,cost_structure"
+Bigblue,7,7,0,0.778,False,"key_partners,cost_structure"
+IMMO,5,8,3,0.889,False,key_partners
+Osso VR,4,5,1,0.556,False,"customer_segments,revenue_model,key_resources,key_activities"
+Playhouse,5,5,0,0.556,False,"key_resources,key_activities,key_partners,cost_structure"
+Bower,7,7,0,0.778,False,"key_resources,cost_structure"
+Muck Rack,6,7,1,0.778,False,"key_partners,cost_structure"
+Belgian Boys,6,9,3,1.0,True,
+LoanWell,7,8,1,0.889,False,key_resources

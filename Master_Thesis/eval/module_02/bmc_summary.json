@@ -1,0 +1,474 @@
+{
+  "n_decks": 50,
+  "n_bmc_fields": 9,
+  "n_comparisons": 450,
+  "fill_agreement": {
+    "fill_match_rate": 0.6,
+    "both_filled": 179,
+    "both_empty": 91,
+    "missed_gt_filled_pred_empty": 81,
+    "extra_gt_empty_pred_filled": 99
+  },
+  "confusion_matrix_fill": {
+    "positive_class": "field_filled",
+    "note": "Rates are fractions 0-1. Metrics describe fill status only, not text match.",
+    "TP": 179,
+    "TN": 91,
+    "FP": 99,
+    "FN": 81,
+    "accuracy": 0.6,
+    "precision": 0.644,
+    "recall": 0.688,
+    "f1": 0.665,
+    "specificity": 0.479
+  },
+  "content_score_0_1": 0.25,
+  "gt_fill_rate": 0.578,
+  "pred_fill_rate": 0.618,
+  "content_metrics": {
+    "note": "Lexical: 0.5×Jaccard + 0.5×sequence ratio. High ≥0.75, partial ≥0.35. embed_sim is cosine similarity (sentence-transformers), computed only when both GT and pred have text (TP).",
+    "mean_lexical_sim_gt_filled": 0.182,
+    "mean_lexical_sim_both_filled": 0.264,
+    "high_match_rate_gt_filled": 0.004,
+    "partial_match_rate_gt_filled": 0.162,
+    "mean_embedding_sim_gt_filled": 0.346,
+    "mean_embedding_sim_both_filled": 0.502,
+    "embedding_high_match_rate_gt_filled": 0.104,
+    "embeddings_computed": true,
+    "mean_similarity_all_cells": 0.307
+  },
+  "embedding_similarity_when_both_filled": 0.502,
+  "embedding_similarity_when_gt_filled": 0.346,
+  "embedding_high_match_rate_gt_filled": 0.104,
+  "content_similarity_when_both_filled": 0.264,
+  "content_similarity_when_gt_filled": 0.182,
+  "content_high_match_rate_gt_filled": 0.004,
+  "content_partial_match_rate_gt_filled": 0.162,
+  "mean_combined_similarity_all_cells": 0.307,
+  "mean_score_0_2": 0.5,
+  "pct_score_2": 20.4,
+  "pct_score_1": 9.1,
+  "pct_score_0": 70.4,
+  "by_field": {
+    "customer_segments": {
+      "fill_match_rate": 0.64,
+      "gt_filled": 50,
+      "pred_filled": 32,
+      "mean_combined_sim_when_both_filled": 0.312,
+      "mean_score_0_2": 0.28
+    },
+    "value_proposition": {
+      "fill_match_rate": 0.98,
+      "gt_filled": 50,
+      "pred_filled": 49,
+      "mean_combined_sim_when_both_filled": 0.259,
+      "mean_score_0_2": 0.2
+    },
+    "channels": {
+      "fill_match_rate": 0.36,
+      "gt_filled": 13,
+      "pred_filled": 43,
+      "mean_combined_sim_when_both_filled": 0.34,
+      "mean_score_0_2": 0.34
+    },
+    "customer_relationships": {
+      "fill_match_rate": 0.3,
+      "gt_filled": 5,
+      "pred_filled": 40,
+      "mean_combined_sim_when_both_filled": 0.217,
+      "mean_score_0_2": 0.42
+    },
+    "revenue_model": {
+      "fill_match_rate": 0.58,
+      "gt_filled": 17,
+      "pred_filled": 30,
+      "mean_combined_sim_when_both_filled": 0.353,
+      "mean_score_0_2": 0.76
+    },
+    "key_resources": {
+      "fill_match_rate": 0.52,
+      "gt_filled": 50,
+      "pred_filled": 26,
+      "mean_combined_sim_when_both_filled": 0.226,
+      "mean_score_0_2": 0.08
+    },
+    "key_activities": {
+      "fill_match_rate": 0.56,
+      "gt_filled": 50,
+      "pred_filled": 28,
+      "mean_combined_sim_when_both_filled": 0.191,
+      "mean_score_0_2": 0.0
+    },
+    "key_partners": {
+      "fill_match_rate": 0.54,
+      "gt_filled": 23,
+      "pred_filled": 24,
+      "mean_combined_sim_when_both_filled": 0.266,
+      "mean_score_0_2": 0.66
+    },
+    "cost_structure": {
+      "fill_match_rate": 0.92,
+      "gt_filled": 2,
+      "pred_filled": 6,
+      "mean_combined_sim_when_both_filled": 0.24,
+      "mean_score_0_2": 1.76
+    }
+  },
+  "by_deck": {
+    "Belgian Boys": {
+      "fill_match_rate": 0.667,
+      "gt_filled": 5,
+      "pred_filled": 6,
+      "mean_combined_sim_when_both_filled": 0.124,
+      "mean_score_0_2": 0.444
+    },
+    "Blueocean": {
+      "fill_match_rate": 0.556,
+      "gt_filled": 4,
+      "pred_filled": 6,
+      "mean_combined_sim_when_both_filled": 0.236,
+      "mean_score_0_2": 0.444
+    },
+    "Mysten Labs": {
+      "fill_match_rate": 0.556,
+      "gt_filled": 4,
+      "pred_filled": 6,
+      "mean_combined_sim_when_both_filled": 0.11,
+      "mean_score_0_2": 0.444
+    },
+    "Waterplan": {
+      "fill_match_rate": 0.556,
+      "gt_filled": 5,
+      "pred_filled": 1,
+      "mean_combined_sim_when_both_filled": 0.206,
+      "mean_score_0_2": 0.889
+    },
+    "Sharpist": {
+      "fill_match_rate": 0.444,
+      "gt_filled": 6,
+      "pred_filled": 5,
+      "mean_combined_sim_when_both_filled": 0.37,
+      "mean_score_0_2": 0.333
+    },
+    "Pilgrim Soul": {
+      "fill_match_rate": 0.222,
+      "gt_filled": 5,
+      "pred_filled": 2,
+      "mean_combined_sim_when_both_filled": null,
+      "mean_score_0_2": 0.444
+    },
+    "lottielab": {
+      "fill_match_rate": 0.444,
+      "gt_filled": 6,
+      "pred_filled": 3,
+      "mean_combined_sim_when_both_filled": 0.24,
+      "mean_score_0_2": 0.444
+    },
+    "Origin": {
+      "fill_match_rate": 0.556,
+      "gt_filled": 5,
+      "pred_filled": 7,
+      "mean_combined_sim_when_both_filled": 0.119,
+      "mean_score_0_2": 0.222
+    },
+    "Scipher Medicine": {
+      "fill_match_rate": 0.889,
+      "gt_filled": 6,
+      "pred_filled": 7,
+      "mean_combined_sim_when_both_filled": 0.317,
+      "mean_score_0_2": 0.667
+    },
+    "Fluence": {
+      "fill_match_rate": 0.444,
+      "gt_filled": 5,
+      "pred_filled": 8,
+      "mean_combined_sim_when_both_filled": 0.14,
+      "mean_score_0_2": 0.0
+    },
+    "Experify": {
+      "fill_match_rate": 0.556,
+      "gt_filled": 7,
+      "pred_filled": 5,
+      "mean_combined_sim_when_both_filled": 0.278,
+      "mean_score_0_2": 0.333
+    },
+    "morty": {
+      "fill_match_rate": 0.889,
+      "gt_filled": 6,
+      "pred_filled": 7,
+      "mean_combined_sim_when_both_filled": 0.272,
+      "mean_score_0_2": 0.556
+    },
+    "Sable": {
+      "fill_match_rate": 0.778,
+      "gt_filled": 6,
+      "pred_filled": 4,
+      "mean_combined_sim_when_both_filled": 0.652,
+      "mean_score_0_2": 1.111
+    },
+    "Playhouse": {
+      "fill_match_rate": 0.667,
+      "gt_filled": 6,
+      "pred_filled": 5,
+      "mean_combined_sim_when_both_filled": 0.365,
+      "mean_score_0_2": 0.778
+    },
+    "Juro": {
+      "fill_match_rate": 0.333,
+      "gt_filled": 4,
+      "pred_filled": 6,
+      "mean_combined_sim_when_both_filled": 0.255,
+      "mean_score_0_2": 0.222
+    },
+    "Influx": {
+      "fill_match_rate": 0.556,
+      "gt_filled": 5,
+      "pred_filled": 5,
+      "mean_combined_sim_when_both_filled": 0.153,
+      "mean_score_0_2": 0.444
+    },
+    "EQL": {
+      "fill_match_rate": 0.778,
+      "gt_filled": 5,
+      "pred_filled": 7,
+      "mean_combined_sim_when_both_filled": 0.322,
+      "mean_score_0_2": 0.667
+    },
+    "multus": {
+      "fill_match_rate": 0.556,
+      "gt_filled": 6,
+      "pred_filled": 2,
+      "mean_combined_sim_when_both_filled": 0.261,
+      "mean_score_0_2": 0.778
+    },
+    "Palta": {
+      "fill_match_rate": 0.889,
+      "gt_filled": 6,
+      "pred_filled": 7,
+      "mean_combined_sim_when_both_filled": 0.231,
+      "mean_score_0_2": 0.667
+    },
+    "banxware": {
+      "fill_match_rate": 0.556,
+      "gt_filled": 6,
+      "pred_filled": 6,
+      "mean_combined_sim_when_both_filled": 0.289,
+      "mean_score_0_2": 0.333
+    },
+    "Mustard": {
+      "fill_match_rate": 0.667,
+      "gt_filled": 6,
+      "pred_filled": 5,
+      "mean_combined_sim_when_both_filled": 0.224,
+      "mean_score_0_2": 0.667
+    },
+    "AI Rudder": {
+      "fill_match_rate": 0.444,
+      "gt_filled": 4,
+      "pred_filled": 7,
+      "mean_combined_sim_when_both_filled": 0.191,
+      "mean_score_0_2": 0.222
+    },
+    "Cowboy": {
+      "fill_match_rate": 0.333,
+      "gt_filled": 4,
+      "pred_filled": 6,
+      "mean_combined_sim_when_both_filled": 0.228,
+      "mean_score_0_2": 0.333
+    },
+    "Mojo": {
+      "fill_match_rate": 0.333,
+      "gt_filled": 4,
+      "pred_filled": 6,
+      "mean_combined_sim_when_both_filled": 0.162,
+      "mean_score_0_2": 0.222
+    },
+    "Bigblue": {
+      "fill_match_rate": 0.889,
+      "gt_filled": 6,
+      "pred_filled": 7,
+      "mean_combined_sim_when_both_filled": 0.475,
+      "mean_score_0_2": 1.0
+    },
+    "PlayPlay": {
+      "fill_match_rate": 0.444,
+      "gt_filled": 4,
+      "pred_filled": 3,
+      "mean_combined_sim_when_both_filled": 0.197,
+      "mean_score_0_2": 0.667
+    },
+    "Macro": {
+      "fill_match_rate": 0.556,
+      "gt_filled": 5,
+      "pred_filled": 3,
+      "mean_combined_sim_when_both_filled": 0.396,
+      "mean_score_0_2": 0.778
+    },
+    "Jobox": {
+      "fill_match_rate": 0.778,
+      "gt_filled": 6,
+      "pred_filled": 6,
+      "mean_combined_sim_when_both_filled": 0.296,
+      "mean_score_0_2": 0.667
+    },
+    "Kryptomon": {
+      "fill_match_rate": 0.444,
+      "gt_filled": 6,
+      "pred_filled": 5,
+      "mean_combined_sim_when_both_filled": 0.249,
+      "mean_score_0_2": 0.333
+    },
+    "Tive": {
+      "fill_match_rate": 0.556,
+      "gt_filled": 4,
+      "pred_filled": 4,
+      "mean_combined_sim_when_both_filled": 0.113,
+      "mean_score_0_2": 0.667
+    },
+    "Lollipop": {
+      "fill_match_rate": 0.778,
+      "gt_filled": 5,
+      "pred_filled": 7,
+      "mean_combined_sim_when_both_filled": 0.228,
+      "mean_score_0_2": 0.444
+    },
+    "Tomo": {
+      "fill_match_rate": 0.556,
+      "gt_filled": 5,
+      "pred_filled": 7,
+      "mean_combined_sim_when_both_filled": 0.105,
+      "mean_score_0_2": 0.222
+    },
+    "8base": {
+      "fill_match_rate": 0.556,
+      "gt_filled": 4,
+      "pred_filled": 8,
+      "mean_combined_sim_when_both_filled": 0.202,
+      "mean_score_0_2": 0.222
+    },
+    "Ownwell": {
+      "fill_match_rate": 0.556,
+      "gt_filled": 5,
+      "pred_filled": 5,
+      "mean_combined_sim_when_both_filled": 0.27,
+      "mean_score_0_2": 0.556
+    },
+    "Hello Heart": {
+      "fill_match_rate": 0.444,
+      "gt_filled": 4,
+      "pred_filled": 7,
+      "mean_combined_sim_when_both_filled": 0.29,
+      "mean_score_0_2": 0.444
+    },
+    "LoanWell": {
+      "fill_match_rate": 0.556,
+      "gt_filled": 5,
+      "pred_filled": 7,
+      "mean_combined_sim_when_both_filled": 0.406,
+      "mean_score_0_2": 0.444
+    },
+    "Bespoken_spirits": {
+      "fill_match_rate": 0.556,
+      "gt_filled": 5,
+      "pred_filled": 5,
+      "mean_combined_sim_when_both_filled": 0.402,
+      "mean_score_0_2": 0.556
+    },
+    "Audience Town": {
+      "fill_match_rate": 0.667,
+      "gt_filled": 6,
+      "pred_filled": 5,
+      "mean_combined_sim_when_both_filled": 0.299,
+      "mean_score_0_2": 0.556
+    },
+    "Aura": {
+      "fill_match_rate": 0.778,
+      "gt_filled": 5,
+      "pred_filled": 5,
+      "mean_combined_sim_when_both_filled": 0.365,
+      "mean_score_0_2": 0.889
+    },
+    "Ageras": {
+      "fill_match_rate": 0.667,
+      "gt_filled": 4,
+      "pred_filled": 7,
+      "mean_combined_sim_when_both_filled": 0.297,
+      "mean_score_0_2": 0.556
+    },
+    "Bower": {
+      "fill_match_rate": 0.778,
+      "gt_filled": 7,
+      "pred_filled": 7,
+      "mean_combined_sim_when_both_filled": 0.175,
+      "mean_score_0_2": 0.222
+    },
+    "Vision": {
+      "fill_match_rate": 0.778,
+      "gt_filled": 9,
+      "pred_filled": 7,
+      "mean_combined_sim_when_both_filled": 0.226,
+      "mean_score_0_2": 0.0
+    },
+    "HTEC": {
+      "fill_match_rate": 0.556,
+      "gt_filled": 5,
+      "pred_filled": 3,
+      "mean_combined_sim_when_both_filled": 0.186,
+      "mean_score_0_2": 0.667
+    },
+    "Osso VR": {
+      "fill_match_rate": 0.444,
+      "gt_filled": 5,
+      "pred_filled": 4,
+      "mean_combined_sim_when_both_filled": 0.31,
+      "mean_score_0_2": 0.444
+    },
+    "LiefergrŸn": {
+      "fill_match_rate": 0.667,
+      "gt_filled": 4,
+      "pred_filled": 7,
+      "mean_combined_sim_when_both_filled": 0.189,
+      "mean_score_0_2": 0.444
+    },
+    "IMMO": {
+      "fill_match_rate": 0.667,
+      "gt_filled": 6,
+      "pred_filled": 5,
+      "mean_combined_sim_when_both_filled": 0.25,
+      "mean_score_0_2": 0.556
+    },
+    "Muck Rack": {
+      "fill_match_rate": 0.889,
+      "gt_filled": 5,
+      "pred_filled": 6,
+      "mean_combined_sim_when_both_filled": 0.283,
+      "mean_score_0_2": 0.778
+    },
+    "Ibble": {
+      "fill_match_rate": 0.667,
+      "gt_filled": 4,
+      "pred_filled": 7,
+      "mean_combined_sim_when_both_filled": 0.139,
+      "mean_score_0_2": 0.444
+    },
+    "Calaxy": {
+      "fill_match_rate": 0.444,
+      "gt_filled": 5,
+      "pred_filled": 6,
+      "mean_combined_sim_when_both_filled": 0.394,
+      "mean_score_0_2": 0.333
+    },
+    "Circular": {
+      "fill_match_rate": 0.667,
+      "gt_filled": 5,
+      "pred_filled": 6,
+      "mean_combined_sim_when_both_filled": 0.192,
+      "mean_score_0_2": 0.444
+    }
+  },
+  "max_bmc_cells": 450,
+  "gt_cells_filled": 260,
+  "pred_cells_filled": 278,
+  "fill_match_cells": 270,
+  "embed_model": "all-MiniLM-L6-v2"
+}

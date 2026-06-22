@@ -1,0 +1,2 @@
+module,pred_path,max_bmc_cells,enriched_cells_filled,completeness_rate,full_bmc_decks,full_bmc_deck_rate,m2_fill_rate,web_lift_cells,web_lift_rate_of_m2_gaps,mean_fields_filled_m3
+module_03,output/module_03/enriched_bmc.csv,450,371,0.824,15,0.300,0.618,93,0.541,7.42

@@ -1,0 +1,2 @@
+model,n_decks,pilot_cells,fill_match_rate,precision,recall,f1,note
+llama3.1:8b,5,45,0.689,0.808,0.700,0.750,verified from eval/module_02/bmc_field_comparison.csv pilot subset

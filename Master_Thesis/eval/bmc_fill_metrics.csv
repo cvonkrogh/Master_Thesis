@@ -1,0 +1,2 @@
+module,gt_path,pred_path,max_bmc_cells,gt_cells_filled,pred_cells_filled,pred_cells_filled_of_max,fill_match_cells,fill_match_of_max,TP,TN,FP,FN,accuracy,precision,recall,f1,content_sim_gt_filled,content_sim_both_filled,content_high_match_rate,content_partial_match_rate,embed_sim_gt_filled,embed_sim_both_filled,embed_high_match_rate,mean_score_0_1
+module_02,data/gt/gt_pd_bmc_50.csv,output/module_02/screening_bmc.csv,450,260,278,278/450,270,270/450,179,91,99,81,0.600,0.644,0.688,0.665,0.182,0.264,0.004,0.162,0.346,0.502,0.104,0.250
