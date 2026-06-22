@@ -1,0 +1,240 @@
+target_deck_id,rank,peer_name,url,rank_score,rank_method,core_embed_sim,embed_sim,discovery_source,bmc_fields_filled
+8base,1,Zenithinnovations,https://zenithinnovations.net/what-is-low-code-and-no-code-development/,0.518,all-MiniLM-L6-v2,0.518,0.631,bmc_search:low-code foundation for building and running startup company,5
+8base,2,Outsystems,https://www.outsystems.com/low-code/,0.376,all-MiniLM-L6-v2,0.376,0.586,bmc_search:low-code foundation for building and running startup company,4
+AI Rudder,1,Salestack,https://www.salestack.co/airudder.com,0.571,all-MiniLM-L6-v2,0.571,0.713,bmc_search:startups similar to airudder B2C communications Multi-lingual conversati,4
+AI Rudder,2,Bolna,https://www.bolna.ai/,0.531,all-MiniLM-L6-v2,0.531,0.645,bmc_search:B2C communications Multi-lingual conversational AI solution for customer,4
+AI Rudder,3,Aisuperior,https://aisuperior.com/ai-companies-for-b2c/,0.506,all-MiniLM-L6-v2,0.506,0.663,bmc_search:B2C communications Multi-lingual conversational AI solution for customer,4
+AI Rudder,4,Engati,https://www.engati.ai/multilingual-chatbots,0.467,all-MiniLM-L6-v2,0.467,0.706,bmc_search:Multi-lingual conversational AI solution for customer startup company,5
+AI Rudder,5,Rasa,https://rasa.com/,0.369,all-MiniLM-L6-v2,0.369,0.673,bmc_search:B2C communications Multi-lingual conversational AI solution for customer,4
+Ageras,1,Single Market Economy,https://single-market-economy.ec.europa.eu/smes_en,0.665,all-MiniLM-L6-v2,0.665,0.738,bmc_search:Enabling success for SMEs through a startup company,5
+Ageras,2,Businessblogofsg,https://businessblogofsg.com/ep-application-for-startups-and-smes-what-to-prepare/,0.588,all-MiniLM-L6-v2,0.588,0.686,bmc_search:Enabling success for SMEs through a startup company,5
+Ageras,3,Inc91,https://www.inc91.com/empowering-indias-startups-and-smes-through-innovation-and-world-class-tech,0.578,all-MiniLM-L6-v2,0.578,0.594,bmc_search:Enabling success for SMEs through a startup company,4
+Ageras,4,Siliconcanals,https://siliconcanals.com/ageras-group-raises-30m/,0.546,all-MiniLM-L6-v2,0.546,0.559,bmc_search:startups similar to Ageras Small and Medium-sized Enabling success for S,6
+Ageras,5,Dragonargent,https://www.dragonargent.com/startup-advisory-services-london,0.507,all-MiniLM-L6-v2,0.507,0.665,bmc_search:Enabling success for SMEs through a startup company,5
+Audience Town,1,Speedeondata,https://speedeondata.com/mover-data/,0.594,all-MiniLM-L6-v2,0.594,0.602,bmc_search:Data management for Home movers startup,5
+Audience Town,2,Marketingtechginsights,https://marketingtechginsights.com/audience-town-launches-precision-advertising-for-home-builders/,0.584,all-MiniLM-L6-v2,0.584,0.769,bmc_search:startups similar to audiencetown Home movers Consolidated ad platform fo,5
+Audience Town,3,Eltoro,https://eltoro.com/digital-new-movers/,0.571,all-MiniLM-L6-v2,0.571,0.737,bmc_search:Home movers Consolidated ad platform focused on finding startup,6
+Audience Town,4,Entrepreneur,https://www.entrepreneur.com/,0.393,all-MiniLM-L6-v2,0.393,0.653,bmc_search:Home movers B2B startup official website,5
+Aura,1,Canopy,https://canopy.us/,0.516,all-MiniLM-L6-v2,0.516,0.469,bmc_search:AI-powered protection for people & families startup,6
+Aura,2,Startup,https://startup.info/digital-threats-every-startup-founder-should-know-and-how-to-handle-them/,0.476,all-MiniLM-L6-v2,0.476,0.435,bmc_search:proactive protection against digital threats startup company,5
+Aura,3,Cybersecuritynews,https://cybersecuritynews.com/proactive-cybersecurity/,0.45,all-MiniLM-L6-v2,0.45,0.363,bmc_search:proactive protection against digital threats startup company,4
+Aura,4,Adaptivesecurity,https://www.adaptivesecurity.com/,0.381,all-MiniLM-L6-v2,0.381,0.443,bmc_search:AI-powered protection for people & families startup,4
+Aura,5,Mimecast,https://www.mimecast.com/get-a-quote/?utm_source=bing&utm_medium=ppc&utm_campaign=neur-hrm-growth-ctp-search&utm_content=1136896818351952&utm_term=Protect%20against%20zero-day&hstk_creative=&hstk_campaign=580831374&hstk_network=googleAds&msclkid=7f76aeb87f481264cc3dc48b83a2f960&utm_source=bing&utm_medium=cpc&utm_campaign=nceur-hrm-growth-ectp-search&utm_term=Protect%20against%20zero-day&utm_content=zero%20day,0.373,all-MiniLM-L6-v2,0.373,0.482,bmc_search:proactive protection against digital threats startup company,3
+Belgian Boys,1,Chefstandards,https://chefstandards.com/millennial-food-trends/,0.642,all-MiniLM-L6-v2,0.642,0.606,bmc_search:Millennial foodies quality standards and taste startup,2
+Belgian Boys,2,Insights,https://insights.mdlzawayfromhome.com/foodies-for-thought-the-impact-of-millennial-foodie-culture,0.549,all-MiniLM-L6-v2,0.549,0.558,bmc_search:Millennial foodies quality standards and taste startup,5
+Belgian Boys,3,Thehalogroup,https://www.thehalogroup.com/can-brand-resonate-millennial-foodies/,0.504,all-MiniLM-L6-v2,0.504,0.634,bmc_search:Merchandising multiple categories in stores for Millennial foodies start,5
+Belgian Boys,4,Growthbusiness,https://growthbusiness.co.uk/restaurant-success-millennials-17920/,0.446,all-MiniLM-L6-v2,0.446,0.613,bmc_search:Millennial foodies quality standards and taste startup,4
+Belgian Boys,5,Bestpitchdeck,https://bestpitchdeck.com/,0.429,all-MiniLM-L6-v2,0.429,0.61,bmc_search:startups similar to belgianboys Millennial foodies quality standards and,3
+Bespoken_spirits,1,Alexanderjarvis,https://www.alexanderjarvis.com/bespoken-spirits-pitch-deck-to-raise-2-6m-seed-round/,0.772,all-MiniLM-L6-v2,0.772,0.707,bmc_search:startups similar to bespokenspirits Tailoring spirits for a desired,5
+Bespoken_spirits,2,Chilledmagazine,https://chilledmagazine.com/bespoken-spirits-whiskey/,0.647,all-MiniLM-L6-v2,0.647,0.811,bmc_search:startups similar to bespokenspirits Tailoring spirits for a desired,5
+Bespoken_spirits,3,Cbrands,https://www.cbrands.com/,0.47,all-MiniLM-L6-v2,0.47,0.624,bmc_search:Tailoring spirits for a desired outcome startup company,3
+Bespoken_spirits,4,Highgrowth,https://highgrowth.scot/leiths-tailored-spirits-co-raises-a-glass-to-stelios-award-win/,0.47,all-MiniLM-L6-v2,0.47,0.69,bmc_search:Tailoring spirits for a desired outcome startup company,4
+Bespoken_spirits,5,Branding5,https://www.branding5.com/your-startup-your-story-consistent-branding-across-all-channels,0.451,all-MiniLM-L6-v2,0.451,0.631,competitor_search:Tailoring spirits for a desired outcome startup competitors,5
+Bigblue,1,Shipbob,https://www.shipbob.com/direct-to-consumer-fulfillment/,0.644,all-MiniLM-L6-v2,0.644,0.755,bmc_search:Fulfillment for customer-centric brands with branded startup company,4
+Bigblue,2,Tradly,https://tradly.app/difference-between-d2c-b2b-b2c-c2c-and-social-commerce,0.615,all-MiniLM-L6-v2,0.615,0.725,bmc_search:D2C brands B2B startup official website,5
+Bigblue,3,Youngurbanproject,https://www.youngurbanproject.com/d2c-marketing-strategies/,0.585,all-MiniLM-L6-v2,0.585,0.599,bmc_search:Delivery operation management for D2C brands startup,2
+Bigblue,4,Explainerd,https://explainerd.com/video-marketing-ideas-for-d2c-startups/,0.55,all-MiniLM-L6-v2,0.55,0.581,bmc_search:Delivery operation management for D2C brands startup,5
+Bigblue,5,1800Dtc,https://1800dtc.com/d2c-dtc-brands,0.517,all-MiniLM-L6-v2,0.517,0.701,bmc_search:D2C brands B2B startup official website,4
+Blueocean,1,Competition,https://competition.adesignaward.com/gooddesign.php?ID=110819,0.58,all-MiniLM-L6-v2,0.58,0.644,bmc_search:blueocean competitors,4
+Blueocean,2,Altitudemarketing,https://altitudemarketing.com/,0.523,all-MiniLM-L6-v2,0.523,0.646,bmc_search:Enterprise marketing B2B startup official website,2
+Blueocean,3,Sendigital,https://sendigital.us/miami-brand-tracking-best-practices-high-growth/,0.476,all-MiniLM-L6-v2,0.476,0.602,bmc_search:Always-on brand tracking startup company,4
+Blueocean,4,Marketing Interactive,https://www.marketing-interactive.com/tracksuit-secures-25m-series-b-to-fuel-global-brand-tracking-ambitions,0.405,all-MiniLM-L6-v2,0.405,0.736,bmc_search:Enterprise marketing Always-on brand tracking startup,3
+Blueocean,5,Fpbundles,https://www.fpbundles.com/,0.346,all-MiniLM-L6-v2,0.346,0.606,bmc_search:Enterprise marketing B2B startup official website,6
+Bower,1,Scandinavianmind,https://scandinavianmind.com/bower-800-000-kilogrammes-of-co2-saved-through-recycling-and-counting/,0.613,all-MiniLM-L6-v2,0.613,0.757,bmc_search:consumers rewarding recycling at existing bins startup,6
+Bower,2,En,https://en.reset.org/racoon-recycling-bin-separates-your-waste-and-distributes-rewards-06082021/,0.601,all-MiniLM-L6-v2,0.601,0.709,bmc_search:rewarding recycling at existing bins startup company,5
+Bower,3,Climatechlist,https://climatechlist.com/bower,0.586,all-MiniLM-L6-v2,0.586,0.646,bmc_search:startups similar to Bower consumers rewarding recycling at existing bins,7
+Bower,4,Phygrid,https://phygrid.com/smart-recycling-bin/,0.523,all-MiniLM-L6-v2,0.523,0.612,bmc_search:consumers rewarding recycling at existing bins startup,5
+Bower,5,Recyclrewards,https://www.recyclrewards.com/,0.476,all-MiniLM-L6-v2,0.476,0.719,bmc_search:consumers rewarding recycling at existing bins startup,6
+Calaxy,1,Panxora,https://panxora.io/from-zero-to-hero-building-a-thriving-decentralized-influencer-network-for-your-token-launch/,0.601,all-MiniLM-L6-v2,0.601,0.677,bmc_search:Influencers Decentralized tools for creating personal tokens startup,5
+Calaxy,2,Spearmint,https://spearmint.online/influencer-marketing/,0.413,all-MiniLM-L6-v2,0.413,0.646,bmc_search:Development of decentralized tools for Influencers startup,5
+Calaxy,3,Thedatascientist,https://thedatascientist.com/influencersgonewild-in-web3-decentralized/,0.386,all-MiniLM-L6-v2,0.386,0.709,bmc_search:Development of decentralized tools for Influencers startup,6
+Calaxy,4,Inoru,https://www.inoru.com/token-development,0.339,all-MiniLM-L6-v2,0.339,0.662,bmc_search:Decentralized tools for creating personal tokens startup company,4
+Calaxy,5,Influencermarketinghub,https://influencermarketinghub.com/b2b-influencer-marketing-platforms/,0.291,all-MiniLM-L6-v2,0.291,0.468,bmc_search:Influencers B2B startup official website,5
+Circular,1,Texspacetoday,https://www.texspacetoday.com/hm-group-and-circ-partner-to-launch-circular-fashion-with-recycled-polycotton-fibers/,0.622,all-MiniLM-L6-v2,0.772,0.836,bmc_search:Circular products made from recycled polycotton startup company,5
+Circular,2,Knowingfabric,https://knowingfabric.com/what-is-recycled-polycotton-eco-friendly-fabric-guide/,0.56,all-MiniLM-L6-v2,0.56,0.738,competitor_search:Circular products made from recycled polycotton startup competitors,6
+Circular,3,Climatesort,https://climatesort.com/circular-economy-companies/,0.495,all-MiniLM-L6-v2,0.575,0.682,bmc_search:startups similar to Circular Circular products made from recycled,5
+Circular,4,Scandinavianmind,https://scandinavianmind.com/olli-kahkonen-aaltocell-nordic-bioproducts/,0.479,all-MiniLM-L6-v2,0.479,0.574,bmc_search:Circular products made from recycled polycotton startup company,6
+Circular,5,Pazepack,https://www.pazepack.com/technology,0.392,all-MiniLM-L6-v2,0.392,0.619,listicle_page:startups similar to Circular Circular pr,4
+Cowboy,1,Velomag,https://velomag.eu/reinventing-the-ride-cowboy-bikes-bold-transformation/,0.662,all-MiniLM-L6-v2,0.662,0.671,bmc_search:cowboy urban mobility e-bikes move people 2xfaster competitors,5
+Cowboy,2,Electricbikeexplorer,https://electricbikeexplorer.com/cowboy-ebike-acquisition-rebirth/,0.628,all-MiniLM-L6-v2,0.628,0.638,bmc_search:cowboy urban mobility e-bikes move people 2xfaster competitors,5
+Cowboy,3,Geeky Gadgets,https://www.geeky-gadgets.com/ebike-startup-bankruptcies/,0.62,all-MiniLM-L6-v2,0.62,0.806,bmc_search:e-bikes move people 2xfaster startup company,4
+Cowboy,4,Us,https://us.cowboy.com/,0.553,all-MiniLM-L6-v2,0.553,0.849,bmc_search:cowboy urban mobility e-bikes move people 2xfaster competitors,6
+Cowboy,5,Blog,https://blog.osum.com/electric-bike-startups/,0.515,all-MiniLM-L6-v2,0.515,0.67,bmc_search:startups similar to cowboy urban mobility e-bikes move people 2xfaster,3
+EQL,1,Humanwomanity,https://humanwomanity.com/eql-login/,0.65,all-MiniLM-L6-v2,0.77,0.735,bmc_search:startups similar to eql Global brands EQL's launch platform manages hype,2
+EQL,2,Renegademarketing,https://renegademarketing.com/b2b-brand-strategy-report/,0.439,all-MiniLM-L6-v2,0.439,0.566,bmc_search:Global brands B2B startup official website,2
+EQL,3,Apps,https://apps.shopify.com/eql-launches,0.367,all-MiniLM-L6-v2,0.367,0.592,bmc_search:EQL's launch platform manages hype startup company,5
+Experify,1,Life Longlearner,https://life-longlearner.com/effective-conversations-about-your-company/,0.497,all-MiniLM-L6-v2,0.497,0.731,competitor_search:Authentic opinions and honest conversations around startup competitors,2
+Experify,2,Moz,https://moz.com/,0.413,all-MiniLM-L6-v2,0.413,0.622,listicle_page:best Authentic opinions and honest conve,3
+Experify,3,Winsavvy,https://www.winsavvy.com/startup-influencer-marketing-collaborations/,0.392,all-MiniLM-L6-v2,0.392,0.68,competitor_search:Authentic opinions and honest conversations around startup competitors,2
+Experify,4,StartupTalky,https://startuptalky.com/,0.354,all-MiniLM-L6-v2,0.354,0.543,vc_seed:Authentic opinions and honest conversations arou,4
+Fluence,1,Integration Communications,https://integration-communications.prowly.com/207580-fluence-receives-oregon-state-license-to-train-psilocybin-facilitators,0.759,all-MiniLM-L6-v2,0.759,0.792,bmc_search:Fluence Licensed therapists credentialed professional trainings online a,5
+Fluence,2,Talkspace,https://www.talkspace.com/online-therapy/,0.54,all-MiniLM-L6-v2,0.54,0.669,bmc_search:startups similar to Fluence Licensed therapists credentialed professiona,6
+Fluence,3,Betterhelp,https://www.betterhelp.com/,0.53,all-MiniLM-L6-v2,0.53,0.618,bmc_search:Licensed therapists credentialed professional trainings online and in-pe,5
+Fluence,4,Eightception,https://eightception.com/mantra-health-campus-solutions/,0.491,all-MiniLM-L6-v2,0.491,0.553,bmc_search:Licensed therapists B2B startup official website,5
+Fluence,5,Growthlist,https://growthlist.co/mental-health-startups/,0.463,all-MiniLM-L6-v2,0.463,0.489,bmc_search:Licensed therapists B2B startup official website,4
+HTEC,1,Hfsresearch,https://www.hfsresearch.com/hot-vendor-profile/?hv=303,0.448,all-MiniLM-L6-v2,0.448,0.73,bmc_search:htec global enterprises notjustdeliver competitors,8
+HTEC,2,Udaan,https://udaan.com/,0.433,all-MiniLM-L6-v2,0.433,0.526,bmc_search:global enterprises B2B startup official website,2
+HTEC,3,Horsesforsources,https://www.horsesforsources.com/gbs-is-dead-long-live-gbs_082123/,0.394,all-MiniLM-L6-v2,0.394,0.539,bmc_search:global enterprises notjustdeliver startup,4
+HTEC,4,Hubspot,https://www.hubspot.com/startups,0.32,all-MiniLM-L6-v2,0.32,0.571,competitor_search:notjustdeliver startup competitors,6
+Hello Heart,1,Thehcdata,https://thehcdata.com/employer-digital-heart-health-program-linked-to-sig/,0.665,all-MiniLM-L6-v2,0.665,0.763,bmc_search:startups similar to helloheart self-insured employers digital solution f,4
+Hello Heart,2,Blog,https://blog.heartratehealthcare.com/heart-health-marketing-solutions/,0.584,all-MiniLM-L6-v2,0.584,0.652,competitor_search:digital solution for heart health startup competitors,5
+Hello Heart,3,Dacadoo,https://www.dacadoo.com/,0.584,all-MiniLM-L6-v2,0.584,0.613,bmc_search:self-insured employers digital solution for heart health startup,2
+Hello Heart,4,Research2Guidance,https://research2guidance.com/the-top-10-hidden-champions-in-digital-cardiology-market-on-r2gconnect/,0.481,all-MiniLM-L6-v2,0.481,0.666,competitor_search:digital solution for heart health startup competitors,2
+Hello Heart,5,Healthee,https://healthee.com/self-insured-employers/,0.474,all-MiniLM-L6-v2,0.474,0.747,bmc_search:AI development for self-insured employers startup,3
+IMMO,1,Siliconcanals,https://siliconcanals.com/london-proptech-startup-immo-funding/,0.453,all-MiniLM-L6-v2,0.453,0.484,bmc_search:Residential sellers IMMO offers a simplified residential platform startu,6
+IMMO,2,Nearlymen,https://nearlymen.com/sofoximmo-a-complete-guide-to-sofoximmo-its-services-features-and-market-potential/,0.452,all-MiniLM-L6-v2,0.452,0.674,bmc_search:Residential sellers IMMO offers a simplified residential platform startu,4
+IMMO,3,Europaproperty,https://europaproperty.com/ca-immo-offers-a-bike-rental-system-in-its-office-buildings-in-warsaw/,0.376,all-MiniLM-L6-v2,0.376,0.484,bmc_search:IMMO offers a simplified residential platform startup company,6
+IMMO,4,Netyield,https://www.netyield.co.uk/?view=article&id=203&catid=17,0.356,all-MiniLM-L6-v2,0.356,0.62,bmc_search:Residential sellers IMMO offers a simplified residential platform startu,5
+IMMO,5,Doma,https://www.doma.com/doma-brings-machine-learning-technology-to-approximately-83-of-us-residential-real-estate-market/,0.328,all-MiniLM-L6-v2,0.328,0.598,bmc_search:Developing and maintaining proprietary technology for Residential seller,6
+Ibble,1,Startbotnet,https://startbotnet.com/,0.542,all-MiniLM-L6-v2,0.542,0.77,bmc_search:Reinventing social media to spark curiosity startup company,5
+Ibble,2,Dokumen,https://dokumen.pub/putting-the-public-back-in-public-relations-how-social-media-is-reinventing-the-aging-business-of-pr-0137150695-9780137150694.html,0.536,all-MiniLM-L6-v2,0.536,0.71,bmc_search:Reinventing social media to spark curiosity startup company,6
+Ibble,3,Marketinglad,https://marketinglad.io/b2b-social-media-content-ideas/,0.512,all-MiniLM-L6-v2,0.512,0.673,bmc_search:Reinventing social media to spark curiosity startup company,5
+Ibble,4,Startupdevkit,https://startupdevkit.com/startup-social-media-marketing/,0.478,all-MiniLM-L6-v2,0.478,0.7,bmc_search:Reinventing social media to spark curiosity startup company,4
+Ibble,5,Timelapsemagazine,https://timelapsemagazine.com/why-web-apps-are-the-new-frontier-for-fitness-startups/,0.453,all-MiniLM-L6-v2,0.453,0.635,bmc_search:Younger mobile users (18-40 B2B startup official website,5
+Influx,1,Startupsearch,https://startupsearch.com/grow-your-career-at-a-startup,0.41,all-MiniLM-L6-v2,0.41,0.656,bmc_search:Career development and growth opportunities startup company,5
+Influx,2,Bestbusinesstimes,https://bestbusinesstimes.com/the-valuation-of-800m-powers-beamery-to-raaise-138m-to-boost-recruitment-for-operating-system/,0.359,all-MiniLM-L6-v2,0.399,0.578,competitor_search:beamery alternatives startup,5
+Influx,3,Mastering Seed Funding,https://www.fundseeder.com/,0.312,all-MiniLM-L6-v2,0.312,0.539,vc_seed:Career development and growth opportunities star,4
+Influx,4,Lula,https://lula.life/careers,0.241,all-MiniLM-L6-v2,0.241,0.588,bmc_search:Career development and growth opportunities startup company,5
+Influx,5,Mindbowser,https://www.mindbowser.com/20-startups-to-watch-out-for-in-hr-tech/,0.153,all-MiniLM-L6-v2,0.153,0.463,bmc_search:startups similar to beamery Career development and growth opportunities,6
+Jobox,1,Ycombinator,https://www.ycombinator.com/jobs/,0.495,all-MiniLM-L6-v2,0.495,0.608,bmc_search:Job matching for Skilled professionals startup,5
+Jobox,2,Workflowmarketplace,https://www.workflowmarketplace.com/,0.404,all-MiniLM-L6-v2,0.404,0.684,bmc_search:Skilled professionals Managed marketplace with workflow tools and startu,2
+Jobox,3,Pega,https://www.pega.com/orchestrate-work?utm_source=bing&utm_medium=cpc&utm_campaign=B_DACH_NonBrand_WFA_IA_Broad_(CPN-108043)_EN&utm_term=workflow%20solutions&gloc=121049&utm_content=pcrid%7C%7Cpkw%7Ckwd-81570324361572:loc-72%7Cpmt%7Cp%7Cpdv%7Cc%7C&&msclkid=79670de8432e1d22f6ba67dd66f63e92&utm_source=bing&utm_medium=cpc&utm_campaign=B_DACH_NonBrand_WFA_IA_Broad_(CPN-108043)_EN&utm_term=workflow%20solutions&utm_content=Workflow%20Automation&gclid=79670de8432e1d22f6ba67dd66f63e92&gclsrc=3p.ds&gad_source=7&gad_campaignid=20603915411,0.401,all-MiniLM-L6-v2,0.401,0.592,bmc_search:Skilled professionals Managed marketplace with workflow tools and startu,3
+Jobox,4,Hubspot,https://www.hubspot.com/,0.395,all-MiniLM-L6-v2,0.395,0.621,bmc_search:Skilled professionals Managed marketplace with workflow tools and startu,6
+Jobox,5,B2Bstaffingservices,https://b2bstaffingservices.com/,0.349,all-MiniLM-L6-v2,0.349,0.554,bmc_search:Skilled professionals B2B startup official website,5
+Juro,1,Umatechnology,https://umatechnology.org/embedding-contracts-how-to-integrate-concord-into-your-own-saas-product/,0.484,all-MiniLM-L6-v2,0.484,0.554,bmc_search:Embed contracts in tools for Companies startup,4
+Juro,2,Icertis,https://www.icertis.com/,0.479,all-MiniLM-L6-v2,0.479,0.679,bmc_search:Companies Browser-native contract automation platform startup,4
+Juro,3,Diraitory,https://diraitory.com/3117,0.475,all-MiniLM-L6-v2,0.475,0.759,bmc_search:juro Companies Browser-native contract automation platform competitors,4
+Juro,4,Legalfly,https://www.legalfly.com?utm_term=legal%20contract%20software&utm_campaign=BSN_EN_AI_Contract_Review_All&utm_source=bing&utm_medium=ppc&hsa_acc=8844834447&hsa_cam=524333532&hsa_grp=1320516385358983&hsa_ad=82532525004644&hsa_src=o&hsa_tgt=kwd-82534012414191:loc-72&hsa_kw=legal%20contract%20software&hsa_mt=p&hsa_net=bing&hsa_ver=3&msclkid=bea6cf65ae691c67022fa55080610502&utm_content=AI_Contract_Review_All,0.471,all-MiniLM-L6-v2,0.471,0.63,bmc_search:Browser-native contract automation platform startup company,3
+Juro,5,Tomorro,https://www.tomorro.com/,0.457,all-MiniLM-L6-v2,0.457,0.728,bmc_search:Companies Browser-native contract automation platform startup,4
+Kryptomon,1,Asiatechdaily,https://asiatechdaily.com/nft-powered-p2e-gaming-platform-kryptomon-raises-10m/,0.759,all-MiniLM-L6-v2,0.759,0.712,bmc_search:startups similar to kryptomon Gamers NFT blockchain based game with,5
+Kryptomon,2,Solulab,https://www.solulab.com/here-are-the-best-nft-games/,0.535,all-MiniLM-L6-v2,0.535,0.666,bmc_search:Gamers NFT blockchain based game with play-and-earn startup,4
+Kryptomon,3,Maticz,https://maticz.com/play-to-earn-game-development,0.486,all-MiniLM-L6-v2,0.486,0.654,bmc_search:Gamers NFT blockchain based game with play-and-earn startup,4
+Kryptomon,4,Aaronkellylaw,https://aaronkellylaw.com/nft-gaming-faq/,0.426,all-MiniLM-L6-v2,0.426,0.616,bmc_search:Gamers NFT blockchain based game with play-and-earn startup,4
+Kryptomon,5,Blockchainappsdeveloper,https://www.blockchainappsdeveloper.com/blockchain-game-development-company,0.376,all-MiniLM-L6-v2,0.376,0.596,bmc_search:NFT blockchain based game with play-and-earn startup company,4
+LiefergrŸn,1,Udaan,https://udaan.com/,0.553,all-MiniLM-L6-v2,0.553,0.528,bmc_search:Electronics B2B startup official website,2
+LiefergrŸn,2,Limesupply,https://limesupply.com/sustainable-deliveries/,0.526,all-MiniLM-L6-v2,0.526,0.626,bmc_search:Electronics SUSTAINABLE deliveries with real-time tracking and startup,6
+LiefergrŸn,3,Paack,https://paack.co/?category=sustainable-deliveries,0.513,all-MiniLM-L6-v2,0.513,0.637,bmc_search:Electronics SUSTAINABLE deliveries with real-time tracking and startup,4
+LiefergrŸn,4,Livingpackets,https://livingpackets.com/,0.499,all-MiniLM-L6-v2,0.499,0.596,bmc_search:Electronics SUSTAINABLE deliveries with real-time tracking and startup,4
+LiefergrŸn,5,Burqup,https://www.burqup.com/startups,0.41,all-MiniLM-L6-v2,0.41,0.635,bmc_search:SUSTAINABLE deliveries with real-time tracking and startup company,5
+LoanWell,1,Fundingo,https://www.fundingo.com/customizable-lending-as-a-service-transforming-loan-management-on-salesforce-4/,0.691,all-MiniLM-L6-v2,0.691,0.735,bmc_search:Community Lenders Customizable End-to-End platform for lenders startup,5
+LoanWell,2,Businesswarrior,https://www.businesswarrior.com/,0.677,all-MiniLM-L6-v2,0.677,0.71,bmc_search:Community Lenders Customizable End-to-End platform for lenders startup,5
+LoanWell,3,Cascading,https://www.cascading.ai/,0.66,all-MiniLM-L6-v2,0.66,0.692,bmc_search:Automated Loan Origination for Community Lenders startup,5
+LoanWell,4,Lendwithspark,https://lendwithspark.com/,0.649,all-MiniLM-L6-v2,0.649,0.717,bmc_search:Automated Loan Origination for Community Lenders startup,2
+LoanWell,5,Infinitysoftware,https://infinitysoftware.com/end-to-end-lending,0.645,all-MiniLM-L6-v2,0.645,0.763,bmc_search:startups similar to loanwell Community Lenders Customizable End-to-End p,6
+Lollipop,1,Startuprise,https://startuprise.co.uk/homecooks-raises-e1-6m-to-expand-uk-meal-prep-marketplace-with-independent-chefs/,0.534,all-MiniLM-L6-v2,0.534,0.693,bmc_search:Home cooks Personalized meal planning startup,3
+Lollipop,2,Apurple,https://www.apurple.co/meal-planning-app-development/,0.522,all-MiniLM-L6-v2,0.522,0.733,bmc_search:Meal planning for Home cooks startup,2
+Lollipop,3,Keeperofthehome,https://keeperofthehome.org/healthy-homemaking-meal-planning-primer/,0.514,all-MiniLM-L6-v2,0.514,0.736,bmc_search:Meal planning for Home cooks startup,4
+Lollipop,4,Mysubscriptionaddiction,https://www.mysubscriptionaddiction.com/meal-planning-service-apps,0.506,all-MiniLM-L6-v2,0.506,0.747,bmc_search:startups similar to takethislollipop Home cooks Personalized meal planni,4
+Lollipop,5,Homeplatemeal,https://www.homeplatemeal.com/,0.429,all-MiniLM-L6-v2,0.429,0.554,bmc_search:Home cooks Personalized meal planning startup,2
+Macro,1,Ironsoftware,https://ironsoftware.com/suite/,0.46,all-MiniLM-L6-v2,0.46,0.618,bmc_search:teams upgraded office suite with extensible formats startup,5
+Macro,2,M365Maps,https://m365maps.com/matrix.htm,0.407,all-MiniLM-L6-v2,0.407,0.613,bmc_search:upgraded office suite with extensible formats subscription startup,2
+Macro,3,Mrsharepoint,https://www.mrsharepoint.com/microsoft-365-licensing-guide/,0.363,all-MiniLM-L6-v2,0.363,0.649,bmc_search:upgraded office suite with extensible formats subscription startup,4
+Macro,4,Teckpath,https://teckpath.com/disable-macro-in-ms-office-2016/,0.288,all-MiniLM-L6-v2,0.408,0.521,bmc_search:macro teams upgraded office suite with extensible competitors,3
+Macro,5,Bestaitoolfinder,https://bestaitoolfinder.com/macro/,0.258,all-MiniLM-L6-v2,0.258,0.679,bmc_search:macro teams upgraded office suite with extensible competitors,5
+Mojo,1,Fantium,https://fantium.com/,0.684,all-MiniLM-L6-v2,0.684,0.796,bmc_search:Professional and amateur athletes Invest in an athlete's career with sta,5
+Mojo,2,Athleteand,https://www.athleteand.us/,0.671,all-MiniLM-L6-v2,0.671,0.768,bmc_search:Professional and amateur athletes B2B startup official website,4
+Mojo,3,Gambling911,https://www.gambling911.com/Mojo-Athlete-Stock-Market.html,0.652,all-MiniLM-L6-v2,0.652,0.827,bmc_search:mojo Professional and amateur Invest in an athlete's career competitors,7
+Mojo,4,Finlete,https://finlete.com/,0.631,all-MiniLM-L6-v2,0.631,0.684,bmc_search:Professional and amateur athletes Invest in an athlete's career with sta,3
+Mojo,5,Knowpert,https://knowpert.com/why-im-replacing-sports-betting-with-mojo/,0.529,all-MiniLM-L6-v2,0.679,0.825,bmc_search:mojo Professional and amateur Invest in an athlete's career competitors,5
+Muck Rack,1,Mediaboard,https://mediaboard.com/implementing-media-monitoring-in-your-pr-strategy/,0.47,all-MiniLM-L6-v2,0.47,0.711,bmc_search:Media Monitoring for Public Relations Professionals startup,5
+Muck Rack,2,Cision,https://www.cision.com/,0.443,all-MiniLM-L6-v2,0.443,0.758,bmc_search:Media Monitoring for Public Relations Professionals startup,3
+Muck Rack,3,Tyccommunication,https://tyccommunication.com/implementing-media-monitoring-in-your-pr-strategy/,0.403,all-MiniLM-L6-v2,0.403,0.745,bmc_search:Media Monitoring for Public Relations Professionals startup,5
+Muck Rack,4,Databricks,https://www.databricks.com/,0.398,all-MiniLM-L6-v2,0.398,0.57,bmc_search:Integrated Platform with Data Feedback Loop startup company,4
+Muck Rack,5,Agilitypr,https://www.agilitypr.com/media-monitoring-ultimate-guide/,0.393,all-MiniLM-L6-v2,0.393,0.72,bmc_search:Media Monitoring for Public Relations Professionals startup,4
+Mustard,1,Tgfitness,https://www.tgfitness.com/adaptive-personal-training/,0.66,all-MiniLM-L6-v2,0.66,0.44,bmc_search:PERSONALLY ADAPTIVE PHYSICAL AND MENTAL TRAINING startup company,5
+Mustard,2,Ingym,https://www.ingym.org/adaptive-personal-training,0.638,all-MiniLM-L6-v2,0.638,0.508,bmc_search:PERSONALLY ADAPTIVE PHYSICAL AND MENTAL TRAINING startup company,4
+Mustard,3,Certifystrong,https://www.certifystrong.com/enhancing-mental-health-with-the-power-of-adaptive-fitness/,0.581,all-MiniLM-L6-v2,0.581,0.524,competitor_search:Mustard PERSONALLY ADAPTIVE PHYSICAL AND MENTAL alternatives startup,4
+Mustard,4,Advisoryexcellence,https://www.advisoryexcellence.com/the-connection-between-mental-focus-and-physical-performance/,0.566,all-MiniLM-L6-v2,0.566,0.453,competitor_search:PERSONALLY ADAPTIVE PHYSICAL AND MENTAL TRAINING startup competitors,4
+Mustard,5,Nrtimes,https://nrtimes.co.uk/adaptive-personal-training-rmr-leading-the-way-rmr25/,0.554,all-MiniLM-L6-v2,0.554,0.445,competitor_search:companies like PERSONALLY ADAPTIVE PHYSICAL AND MENTAL TRAINING startup,6
+Mysten Labs,1,Financefeeds,https://financefeeds.com/web3-prepares-to-welcome-the-consumer-friendly-l2-its-been-missing-as-abstract-readies-for-launch/,0.366,all-MiniLM-L6-v2,0.366,0.585,bmc_search:Polaris web3 platform abstracts away all startup company,5
+Mysten Labs,2,Chainalysis,https://www.chainalysis.com/,0.277,all-MiniLM-L6-v2,0.277,0.473,listicle_page:startups similar to mystenlabs Polaris w,5
+Mysten Labs,3,Cer,https://cer.live/,0.245,all-MiniLM-L6-v2,0.245,0.561,listicle_page:startups similar to mystenlabs Polaris w,5
+Mysten Labs,4,News,https://news.bitcoin.com/nfts-will-persist-for-as-long-as-communities-are-willing-to-use-them-lostworlds-co-founder/,0.228,all-MiniLM-L6-v2,0.228,0.481,competitor_search:companies like Polaris web3 platform abstracts away all startup,5
+Origin,1,Dragonpass,https://www.dragonpass.com/,0.562,all-MiniLM-L6-v2,0.562,0.774,bmc_search:Premium travelers Personalized travel experience with ML/Al superpowered,4
+Origin,2,Ivtrip,https://ivtrip.implevista.com/personalized-travel-experiences-big-data-ai/,0.517,all-MiniLM-L6-v2,0.517,0.644,bmc_search:origin Premium travelers Personalized travel experience with ML/Al compe,4
+Origin,3,Mindtrip,https://mindtrip.ai/,0.514,all-MiniLM-L6-v2,0.514,0.605,bmc_search:Personalized travel experience with ML/Al superpowered startup company,2
+Origin,4,Partner,https://partner.expediagroup.com/en-us,0.475,all-MiniLM-L6-v2,0.475,0.73,bmc_search:Premium travelers B2B startup official website,5
+Origin,5,Hbxgroup,https://www.hbxgroup.com/,0.472,all-MiniLM-L6-v2,0.472,0.724,bmc_search:Premium travelers B2B startup official website,5
+Osso VR,1,Thewild,https://thewild.com/,0.581,all-MiniLM-L6-v2,0.581,0.654,competitor_search:ossovr collaborative alternatives startup,5
+Osso VR,2,Vantarivr,https://www.vantarivr.com/,0.556,all-MiniLM-L6-v2,0.556,0.638,listicle_page:startups similar to ossovr collaborative,4
+Osso VR,3,Massdevice,https://www.massdevice.com/osso-vr-launches-controller-free-option-for-its-surgical-training-vr/,0.5,all-MiniLM-L6-v2,0.5,0.719,competitor_search:ossovr collaborative alternatives startup,8
+Osso VR,4,Immersivetouch,https://www.immersivetouch.com/,0.376,all-MiniLM-L6-v2,0.376,0.684,listicle_page:startups similar to ossovr collaborative,5
+Ownwell,1,Ptmoney,https://ptmoney.com/ownwell-review/,0.427,all-MiniLM-L6-v2,0.427,0.671,bmc_search:startups similar to ownwell,5
+Ownwell,2,Constructionmanagement,https://constructionmanagement.co.uk/look-after-your-asset-information-model-it-will-care-for-your-asset/,0.41,all-MiniLM-L6-v2,0.41,0.501,bmc_search:Property owners Manage your largest asset like an startup,4
+Ownwell,3,Likelyabusiness,https://likelyabusiness.com/why-hiring-property-tax-reduction-services-is-a-smart-move-for-every-property-owner/,0.399,all-MiniLM-L6-v2,0.399,0.723,bmc_search:Analyzing property tax assessments for Property owners startup,5
+Ownwell,4,Finovate,https://finovate.com/fintech-startup-showcase-with-ownwell-proptech-meets-taxtech/,0.393,all-MiniLM-L6-v2,0.393,0.716,bmc_search:startups similar to ownwell Property owners Manage your largest asset li,4
+Ownwell,5,Proptechconnect,https://proptechconnect.com/ownwell-lands-30m-to-help-homeowners-lower-their-property-tax-bills/,0.388,all-MiniLM-L6-v2,0.388,0.665,bmc_search:startups similar to ownwell Property owners Manage your largest asset li,5
+Palta,1,Precedenceresearch,https://www.precedenceresearch.com/womens-health-app-market,0.6,all-MiniLM-L6-v2,0.64,0.734,bmc_search:ode Women's health and Personalized health and wellness services competi,5
+Palta,2,Techweek,https://techweek.com/jessie-health-digital-clinic-women/,0.493,all-MiniLM-L6-v2,0.573,0.715,bmc_search:startups similar to ode Women's health and Personalized health and welln,6
+Palta,3,Hg,https://www.hg.agency/womens-health,0.483,all-MiniLM-L6-v2,0.483,0.635,bmc_search:ode Women's health and Personalized health and wellness services competi,5
+Palta,4,Healthapp,https://healthapp.google/,0.291,all-MiniLM-L6-v2,0.331,0.737,bmc_search:ode Personalized health and wellness services through competitors,6
+Pilgrim Soul,1,Thesecretline,https://thesecretline.com/white-label-thc-products-benefits-for-startups-and-retailers/,0.554,all-MiniLM-L6-v2,0.554,0.732,bmc_search:THC-based products for focus startup company,6
+Pilgrim Soul,2,Focl,https://focl.com/,0.43,all-MiniLM-L6-v2,0.43,0.465,bmc_search:Health-conscious individuals THC-based products for focus startup,3
+Pilgrim Soul,3,Startupurban,https://www.startupurban.com/success-story-of-the-healthy-company-thc/,0.389,all-MiniLM-L6-v2,0.389,0.609,bmc_search:THC-based products for focus startup company,4
+Pilgrim Soul,4,Growthlist,https://growthlist.co/cannabis-startups/,0.361,all-MiniLM-L6-v2,0.361,0.496,bmc_search:Health-conscious individuals THC-based products for focus startup,4
+Pilgrim Soul,5,Essen Nutrition,https://www.essen-nutrition.com/the-ultimate-guide-to-starting-a-private-label-health-and-wellness-brand/,0.323,all-MiniLM-L6-v2,0.323,0.533,bmc_search:Product development for Health-conscious individuals startup,2
+PlayPlay,1,Softwaresuggest,https://www.softwaresuggest.com/playplay,0.656,all-MiniLM-L6-v2,0.656,0.733,bmc_search:startups similar to playplay Businesses Highest quality,6
+PlayPlay,2,Udaan,https://udaan.com/,0.469,all-MiniLM-L6-v2,0.469,0.541,bmc_search:Businesses B2B startup official website,2
+PlayPlay,3,Onlinesalesguidetip,https://www.onlinesalesguidetip.com/aligning-a-startup-business-with-quality-assurance-a-complete-guide/,0.462,all-MiniLM-L6-v2,0.462,0.614,bmc_search:Businesses Highest quality startup,4
+PlayPlay,4,Localseoresources,https://localseoresources.com/14-best-video-editing-software-tools-for-youtube/,0.408,all-MiniLM-L6-v2,0.408,0.602,bmc_search:startups similar to playplay Businesses Highest quality,4
+PlayPlay,5,Lastartups,https://www.lastartups.com/product-quality/,0.401,all-MiniLM-L6-v2,0.401,0.732,bmc_search:Businesses Highest quality startup,4
+Playhouse,1,Megaincomestream,https://megaincomestream.com/real-estate-app-development-company/,0.628,all-MiniLM-L6-v2,0.628,0.677,bmc_search:Entertainment-focused real estate app with video startup company,5
+Playhouse,2,Movetubestudio,https://movetubestudio.com/,0.585,all-MiniLM-L6-v2,0.585,0.755,bmc_search:Real estate agents and Entertainment-focused real estate app with video ,5
+Playhouse,3,Momenzo,https://www.momenzo.com/,0.469,all-MiniLM-L6-v2,0.469,0.491,bmc_search:Real estate agents and Entertainment-focused real estate app with video ,4
+Playhouse,4,Jploft,https://www.jploft.com/real-estate-app-development,0.351,all-MiniLM-L6-v2,0.351,0.68,bmc_search:Entertainment-focused real estate app with video startup company,7
+Playhouse,5,Devtechnosys,https://devtechnosys.com/real-estate-app-development.php,0.322,all-MiniLM-L6-v2,0.322,0.658,bmc_search:Entertainment-focused real estate app with video startup company,4
+Sable,1,Mercury,https://mercury.com/,0.518,all-MiniLM-L6-v2,0.518,0.631,bmc_search:New-to-America internationals Easily access financial products and build,7
+Sable,2,Angellist,https://www.angellist.com/,0.361,all-MiniLM-L6-v2,0.361,0.554,bmc_search:Easily access financial products and build startup company,6
+Sable,3,Consensys,https://consensys.io/,0.354,all-MiniLM-L6-v2,0.354,0.607,bmc_search:Easily access financial products and build startup company,5
+Sable,4,B2Binternational,https://www.b2binternational.com/,0.333,all-MiniLM-L6-v2,0.333,0.573,bmc_search:New-to-America internationals B2B startup official website,4
+Sable,5,Mattbruen,https://mattbruen.com/an-industry-analysis-tip-for-startups-that-i-wish-i-knew-10-years-ago/,0.306,all-MiniLM-L6-v2,0.306,0.491,competitor_search:Easily access financial products and build startup competitors,4
+Scipher Medicine,1,Rna Seqblog,https://www.rna-seqblog.com/the-m2-pipeline-a-novel-tool-for-rapidly-analyzing-host-metabolic-profiles-from-rna-seq-data/,0.51,all-MiniLM-L6-v2,0.51,0.63,bmc_search:Precision medicine platform using RNA analysis startup company,4
+Scipher Medicine,2,Decodingautoimmunity,https://www.decodingautoimmunity.org/,0.491,all-MiniLM-L6-v2,0.491,0.423,bmc_search:Testing business drives creation of for Autoimmune diseases startup,4
+Scipher Medicine,3,Biostate,https://www.biostate.ai/,0.479,all-MiniLM-L6-v2,0.479,0.641,bmc_search:Autoimmune diseases Precision medicine platform using RNA analysis start,5
+Scipher Medicine,4,Kcasbio,https://kcasbio.com/contact-lp-bioa/?utm_source=bing&utm_medium=Search&utm_campaign=General+BioA+Industry+NonBrand-EU&utm_term=list%20of%20life%20science%20companies&msclkid=14514709db5511fea8012d3c956fcafc,0.429,all-MiniLM-L6-v2,0.429,0.561,bmc_search:sciphermedicine competitors,3
+Scipher Medicine,5,Thechemicaldata,https://thechemicaldata.com/bostongene-to-present-ai-platform-at-japan/,0.422,all-MiniLM-L6-v2,0.422,0.617,bmc_search:Precision medicine platform using RNA analysis startup company,4
+Sharpist,1,Coachhub,https://www.coachhub.com/,0.657,all-MiniLM-L6-v2,0.657,0.736,bmc_search:one-on-one digital coaching and learning startup company,6
+Sharpist,2,Theinnovator,https://theinnovator.news/startup-of-the-week-sharpist/,0.607,all-MiniLM-L6-v2,0.607,0.75,bmc_search:startups similar to sharpist one-on-one digital coaching and learning,5
+Sharpist,3,Rocketreach,https://rocketreach.co/sharpist-profile_b4557592fc9536f4,0.561,all-MiniLM-L6-v2,0.561,0.689,bmc_search:sharpist competitors,4
+Sharpist,4,Speakin,https://www.speakin.co/,0.53,all-MiniLM-L6-v2,0.53,0.582,bmc_search:one-on-one digital coaching and learning startup company,6
+Sharpist,5,Byjus,https://byjus.com/us/,0.527,all-MiniLM-L6-v2,0.527,0.743,listicle_page:best one-on-one digital coaching and lea,7
+Tive,1,Finditname,https://finditname.com/modern-solutions-for-shipping-high-value-cargo-by-air/,0.444,all-MiniLM-L6-v2,0.444,0.649,bmc_search:Track shipment location and condition for High-value & time/temperature-,4
+Tive,2,Precisionmonitoring,https://precisionmonitoring.co.nz/tive-beacon/,0.438,all-MiniLM-L6-v2,0.558,0.717,bmc_search:tive High-value & time/temperature-sensitive monitor and take action on ,4
+Tive,3,Silentrac,https://silentrac.com/silentracs-latest-tive-monitoring-solutions/,0.433,all-MiniLM-L6-v2,0.583,0.741,bmc_search:tive monitor and take action on in-transit competitors,4
+Tive,4,Startuptalky,https://startuptalky.com/via-success-story/,0.424,all-MiniLM-L6-v2,0.424,0.669,bmc_search:monitor and take action on in-transit startup company,4
+Tive,5,Blog,https://blog.deliverysolutions.co/preserving-brand-experience-in-temperature-sensitive-food-deliveries,0.398,all-MiniLM-L6-v2,0.398,0.652,bmc_search:Track shipment location and condition for High-value & time/temperature-,5
+Tomo,1,Fioney,https://fioney.com/fintech-credit-building-card-startup-tomo-raises-10-million/,0.478,all-MiniLM-L6-v2,0.478,0.669,competitor_search:Millennials TomoCard: Proven Asset (Cash companies startup,5
+Tomo,2,Wherrelz,https://wherrelz.com/~guava,0.43,all-MiniLM-L6-v2,0.43,0.527,bmc_search:tomocredit competitors,4
+Tomo,3,Financebuzz,https://financebuzz.com/tomo-credit-card-review,0.401,all-MiniLM-L6-v2,0.401,0.673,bmc_search:Millennials TomoCard: Proven Asset (Cash startup,5
+Tomo,4,Cardvcc,https://cardvcc.com/tomo-credit-cards/,0.394,all-MiniLM-L6-v2,0.394,0.671,bmc_search:startups similar to tomocredit Millennials TomoCard: Proven Asset (Cash,2
+Tomo,5,Growthbusiness,https://growthbusiness.co.uk/harnessing-big-data-to-market-to-millennials-13451/,0.392,all-MiniLM-L6-v2,0.392,0.58,bmc_search:Data Collection for Millennials startup,4
+Vision,1,In Between The Lines,https://in-between-the-lines.com/,0.76,all-MiniLM-L6-v2,0.76,0.657,bmc_search:Building messaging infrastructure for businesses for Ecommerce startup,4
+Vision,2,Shift4Shop,https://www.shift4shop.com/b2b-ecommerce.html,0.679,all-MiniLM-L6-v2,0.679,0.597,bmc_search:Ecommerce B2B startup official website,6
+Vision,3,Infobip,https://www.infobip.com/marketing,0.579,all-MiniLM-L6-v2,0.579,0.743,bmc_search:Building messaging infrastructure for businesses for Ecommerce startup,6
+Vision,4,Fastercapital,https://fastercapital.com/digital-marketing-services.html,0.555,all-MiniLM-L6-v2,0.555,0.632,bmc_search:Ecommerce Message-first Al-powered marketing solution for businesses sta,5
+Vision,5,B2Bwave,https://www.b2bwave.com/,0.48,all-MiniLM-L6-v2,0.48,0.613,bmc_search:Ecommerce B2B startup official website,6
+Waterplan,1,Ctvc,https://www.ctvc.co/global-water-crises-unleash-tsunami/,0.652,all-MiniLM-L6-v2,0.652,0.688,competitor_search:water-dependent industries Automates water risk quantification and mitig,5
+Waterplan,2,Aerolab,https://aerolab.co/waterplan,0.638,all-MiniLM-L6-v2,0.638,0.701,bmc_search:startups similar to waterplan,2
+Waterplan,3,Waterindustriesholding,https://www.waterindustriesholding.com/,0.626,all-MiniLM-L6-v2,0.626,0.717,bmc_search:water-dependent industries B2B startup official website,4
+Waterplan,4,H2Oinnovation,https://www.h2oinnovation.com/,0.603,all-MiniLM-L6-v2,0.603,0.705,bmc_search:water-dependent industries B2B startup official website,4
+Waterplan,5,Readtheimpact,https://readtheimpact.com/cities-are-great-first-customers-for-der-startups/,0.576,all-MiniLM-L6-v2,0.576,0.716,competitor_search:water-dependent industries startup landscape competitors,3
+banxware,1,Smebanking,https://smebanking.club/the-future-of-sme-finance-is-embedded/,0.592,all-MiniLM-L6-v2,0.592,0.757,bmc_search:SMEs Embedded Cash Advance Product startup,3
+banxware,2,Etcentric,https://www.etcentric.org/embedded-finance-becomes-more-popular-across-industries/,0.53,all-MiniLM-L6-v2,0.53,0.727,bmc_search:Embedded Cash Advance Product startup company,5
+banxware,3,Blog,https://blog.currencycloud.com/embedded-lending-with-marketfinance,0.508,all-MiniLM-L6-v2,0.508,0.786,bmc_search:SMEs Embedded Cash Advance Product startup,6
+banxware,4,Single Market Economy,https://single-market-economy.ec.europa.eu/smes_en,0.5,all-MiniLM-L6-v2,0.5,0.596,bmc_search:SMEs B2B startup official website,5
+banxware,5,Listeninnovategrow,https://listeninnovategrow.com/legacy/,0.422,all-MiniLM-L6-v2,0.422,0.493,bmc_search:SMEs B2B startup official website,4
+lottielab,1,Animaker,https://www.animaker.com/,0.645,all-MiniLM-L6-v2,0.645,0.581,bmc_search:product teams product animation platform for product teams startup,5
+lottielab,2,Vijaytalksai,https://vijaytalksai.com/lottielab-review/,0.529,all-MiniLM-L6-v2,0.529,0.685,bmc_search:startups similar to lottielab product teams product animation platform f,2
+lottielab,3,Udaan,https://udaan.com/,0.462,all-MiniLM-L6-v2,0.462,0.497,bmc_search:product teams B2B startup official website,2
+lottielab,4,Productboard,https://www.productboard.com/,0.409,all-MiniLM-L6-v2,0.409,0.611,bmc_search:product animation platform for product teams startup company,2
+lottielab,5,Synthesia,https://www.synthesia.io/,0.4,all-MiniLM-L6-v2,0.4,0.614,bmc_search:product teams product animation platform for product teams startup,4
+morty,1,Vctavern,https://vctavern.com/tidalwave-raises-22-million-series-a-to-scale-agentic-ai-mortgage-platform/,0.693,all-MiniLM-L6-v2,0.693,0.677,bmc_search:Autonomous mortgage marketplace with technology-driven growth startup co,5
+morty,2,Pylonlending,https://www.pylonlending.com/,0.66,all-MiniLM-L6-v2,0.66,0.726,bmc_search:Autonomous mortgage marketplace with technology-driven growth startup co,4
+morty,3,Propmodo,https://propmodo.com/high-rates-and-low-volume-accelerate-the-rise-of-ai-enabled-mortgage-lenders/,0.644,all-MiniLM-L6-v2,0.644,0.708,bmc_search:Autonomous mortgage marketplace with technology-driven growth startup co,5
+morty,4,Vesta,https://www.vesta.com/,0.511,all-MiniLM-L6-v2,0.511,0.748,bmc_search:Consumers and lenders Autonomous mortgage marketplace with technology-dr,5
+morty,5,Startupchronicle,https://startupchronicle.in/digital-lending-startups-challenges-2026/,0.51,all-MiniLM-L6-v2,0.51,0.714,bmc_search:Autonomous acquisition for Consumers and lenders startup,5
+multus,1,Gfieurope,https://gfieurope.org/lab-meat-synthetic-meat-cultivated-meat-11-things-you-need-to-know/,0.611,all-MiniLM-L6-v2,0.611,0.762,bmc_search:Cultivated meat represents a step-change in startup company,5
+multus,2,Gfi India,https://gfi-india.org/the-science-of-cultivated-meat/,0.606,all-MiniLM-L6-v2,0.606,0.709,competitor_search:Biomanufacturing companies Cultivated meat represents a step-change in c,4
+multus,3,Marinexcell,https://marinexcell.com/immense-potential-indian-government-body-to-develop-cultivated-fish-in-partnership-with-neat-meatt/,0.602,all-MiniLM-L6-v2,0.602,0.672,bmc_search:Biomanufacturing companies Cultivated meat represents a step-change in s,5
+multus,4,Entrepreneurloop,https://entrepreneurloop.com/meatable-shutdown-cultivated-meat-funding-crisis/,0.587,all-MiniLM-L6-v2,0.587,0.773,competitor_search:Cultivated meat represents a step-change in startup competitors,5
+multus,5,Thecounter,https://thecounter.org/lab-grown-cultivated-meat-cost-at-scale/,0.518,all-MiniLM-L6-v2,0.518,0.789,bmc_search:Cultivated meat represents a step-change in startup company,5

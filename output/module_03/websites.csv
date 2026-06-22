@@ -1,0 +1,51 @@
+deck_id,startup_name,website_url,website_source,discovered_website
+Palta,Palta,https://www.ode.gow,deck_regex,
+Aura,Aura,https://www.aura.com,search,https://www.aura.com
+Bespoken_spirits,Bespoken_spirits,https://bespokenspirits.com/,search,https://bespokenspirits.com/
+Jobox,Jobox,https://www.jobox.ai,search,https://www.jobox.ai
+Macro,Macro,https://macro.com/,search,https://macro.com/
+Sable,Sable,,,
+Sharpist,Sharpist,https://www.sharpist.com,search,https://www.sharpist.com
+Vision,Connectly,https://www.connectly.ai/,search,https://www.connectly.ai/
+morty,morty,https://api.morty.comleads,deck_regex,https://www.morty.com
+multus,multus,https://www.multus.co.uk,deck_regex,https://www.multus.bio/
+8base,8base,https://www.8base.com,search,https://www.8base.com
+Ageras,Ageras,,,
+AI Rudder,AI Rudder,https://www.airudder.com,deck_regex,https://airudder.com/
+Audience Town,Audience Town,https://www.audiencetown.com,search,https://www.audiencetown.com
+banxware,banxware,https://www.banxware.com,search,https://www.banxware.com
+Blueocean,Blueocean,https://www.blueocean.ai,search,https://www.blueocean.ai
+Calaxy,Calaxy,https://calaxy.com/,search,https://calaxy.com/
+Circular,Circular,,,
+Cowboy,Cowboy,https://cowboy.com/,search,https://cowboy.com/
+EQL,EQL,https://www.eql.com,search,https://www.eql.com
+Fluence,Fluence,,,
+Hello Heart,Hello Heart,https://www.helloheart.com,search,https://www.helloheart.com
+HTEC,HTEC,https://htec.com/,search,https://htec.com/
+Ibble,Ibble,https://youtu.be/NORAnNKHV5o,deck_regex,https://www.getibble.com
+Influx,Influx,https://www.fluxwork.co,deck_regex,https://beamery.com
+lottielab,lottielab,https://www.lottielab.com,search,https://www.lottielab.com
+Juro,Juro,https://juro.com/,search,https://juro.com/
+Kryptomon,Kryptomon,https://www.kryptomon.co,search,https://www.kryptomon.co
+LiefergrŸn,LiefergrŸn,,,
+Lollipop,Lollipop,https://takethislollipop.com/,search,https://takethislollipop.com/
+Mojo,Mojo,https://www.mojo.com,search,https://www.mojo.com
+Mysten Labs,Mysten Labs,https://www.mystenlabs.com,search,https://www.mystenlabs.com
+Origin,Origin,https://www.origin.me,deck_regex,
+Ownwell,Ownwell,https://www.ownwell.com,search,https://www.ownwell.com
+Pilgrim Soul,Pilgrim Soul,https://www.pilgrimsoul.com,search,https://www.pilgrimsoul.com
+PlayPlay,PlayPlay,https://playplay.com/,search,https://playplay.com/
+Scipher Medicine,Scipher Medicine,https://www.scipher.com,deck_regex,https://www.sciphermedicine.com
+Tive,Tive,https://www.tive.com,search,https://www.tive.com
+Tomo,Tomo,https://tomocredit.com/,search,https://tomocredit.com/
+Waterplan,Waterplan,https://www.waterplan.com,search,https://www.waterplan.com
+Experify,Experify,,,
+Mustard,Mustard,,,
+Bigblue,Bigblue,https://www.bigblue.co/,search,https://www.bigblue.co/
+IMMO,IMMO,https://www.immounited.com/,search,https://www.immounited.com/
+Osso VR,Osso VR,https://www.ossovr.com,search,https://www.ossovr.com
+Playhouse,Playhouse,,,
+Bower,Bower,,,
+Muck Rack,Muck Rack,https://muckrack.cloudflareaccess.com/cdn-cgi/access/login/www.muckrack.co?kid=e2d30a4fbabfc3d85effa34f8cdcdda1ec91da76b3abfe44a31eed233164ad4c&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjJhMDA4MDUwZmIxM2YzZGE1MTY2NWFlYWI2MWUwODA5YTJmZWEyODQzYzFjMzQ2YjczZjQwY2FhZTQ0NzRhMzQifQ.eyJ0eXBlIjoibWV0YSIsImF1ZCI6ImUyZDMwYTRmYmFiZmMzZDg1ZWZmYTM0ZjhjZGNkZGExZWM5MWRhNzZiM2FiZmU0NGEzMWVlZDIzMzE2NGFkNGMiLCJob3N0bmFtZSI6Ind3dy5tdWNrcmFjay5jbyIsInJlZGlyZWN0X3VybCI6Ii8iLCJzZXJ2aWNlX3Rva2VuX3N0YXR1cyI6ZmFsc2UsImlzX3dhcnAiOmZhbHNlLCJpc19nYXRld2F5IjpmYWxzZSwiZXhwIjoxNzgxNzI5OTc0LCJuYmYiOjE3ODE3Mjk2NzQsImlhdCI6MTc4MTcyOTY3NCwiYXV0aF9zdGF0dXMiOiJOT05FIiwibXRsc19hdXRoIjp7ImNlcnRfaXNzdWVyX2RuIjoiIiwiY2VydF9zZXJpYWwiOiIiLCJjZXJ0X2lzc3Vlcl9za2kiOiIiLCJjZXJ0X3ByZXNlbnRlZCI6ZmFsc2UsImNvbW1vbl9uYW1lIjoiIiwiYXV0aF9zdGF0dXMiOiJOT05FIn0sInJlYWxfY291bnRyeSI6IkRFIiwiYXBwX3Nlc3Npb25faGFzaCI6ImY1NDNkMjFiNTIzNjAwZjM2NjM4ZWE3MmMwYzU2NjhiODY4ZDkxNGVhNWYwMTRlZTFmYjVmNjgwYjdhZTIzMWUifQ.SLobF3hLjhPN86uWPot-EvJVdgRoTHgF18ItpYU53JFTnvFrCNBp8YAdLCHdHAD5h3YBmkQM0Y9Wq6jWE0cfNs4YPVmPePxF9_dq1dpXaDyeXmKzDlzFRn7DkvsKszP3jEjMZGI0UZOFGFIHkYoL72F_SazE4nW_FT90SpShwPNY6NeBbDsd3sR7dYa9FmlVGRxK7xe0oueGddbKpCd4nPygoT_0lVJFNwqULXlCq13yMAnH0LmuYT862EKdLonum6MaE5jwJdvh57j_1VMemPoV7M1paWpiMsRRFl2RYvroloBFsAA_NWrkDYL0k-DhEvRGiZhqzhi3TM0dwscjSw&redirect_url=%2F,search,https://muckrack.cloudflareaccess.com/cdn-cgi/access/login/www.muckrack.co?kid=e2d30a4fbabfc3d85effa34f8cdcdda1ec91da76b3abfe44a31eed233164ad4c&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjJhMDA4MDUwZmIxM2YzZGE1MTY2NWFlYWI2MWUwODA5YTJmZWEyODQzYzFjMzQ2YjczZjQwY2FhZTQ0NzRhMzQifQ.eyJ0eXBlIjoibWV0YSIsImF1ZCI6ImUyZDMwYTRmYmFiZmMzZDg1ZWZmYTM0ZjhjZGNkZGExZWM5MWRhNzZiM2FiZmU0NGEzMWVlZDIzMzE2NGFkNGMiLCJob3N0bmFtZSI6Ind3dy5tdWNrcmFjay5jbyIsInJlZGlyZWN0X3VybCI6Ii8iLCJzZXJ2aWNlX3Rva2VuX3N0YXR1cyI6ZmFsc2UsImlzX3dhcnAiOmZhbHNlLCJpc19nYXRld2F5IjpmYWxzZSwiZXhwIjoxNzgxNzI5OTc0LCJuYmYiOjE3ODE3Mjk2NzQsImlhdCI6MTc4MTcyOTY3NCwiYXV0aF9zdGF0dXMiOiJOT05FIiwibXRsc19hdXRoIjp7ImNlcnRfaXNzdWVyX2RuIjoiIiwiY2VydF9zZXJpYWwiOiIiLCJjZXJ0X2lzc3Vlcl9za2kiOiIiLCJjZXJ0X3ByZXNlbnRlZCI6ZmFsc2UsImNvbW1vbl9uYW1lIjoiIiwiYXV0aF9zdGF0dXMiOiJOT05FIn0sInJlYWxfY291bnRyeSI6IkRFIiwiYXBwX3Nlc3Npb25faGFzaCI6ImY1NDNkMjFiNTIzNjAwZjM2NjM4ZWE3MmMwYzU2NjhiODY4ZDkxNGVhNWYwMTRlZTFmYjVmNjgwYjdhZTIzMWUifQ.SLobF3hLjhPN86uWPot-EvJVdgRoTHgF18ItpYU53JFTnvFrCNBp8YAdLCHdHAD5h3YBmkQM0Y9Wq6jWE0cfNs4YPVmPePxF9_dq1dpXaDyeXmKzDlzFRn7DkvsKszP3jEjMZGI0UZOFGFIHkYoL72F_SazE4nW_FT90SpShwPNY6NeBbDsd3sR7dYa9FmlVGRxK7xe0oueGddbKpCd4nPygoT_0lVJFNwqULXlCq13yMAnH0LmuYT862EKdLonum6MaE5jwJdvh57j_1VMemPoV7M1paWpiMsRRFl2RYvroloBFsAA_NWrkDYL0k-DhEvRGiZhqzhi3TM0dwscjSw&redirect_url=%2F
+Belgian Boys,Belgian Boys,https://www.belgianboys.com,search,https://www.belgianboys.com
+LoanWell,LoanWell,https://www.loanwell.com,search,https://www.loanwell.com
