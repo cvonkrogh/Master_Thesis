@@ -26,14 +26,13 @@ _MODULES_DIR = Path(__file__).resolve().parent.parent
 if str(_MODULES_DIR) not in sys.path:
     sys.path.insert(0, str(_MODULES_DIR))
 
-from eval.evaluate_bmc import combined_similarity, jaccard, seq_ratio  # noqa: E402
-from support.csv_bmc import canonical_deck_id, load_gt_bmc_rows  # noqa: E402
-from support.schema import BMC_FIELDS  # noqa: E402
-from support.paths import DEFAULT_GT_DIR, DEFAULT_GT_FULL_BMC  # noqa: E402
+from eval.evaluate_bmc import combined_similarity, jaccard, seq_ratio
+from support.csv_bmc import canonical_deck_id, load_gt_bmc_rows
+from support.schema import BMC_FIELDS
+from support.paths import DEFAULT_GT_DIR, DEFAULT_GT_FULL_BMC
 
 BMC_MAX_ENRICHED = DEFAULT_GT_DIR / "BMC_max_enriched.csv"
 
-# startup_name in BMC_max_enriched → canonical GT deck_id
 _STARTUP_ALIASES: dict[str, str] = {
     "connectly": "Vision",
     "bespoken spirits": "Bespoken_spirits",
@@ -47,23 +46,19 @@ _STARTUP_ALIASES: dict[str, str] = {
     "macro": "Macro",
 }
 
-
 def _norm_name(name: str) -> str:
     return re.sub(r"\s+", " ", (name or "").strip().lower())
-
 
 def deck_id_from_startup_name(name: str) -> str:
     key = _norm_name(name)
     if key in _STARTUP_ALIASES:
         return _STARTUP_ALIASES[key]
-    # Fallback: title-case token matching GT deck ids
+
     token = name.strip().replace(" ", "_")
     return canonical_deck_id(token)
 
-
 def _detect_delimiter(first_line: str) -> str:
     return ";" if first_line.count(";") > first_line.count(",") else ","
-
 
 def load_bmc_max_enriched_rows(path: Path = BMC_MAX_ENRICHED) -> dict[str, dict[str, str]]:
     """Load BMC_max_enriched.csv keyed by canonical deck_id."""
@@ -89,7 +84,6 @@ def load_bmc_max_enriched_rows(path: Path = BMC_MAX_ENRICHED) -> dict[str, dict[
             by_deck[deck_id] = rec
     return by_deck
 
-
 def _maybe_embed_pairs(pairs: list[tuple[str, str]]) -> list[float]:
     if not pairs:
         return []
@@ -104,7 +98,6 @@ def _maybe_embed_pairs(pairs: list[tuple[str, str]]) -> list[float]:
     except Exception as e:
         print(f"[testing] Embeddings skipped ({e})", file=sys.stderr)
         return []
-
 
 def compare_gt_sources(
     gt_path: Path = DEFAULT_GT_FULL_BMC,
@@ -205,7 +198,6 @@ def compare_gt_sources(
 
     return 0
 
-
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
         description="Compare gt_full_bmc.csv vs BMC_max_enriched.csv (10 startups).",
@@ -229,7 +221,6 @@ def main(argv: list[str] | None = None) -> int:
     )
     args = parser.parse_args(argv)
     return compare_gt_sources(args.gt, args.alt, use_embeddings=args.embeddings)
-
 
 if __name__ == "__main__":
     raise SystemExit(main())

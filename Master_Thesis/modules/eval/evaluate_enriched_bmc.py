@@ -23,32 +23,28 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from support.csv_bmc import bmc_by_deck_from_csv, load_screening_bmc_rows  # noqa: E402
-from support.paths import (  # noqa: E402
+from support.csv_bmc import bmc_by_deck_from_csv, load_screening_bmc_rows
+from support.paths import (
     DEFAULT_EVAL_MODULE_03,
     DEFAULT_SCREENING_BMC,
     resolve_enriched_bmc,
     resolve_screening_bmc,
 )
-from support.schema import BMC_FIELDS  # noqa: E402
+from support.schema import BMC_FIELDS
 
 COMPLETENESS_NOTE = (
     "Target: all 9 BMC fields filled per deck from deck + web (full BMC). "
     "No per-field human GT — completeness = share of cells filled."
 )
 
-
 def _filled(row: dict[str, str], field: str) -> bool:
     return bool((row.get(field) or "").strip())
-
 
 def _count_filled(row: dict[str, str]) -> int:
     return sum(1 for f in BMC_FIELDS if _filled(row, f))
 
-
 def _empty_fields(row: dict[str, str]) -> list[str]:
     return [f for f in BMC_FIELDS if not _filled(row, f)]
-
 
 def evaluate_completeness(
     enriched_rows: list[dict[str, str]],
@@ -159,7 +155,6 @@ def evaluate_completeness(
     }
     return per_deck, summary
 
-
 def _write_completeness_metrics_csv(path: Path, summary: dict, pred_path: Path) -> None:
     """Upsert module_03 row into eval/bmc_completeness_metrics.csv."""
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -191,7 +186,6 @@ def _write_completeness_metrics_csv(path: Path, summary: dict, pred_path: Path) 
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(existing)
-
 
 def run_completeness_eval(
     enriched_path: Path,
@@ -285,7 +279,6 @@ def run_completeness_eval(
         print(f"       {field}: {rate:.1%}")
     return 0
 
-
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
         description="Evaluate Module 03 enriched BMC — web-fill completeness."
@@ -320,7 +313,6 @@ def main(argv: list[str] | None = None) -> int:
         return 1
 
     return run_completeness_eval(enriched_path, screening_path, args.out)
-
 
 if __name__ == "__main__":
     raise SystemExit(main())

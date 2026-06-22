@@ -30,27 +30,26 @@ _MODULES_DIR = Path(__file__).resolve().parent.parent
 if str(_MODULES_DIR) not in sys.path:
     sys.path.insert(0, str(_MODULES_DIR))
 
-from support.csv_bmc import bmc_by_deck_from_csv, load_screening_bmc_rows, write_enriched_bmc  # noqa: E402
-from support.local_llm import chat_json, check_ollama, ollama_model  # noqa: E402
-from support.paths import (  # noqa: E402
+from support.csv_bmc import bmc_by_deck_from_csv, load_screening_bmc_rows, write_enriched_bmc
+from support.local_llm import chat_json, check_ollama, ollama_model
+from support.paths import (
     DEFAULT_ENRICHED_BMC,
     DEFAULT_MODULE_01_SLIDES_CSV,
     DEFAULT_SCREENING_BMC,
     DEFAULT_WEBSITES_CSV,
 )
-from support.web_fetch import USER_AGENT, discover_website, fetch_pages  # noqa: E402
-from support.website_validate import (  # noqa: E402
+from support.web_fetch import USER_AGENT, discover_website, fetch_pages
+from support.website_validate import (
     discover_website_validated,
     load_deck_context,
 )
-from support.websites import (  # noqa: E402
+from support.websites import (
     load_slides_for_deck_from_store,
     website_seed_from_slides,
     write_websites_csv,
 )
-from support.bmc_clamp import clamp_bmc_field  # noqa: E402
-from support.schema import BMC_FIELDS, FIELD_DEFINITIONS  # noqa: E402
-
+from support.bmc_clamp import clamp_bmc_field
+from support.schema import BMC_FIELDS, FIELD_DEFINITIONS
 
 def build_web_enrichment_model() -> type[BaseModel]:
     """BMC fields + URL evidence lists (not slide numbers)."""
@@ -76,16 +75,15 @@ def build_web_enrichment_model() -> type[BaseModel]:
     )
 
     class BmcEnrichment(BaseModel):
-        fields: fields_model = Field(  # type: ignore[valid-type]
+        fields: fields_model = Field(
             description="BMC answers from website text. Use '' if unsupported.",
         )
-        evidence: evidence_model = Field(  # type: ignore[valid-type]
+        evidence: evidence_model = Field(
             description="Supporting URLs for each field.",
         )
 
     BmcEnrichment.model_rebuild()
     return BmcEnrichment
-
 
 BMC_ENRICHMENT_MODEL = build_web_enrichment_model()
 
@@ -98,7 +96,6 @@ Rules:
 4. Short phrases, under 25 words. Preserve numbers verbatim.
 5. For each field you fill from the web, list supporting URLs. Empty fields → empty URL lists.
 6. For fields already filled from the deck, return the same text verbatim with an empty URL list."""
-
 
 def _build_user_prompt(
     deck_id: str,
@@ -125,13 +122,12 @@ def _build_user_prompt(
     lines.append("Return structured BMC fields + evidence URLs.")
     return "\n".join(lines)
 
-
 def _merge_bmc(
     deck_row: dict[str, str],
     enrichment: BaseModel,
 ) -> tuple[dict[str, str], dict[str, dict[str, object]]]:
-    enriched_fields = enrichment.fields.model_dump()  # type: ignore[attr-defined]
-    enriched_evidence = enrichment.evidence.model_dump()  # type: ignore[attr-defined]
+    enriched_fields = enrichment.fields.model_dump()
+    enriched_evidence = enrichment.evidence.model_dump()
     merged: dict[str, str] = {"deck_id": deck_row["deck_id"]}
     provenance: dict[str, dict[str, object]] = {}
 
@@ -156,13 +152,11 @@ def _merge_bmc(
 
     return merged, provenance
 
-
 def _summarize(prov: dict[str, dict[str, object]]) -> str:
     deck = sum(1 for p in prov.values() if p["source"] == "deck")
     web = sum(1 for p in prov.values() if p["source"] == "web")
     none = sum(1 for p in prov.values() if p["source"] == "none")
     return f"deck={deck}, web={web}, empty={none}"
-
 
 def main(argv: Optional[list[str]] = None) -> int:
     parser = argparse.ArgumentParser(
@@ -325,7 +319,6 @@ def main(argv: Optional[list[str]] = None) -> int:
     write_enriched_bmc(enriched_rows, args.csv_out)
     print(f"[03] enriched_bmc.csv (GT order) -> {args.csv_out}", flush=True)
     return 0
-
 
 if __name__ == "__main__":
     raise SystemExit(main())

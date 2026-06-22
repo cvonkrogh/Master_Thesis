@@ -34,7 +34,7 @@ _MODULES_DIR = Path(__file__).resolve().parent.parent
 if str(_MODULES_DIR) not in sys.path:
     sys.path.insert(0, str(_MODULES_DIR))
 
-from support.paths import DEFAULT_MODULE_04_DIR  # noqa: E402
+from support.paths import DEFAULT_MODULE_04_DIR
 
 RUBRIC_FIELDS = [
     "target_deck_id",
@@ -52,7 +52,6 @@ RUBRIC_FIELDS = [
     "relevance_code",
     "notes",
 ]
-
 
 def _load_rows(module_04_dir: Path, top_k: int) -> list[dict[str, str]]:
     summary = module_04_dir / "similar_top5_all_decks.csv"
@@ -83,7 +82,6 @@ def _load_rows(module_04_dir: Path, top_k: int) -> list[dict[str, str]]:
         if deck_rows:
             rows.extend(deck_rows[:top_k])
     return rows
-
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Build Module 04 qualitative rubric template.")
@@ -120,7 +118,6 @@ def main(argv: list[str] | None = None) -> int:
     print(f"[m04-rubric] {len(rows)} row(s) -> {args.out}")
     print("[m04-rubric] Fill relevance_code: C=credible peer, A=adjacent, W=wrong, U=unusable")
     return 0
-
 
 if __name__ == "__main__":
     raise SystemExit(main())

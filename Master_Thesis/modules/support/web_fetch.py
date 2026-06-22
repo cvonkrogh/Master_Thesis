@@ -17,10 +17,7 @@ HTTP_TIMEOUT = 10.0
 MAX_PAGE_CHARS = 8_000
 MAX_TOTAL_CHARS = 30_000
 
-# Some sites set cookies with non-ASCII values; httpx can raise UnicodeEncodeError
-# when re-sending them. Treat like a failed fetch and clear the jar.
 _HTTP_FETCH_ERRORS = (httpx.HTTPError, UnicodeEncodeError)
-
 
 def _clear_client_cookies(client: httpx.Client) -> None:
     try:
@@ -37,11 +34,9 @@ URL_IN_TEXT_RE = re.compile(
     re.IGNORECASE,
 )
 
-
 def slugify(name: str) -> str:
     s = name.lower()
     return re.sub(r"[^a-z0-9]+", "", s)
-
 
 def candidate_urls(startup_name: str) -> list[str]:
     slug = slugify(startup_name)
@@ -50,7 +45,6 @@ def candidate_urls(startup_name: str) -> list[str]:
     return [f"https://www.{slug}{tld}" for tld in CANDIDATE_TLDS] + [
         f"https://{slug}{tld}" for tld in CANDIDATE_TLDS
     ]
-
 
 def normalize_url(url: str) -> Optional[str]:
     url = url.strip()
@@ -67,7 +61,6 @@ def normalize_url(url: str) -> Optional[str]:
         return None
     return url
 
-
 def extract_urls_from_text(text: str) -> list[str]:
     found: list[str] = []
     for match in URL_IN_TEXT_RE.findall(text or ""):
@@ -75,7 +68,6 @@ def extract_urls_from_text(text: str) -> list[str]:
         if norm:
             found.append(norm)
     return found
-
 
 def extract_urls_from_slides(slides: list[dict]) -> list[str]:
     urls: list[str] = []
@@ -90,7 +82,6 @@ def extract_urls_from_slides(slides: list[dict]) -> list[str]:
             out.append(u)
     return out
 
-
 def pick_deck_url(urls: list[str], deck_id: str) -> str:
     """Prefer a URL whose host matches the deck / startup name."""
     slug = slugify(deck_id)
@@ -100,7 +91,6 @@ def pick_deck_url(urls: list[str], deck_id: str) -> str:
             if slug in host or host in slug:
                 return u
     return urls[0] if urls else ""
-
 
 def try_url(client: httpx.Client, url: str) -> Optional[str]:
     url = normalize_url(url) or ""
@@ -118,31 +108,26 @@ def try_url(client: httpx.Client, url: str) -> Optional[str]:
         _clear_client_cookies(client)
         return None
 
-
 def search_engine_lookup(startup_name: str) -> Optional[str]:
     urls = search_engine_urls(startup_name, max_results=5)
     return urls[0] if urls else None
 
-
 def search_engine_urls(startup_name: str, max_results: int = 5) -> list[str]:
     return search_engine_text(f"{startup_name} official website", max_results=max_results)
-
 
 def _run_ddg_text(query: str, max_results: int) -> list[dict]:
     """Run DuckDuckGo text search via ddgs package."""
     try:
-        from ddgs import DDGS  # type: ignore[import-untyped]
+        from ddgs import DDGS
 
         with DDGS(timeout=HTTP_TIMEOUT) as client:
             return list(client.text(query, max_results=max_results))
     except Exception:
         return []
 
-
 def search_engine_results(query: str, max_results: int = 8) -> list[dict]:
     """DuckDuckGo text hits with href, title, and body (for seed-name extraction)."""
     return _run_ddg_text(query, max_results)
-
 
 def search_engine_text(query: str, max_results: int = 5) -> list[str]:
     results = search_engine_results(query, max_results)
@@ -171,7 +156,6 @@ def search_engine_text(query: str, max_results: int = 5) -> list[str]:
             urls.append(norm)
     return urls
 
-
 def iter_website_candidates(
     startup_name: str,
     seed_url: str,
@@ -193,7 +177,6 @@ def iter_website_candidates(
     for url in search_engine_urls(startup_name):
         add(url, "search")
     return candidates
-
 
 def fetch_homepage_snippet(
     url: str,
@@ -219,7 +202,6 @@ def fetch_homepage_snippet(
         return None
     return text[:max_chars]
 
-
 def discover_website(
     startup_name: str,
     existing_url: str,
@@ -236,14 +218,12 @@ def discover_website(
             return resolved
     return None
 
-
 def strip_html(html: str) -> str:
     soup = BeautifulSoup(html, "lxml")
     for tag in soup(DROP_TAGS):
         tag.decompose()
     lines = [ln.strip() for ln in soup.get_text(separator="\n").splitlines() if ln.strip()]
     return "\n".join(lines)
-
 
 def fetch_pages(
     base_url: str,
@@ -284,7 +264,6 @@ def fetch_pages(
         if total >= MAX_TOTAL_CHARS:
             break
     return pages
-
 
 def fetch_pages_with_retry(
     base_url: str,

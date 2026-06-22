@@ -9,10 +9,6 @@ identical column orders and the diff between them is meaningful.
 
 from __future__ import annotations
 
-
-# Field name -> short definition shown to the LLM in the structured-output
-# JSON schema's `description` slot. The wording matters: it tells the model
-# what each Business-Model-Canvas term means in the context of a pitch deck.
 FIELD_DEFINITIONS: dict[str, str] = {
     "startup_name": "Official company / product name as it appears on the deck.",
     "website_url": "Public website URL of the company (e.g. https://palta.com). Empty if not on the deck.",
@@ -38,9 +34,6 @@ FIELD_DEFINITIONS: dict[str, str] = {
 
 FIELD_NAMES: tuple[str, ...] = tuple(FIELD_DEFINITIONS.keys())
 
-# The nine Business Model Canvas building blocks (Osterwalder & Pigneur, 2010).
-# Used for Module 02.1 evaluation: compare deck-only extraction vs human GT on
-# BMC fields only, separate from traction / market / identity fields.
 BMC_FIELDS: tuple[str, ...] = (
     "customer_segments",
     "value_proposition",
@@ -53,8 +46,6 @@ BMC_FIELDS: tuple[str, ...] = (
     "cost_structure",
 )
 
-# Non-BMC screening fields (Module 02b): identity, traction, market, team.
 SCREENING_FIELDS: tuple[str, ...] = tuple(n for n in FIELD_NAMES if n not in BMC_FIELDS)
 
-# Metadata columns that come before the schema fields in the screening CSVs.
 META_COLUMNS: tuple[str, ...] = ("deck_id", "n_slides", "model")

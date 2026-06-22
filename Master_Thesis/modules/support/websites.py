@@ -18,7 +18,6 @@ WEBSITE_CSV_FIELDS = (
     "discovered_website",
 )
 
-
 def website_seed_from_slides(slides: list, deck_id: str) -> dict[str, str]:
     """Extract startup label + deck URL hints from pitch-deck slides (no LLM)."""
     canon = canonical_deck_id(deck_id)
@@ -39,14 +38,12 @@ def website_seed_from_slides(slides: list, deck_id: str) -> dict[str, str]:
         "discovered_website": "",
     }
 
-
 def lookup_website_info(
     deck_id: str,
     by_pipeline_deck: dict[str, dict[str, str]],
 ) -> dict[str, str]:
     canon = canonical_deck_id(deck_id)
     return by_pipeline_deck.get(canon, {})
-
 
 def load_websites_csv(path: Path = DEFAULT_WEBSITES_CSV) -> dict[str, dict[str, str]]:
     if not path.exists():
@@ -60,7 +57,6 @@ def load_websites_csv(path: Path = DEFAULT_WEBSITES_CSV) -> dict[str, dict[str, 
             by_deck[deck_id] = {**row, "deck_id": deck_id}
     return by_deck
 
-
 def write_websites_csv(rows: list[dict[str, str]], path: Path = DEFAULT_WEBSITES_CSV) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8", newline="") as f:
@@ -69,11 +65,9 @@ def write_websites_csv(rows: list[dict[str, str]], path: Path = DEFAULT_WEBSITES
         for row in rows:
             w.writerow({k: row.get(k, "") for k in WEBSITE_CSV_FIELDS})
 
-
 def load_slides_for_deck_from_store(deck_id: str, slides_csv: Path | None = None) -> list[dict]:
     path = slides_csv or resolve_module_01_slides()
     return load_slides_for_deck(deck_id, path)
-
 
 def build_websites_csv(
     deck_ids: list[str] | None = None,

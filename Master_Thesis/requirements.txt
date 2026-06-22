@@ -1,23 +1,16 @@
 PyMuPDF==1.24.10
 Pillow==10.4.0
 rapidocr-onnxruntime==1.4.4
-# Optional: faster/lighter OCR if you have the `tesseract` binary installed.
-# pytesseract==0.3.13
 
-# Module 02 (slides -> structured schema via LLM).
 openai>=1.55,<3
 pydantic>=2.7,<3
 python-dotenv>=1.0,<2
 
-# Module 03–04 (web scraping + peer discovery).
 httpx>=0.27,<1
 beautifulsoup4>=4.12,<5
 lxml>=5,<7
 ddgs>=6,<10
-# Module 04 (peer startup similarity).
 scikit-learn>=1.4,<2
 
-# Eval + Module 04 ranking — embedding cosine (all-MiniLM-L6-v2; first run downloads model).
-# Pin numpy<2 for torch/sentence-transformers compatibility on macOS.
 numpy>=1.26,<2
 sentence-transformers>=3,<4

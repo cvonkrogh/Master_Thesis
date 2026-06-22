@@ -9,12 +9,10 @@ from support.schema import BMC_FIELDS
 MAX_BMC_FIELD_WORDS = 25
 MAX_BMC_FIELD_CHARS = 280
 
-# Model rants / commentary that sometimes leak into a field value.
 _NOTE_MARKERS = re.compile(
     r"\n\s*(Note:|Additionally:|For example:|In summary:|It's important to note)",
     re.IGNORECASE,
 )
-
 
 def clamp_bmc_field(
     value: str,
@@ -49,7 +47,6 @@ def clamp_bmc_field(
         text = f"{cut}..." if cut else text[:max_chars]
 
     return text.strip()
-
 
 def clamp_bmc_row(
     row: dict[str, str],

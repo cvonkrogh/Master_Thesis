@@ -25,10 +25,8 @@ Outputs: output/model_selection/{model}/{deck}.bmc.json   (raw extractions)
          eval/model_selection/summary.json
 
 Usage:
-    # default: 5 decks x 5 models
     python modules/pipeline/model_selection.py
 
-    # custom models / decks
     python modules/pipeline/model_selection.py \
         --models llama3.1:8b qwen2.5:7b-instruct mistral:7b \
         --decks Aura Macro Vision
@@ -55,25 +53,24 @@ _MODULES_DIR = Path(__file__).resolve().parent.parent
 if str(_MODULES_DIR) not in sys.path:
     sys.path.insert(0, str(_MODULES_DIR))
 
-from eval.evaluate_bmc import compare, summarize  # noqa: E402
-from support.csv_bmc import canonical_deck_id, load_gt_bmc_rows  # noqa: E402
-from support.extract_common import (  # noqa: E402
+from eval.evaluate_bmc import compare, summarize
+from support.csv_bmc import canonical_deck_id, load_gt_bmc_rows
+from support.extract_common import (
     build_extraction_model,
     call_extract,
     deck_id_from_slides_path,
     load_slides,
 )
-from support.local_llm import check_ollama  # noqa: E402
-from support.paths import (  # noqa: E402
+from support.local_llm import check_ollama
+from support.paths import (
     DEFAULT_GT_BMC_PD,
     DEFAULT_OUTPUT_DIR,
     resolve_module_01_slides,
 )
-from support.schema import BMC_FIELDS  # noqa: E402
+from support.schema import BMC_FIELDS
 
-# Candidate local models. Override with --models. See README/plan for rationale.
 DEFAULT_MODELS: tuple[str, ...] = (
-    "llama3.1:8b",            # pipeline default
+    "llama3.1:8b",
     "mistral:7b",
     "qwen2.5:7b-instruct",
     "mistral-small",
@@ -81,8 +78,6 @@ DEFAULT_MODELS: tuple[str, ...] = (
     "qwen2.5:3b-instruct",
 )
 
-# 5 stratified decks: homonyms (Aura, Macro), naming alias (Vision/Connectly),
-# large deck (Jobox), niche/sparse (Bespoken_spirits). Override with --decks.
 DEFAULT_DECKS: tuple[str, ...] = (
     "Aura",
     "Macro",
@@ -99,10 +94,8 @@ BMC_SYSTEM_EXTRA = (
 )
 BMC_TASK = "Extract the nine Business Model Canvas fields from this pitch deck."
 
-
 def _safe_model_dir(model: str) -> str:
     return model.replace("/", "_").replace(":", "_")
-
 
 def _warmup_model(model: str) -> None:
     """Load the model into RAM with a tiny call so the timed run measures
@@ -122,9 +115,8 @@ def _warmup_model(model: str) -> None:
             },
             timeout=600.0,
         )
-    except Exception as e:  # noqa: BLE001 — warmup is best-effort
+    except Exception as e:
         print(f"[model-sel] warmup {model} failed (non-fatal): {e}", file=sys.stderr)
-
 
 def _resolve_decks(deck_names: list[str], slides_csv: Path) -> list[str]:
     from support.slides_store import deck_ids_from_slides_csv
@@ -142,7 +134,6 @@ def _resolve_decks(deck_names: list[str], slides_csv: Path) -> list[str]:
             continue
         resolved.append(canon)
     return resolved
-
 
 def _run_model_on_decks(
     model: str,
@@ -180,8 +171,8 @@ def _run_model_on_decks(
                 extra_system=BMC_SYSTEM_EXTRA,
                 model=model,
             )
-            fields = {f: str(v) for f, v in extraction.fields.model_dump().items()}  # type: ignore[attr-defined]
-        except Exception as e:  # noqa: BLE001 — log per-deck failure, keep going
+            fields = {f: str(v) for f, v in extraction.fields.model_dump().items()}
+        except Exception as e:
             status = "failed"
             print(f"[model-sel] {model} :: {canon_id}: FAILED ({e})", file=sys.stderr)
         elapsed = round(time.perf_counter() - t0, 2)
@@ -199,7 +190,6 @@ def _run_model_on_decks(
             }
         )
 
-        # Persist raw extraction for auditability (separate from real pipeline).
         (out_dir / f"{canon_id}.bmc.json").write_text(
             json.dumps(
                 {
@@ -222,7 +212,6 @@ def _run_model_on_decks(
 
     return pred_by_deck, latency_rows
 
-
 def _score_model(
     pred_by_deck: dict[str, dict[str, str]],
     gt_rows: list[dict[str, str]],
@@ -238,7 +227,6 @@ def _score_model(
         except ImportError as e:
             print(f"[model-sel] WARNING: skipping embeddings — {e}", file=sys.stderr)
     return summarize(results)
-
 
 def _comparison_row(model: str, latency_rows: list[dict], summary: dict) -> dict:
     ok = [r for r in latency_rows if r["status"] == "ok"]
@@ -264,7 +252,6 @@ def _comparison_row(model: str, latency_rows: list[dict], summary: dict) -> dict
         "mean_score_0_2": summary.get("mean_score_0_2"),
     }
 
-
 COMPARISON_COLUMNS = [
     "model",
     "n_decks",
@@ -283,7 +270,6 @@ COMPARISON_COLUMNS = [
     "mean_score_0_2",
 ]
 
-
 def _merge_existing(
     path: Path,
     new_rows: list[dict],
@@ -298,7 +284,6 @@ def _merge_existing(
                 if row.get(key) not in new_keys:
                     kept.append(row)
     return kept + new_rows
-
 
 def _print_table(rows: list[dict]) -> None:
     if not rows:
@@ -323,7 +308,6 @@ def _print_table(rows: list[dict]) -> None:
             f"{(r['mean_score_0_2'] if r['mean_score_0_2'] is not None else 0):>6}"
         )
     print()
-
 
 def main(argv: Optional[list[str]] = None) -> int:
     parser = argparse.ArgumentParser(
@@ -453,7 +437,6 @@ def main(argv: Optional[list[str]] = None) -> int:
         new_lat_models = {r["model"] for r in all_latency_rows}
         all_latency_rows = _merge_existing(lat_path, all_latency_rows, new_lat_models, key="model")
 
-    # Sort by quality (mean_score_0_2) desc, then speed asc, for a quick read.
     comparison_rows.sort(
         key=lambda r: (
             -(float(r.get("mean_score_0_2") or 0)),
@@ -503,7 +486,6 @@ def main(argv: Optional[list[str]] = None) -> int:
         f"(score={best['mean_score_0_2']}, {best['mean_seconds_per_deck']}s/deck)"
     )
     return 0
-
 
 if __name__ == "__main__":
     raise SystemExit(main())

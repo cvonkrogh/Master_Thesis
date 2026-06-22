@@ -26,23 +26,23 @@ _MODULES_DIR = Path(__file__).resolve().parent.parent
 if str(_MODULES_DIR) not in sys.path:
     sys.path.insert(0, str(_MODULES_DIR))
 
-from support.bmc_clamp import clamp_bmc_row  # noqa: E402
-from support.csv_bmc import canonical_deck_id, write_screening_bmc_from_preds  # noqa: E402
-from support.local_llm import check_ollama, ollama_model  # noqa: E402
-from support.pdf_deck import DEFAULT_PDF_DIR, extract_pdf_slides, resolve_pdf_path  # noqa: E402
-from support.paths import (  # noqa: E402
+from support.bmc_clamp import clamp_bmc_row
+from support.csv_bmc import canonical_deck_id, write_screening_bmc_from_preds
+from support.local_llm import check_ollama, ollama_model
+from support.pdf_deck import DEFAULT_PDF_DIR, extract_pdf_slides, resolve_pdf_path
+from support.paths import (
     DEFAULT_GT_BMC_PD,
     DEFAULT_MODULE_01_SLIDES_CSV,
     DEFAULT_SCREENING_BMC,
 )
-from support.schema import BMC_FIELDS  # noqa: E402
-from support.extract_common import (  # noqa: E402
+from support.schema import BMC_FIELDS
+from support.extract_common import (
     build_extraction_model,
     call_extract,
     resolve_deck_ids,
     summarize_extraction,
 )
-from support.slides_store import load_slides_for_deck  # noqa: E402
+from support.slides_store import load_slides_for_deck
 
 BMC_MODEL = build_extraction_model(BMC_FIELDS, model_name="BmcExtraction")
 
@@ -53,7 +53,6 @@ BMC_SYSTEM_EXTRA = (
 )
 
 BMC_TASK = "Extract the nine Business Model Canvas fields from this pitch deck."
-
 
 def main(argv: Optional[list[str]] = None) -> int:
     parser = argparse.ArgumentParser(description="Module 02 — BMC deck extraction (CSV + PDF).")
@@ -135,7 +134,7 @@ def main(argv: Optional[list[str]] = None) -> int:
             print(f"[02] {canon}: FAILED ({e})", file=sys.stderr)
             continue
 
-        fields = extraction.fields.model_dump()  # type: ignore[attr-defined]
+        fields = extraction.fields.model_dump()
         pred_by_deck[canon] = clamp_bmc_row(
             {f: str(fields.get(f) or "").strip() for f in BMC_FIELDS}
         )
@@ -148,7 +147,6 @@ def main(argv: Optional[list[str]] = None) -> int:
     write_screening_bmc_from_preds(pred_by_deck, args.bmc_csv, gt_path=DEFAULT_GT_BMC_PD)
     print(f"[02] screening_bmc.csv ({len(pred_by_deck)} decks, GT order) -> {args.bmc_csv}", flush=True)
     return 0
-
 
 if __name__ == "__main__":
     raise SystemExit(main())

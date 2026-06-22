@@ -14,11 +14,11 @@ _MODULES_DIR = Path(__file__).resolve().parent.parent
 if str(_MODULES_DIR) not in sys.path:
     sys.path.insert(0, str(_MODULES_DIR))
 
-from support.local_llm import chat_json, ollama_model  # noqa: E402
-from support.csv_bmc import canonical_deck_id  # noqa: E402
-from support.paths import resolve_module_01_slides  # noqa: E402
-from support.schema import BMC_FIELDS, FIELD_DEFINITIONS, FIELD_NAMES, META_COLUMNS, SCREENING_FIELDS  # noqa: E402
-from support.slides_store import deck_ids_from_slides_csv, load_slides_for_deck  # noqa: E402
+from support.local_llm import chat_json, ollama_model
+from support.csv_bmc import canonical_deck_id
+from support.paths import resolve_module_01_slides
+from support.schema import BMC_FIELDS, FIELD_DEFINITIONS, FIELD_NAMES, META_COLUMNS, SCREENING_FIELDS
+from support.slides_store import deck_ids_from_slides_csv, load_slides_for_deck
 
 DEFAULT_SLIDES_CSV = resolve_module_01_slides()
 
@@ -41,10 +41,8 @@ RULES (very important):
 
 Return only the structured object. Do not add commentary outside the JSON fields."""
 
-
 def _str_field(description: str):
     return (str, Field(default="", description=description))
-
 
 def _evidence_field(field_name: str):
     return (
@@ -56,7 +54,6 @@ def _evidence_field(field_name: str):
             ),
         ),
     )
-
 
 def build_extraction_model(
     field_names: tuple[str, ...],
@@ -74,16 +71,15 @@ def build_extraction_model(
     )
 
     class Extraction(BaseModel):
-        fields: fields_model = Field(  # type: ignore[valid-type]
+        fields: fields_model = Field(
             description="Extracted answers. Use '' if not in the deck.",
         )
-        evidence: evidence_model = Field(  # type: ignore[valid-type]
+        evidence: evidence_model = Field(
             description="Slide numbers (1-indexed) justifying each field.",
         )
 
     Extraction.model_rebuild()
     return Extraction
-
 
 def format_slides(slides: list[dict], *, label: str = "", max_body_chars: int = 2000) -> str:
     blocks = []
@@ -105,7 +101,6 @@ def format_slides(slides: list[dict], *, label: str = "", max_body_chars: int = 
     header = f"{prefix}({len(slides)} slides)\n\n" if prefix else ""
     return header + "\n\n".join(blocks)
 
-
 def format_combined_deck_text(
     slides_json: list[dict],
     pdf_slides: list[dict],
@@ -121,7 +116,6 @@ def format_combined_deck_text(
     ]
     return "\n".join(parts)
 
-
 def build_user_prompt(deck_id: str, slides: list[dict], task_hint: str) -> str:
     return (
         f"Pitch deck: {deck_id}\n"
@@ -130,7 +124,6 @@ def build_user_prompt(deck_id: str, slides: list[dict], task_hint: str) -> str:
         f"{format_slides(slides)}\n\n"
         "Fill the schema. Use empty string for anything not in the slides."
     )
-
 
 def build_bmc_user_prompt(
     deck_id: str,
@@ -146,7 +139,6 @@ def build_bmc_user_prompt(
         f"{format_combined_deck_text(slides_json, pdf_slides, pdf_path=pdf_path)}\n\n"
         "Fill the schema from BOTH sources. Use empty string for anything not supported by the deck."
     )
-
 
 def call_extract(
     slides: list[dict],
@@ -174,7 +166,6 @@ def call_extract(
     ]
     return chat_json(messages, extraction_model, model=model or ollama_model(), temperature=0.0)
 
-
 def resolve_deck_ids(
     slides_csv: Path | None = None,
     deck_filter: list[str] | None = None,
@@ -195,7 +186,6 @@ def resolve_deck_ids(
             raise FileNotFoundError(f"No matching decks in {path} for {deck_filter!r}.")
     return ids
 
-
 def _dedupe_slide_inputs(paths: list[Path]) -> list[Path]:
     """One slides file per GT deck — prefer Vision.slides.json over Connectly.slides.json."""
     by_canonical: dict[str, Path] = {}
@@ -210,7 +200,6 @@ def _dedupe_slide_inputs(paths: list[Path]) -> list[Path]:
             by_canonical[canon] = path
     return sorted(by_canonical.values())
 
-
 def load_slides(path: Path) -> list[dict]:
     with path.open("r", encoding="utf-8") as f:
         data = json.load(f)
@@ -218,13 +207,11 @@ def load_slides(path: Path) -> list[dict]:
         raise ValueError(f"{path} does not contain a list of slides.")
     return data
 
-
 def deck_id_from_slides_path(path: Path) -> str:
     name = path.name
     if name.endswith(".slides.json"):
         return name[: -len(".slides.json")]
     return path.stem
-
 
 def save_partial_json(
     extraction: BaseModel,
@@ -239,18 +226,16 @@ def save_partial_json(
         "n_slides": n_slides,
         "model": model,
         "extract_type": extract_type,
-        "fields": extraction.fields.model_dump(),  # type: ignore[attr-defined]
-        "evidence": extraction.evidence.model_dump(),  # type: ignore[attr-defined]
+        "fields": extraction.fields.model_dump(),
+        "evidence": extraction.evidence.model_dump(),
     }
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2))
 
-
 def summarize_extraction(extraction: BaseModel) -> str:
-    fields = extraction.fields.model_dump()  # type: ignore[attr-defined]
+    fields = extraction.fields.model_dump()
     filled = sum(1 for v in fields.values() if v)
     return f"{filled}/{len(fields)} fields filled"
-
 
 def upsert_csv_row(csv_path: Path, row: dict[str, str], key: str = "deck_id") -> None:
     rows: list[dict[str, str]] = []
@@ -286,13 +271,11 @@ def upsert_csv_row(csv_path: Path, row: dict[str, str], key: str = "deck_id") ->
         for r in rows:
             writer.writerow({fn: r.get(fn, "") for fn in fieldnames})
 
-
 def load_partial_fields(json_path: Path) -> dict[str, str]:
     if not json_path.exists():
         return {}
     data = json.loads(json_path.read_text(encoding="utf-8"))
     return {k: str(v) for k, v in (data.get("fields") or {}).items()}
-
 
 def merge_deck_fields(
     deck_id: str,
@@ -304,7 +287,6 @@ def merge_deck_fields(
         path = json_dir / f"{deck_id}{suffix}"
         merged.update(load_partial_fields(path))
     return merged
-
 
 def row_for_screening_csv(
     deck_id: str,
@@ -320,7 +302,6 @@ def row_for_screening_csv(
     for name in FIELD_NAMES:
         row[name] = str(fields.get(name, ""))
     return row
-
 
 def migrate_extracted_json(json_dir: Path) -> int:
     """Split legacy {deck}.extracted.json into .bmc.json + .screening.json."""

@@ -57,14 +57,11 @@ NON_STARTUP_HOST_SUFFIXES = (
     "techcrunch.com",
 )
 
-
 def _norm(text: str) -> str:
     return re.sub(r"\s+", " ", (text or "").strip().lower())
 
-
 def _tokens(text: str) -> set[str]:
     return {t for t in re.findall(r"[a-z0-9]+", _norm(text)) if len(t) > 1}
-
 
 def jaccard(a: str, b: str) -> float:
     ta, tb = _tokens(a), _tokens(b)
@@ -74,7 +71,6 @@ def jaccard(a: str, b: str) -> float:
         return 0.0
     return len(ta & tb) / len(ta | tb)
 
-
 def seq_ratio(a: str, b: str) -> float:
     if not a.strip() and not b.strip():
         return 1.0
@@ -82,15 +78,12 @@ def seq_ratio(a: str, b: str) -> float:
         return 0.0
     return SequenceMatcher(None, _norm(a), _norm(b)).ratio()
 
-
 def jaccard_combined(a: str, b: str) -> float:
     return 0.5 * jaccard(a, b) + 0.5 * seq_ratio(a, b)
-
 
 def _field_line(field: str, row: dict[str, str]) -> str:
     value = (row.get(field) or "").strip()
     return f"{field}: {value}" if value else ""
-
 
 def _fit_cosine(docs: list[str]) -> list[float]:
     if len(docs) < 2:
@@ -101,7 +94,6 @@ def _fit_cosine(docs: list[str]) -> list[float]:
     sims = cosine_similarity(matrix[0:1], matrix[1:])[0]
     return [float(s) for s in sims]
 
-
 def _host_penalty(url: str) -> float:
     host = (urlparse(url).hostname or "").lower()
     path = (urlparse(url).path or "").lower()
@@ -111,7 +103,6 @@ def _host_penalty(url: str) -> float:
     if any(h in path for h in ("/post/", "/news/", "/blog/", "/article/", "/insights/")):
         penalty += 0.08
     return penalty
-
 
 def _target_mention_penalty(peer_profile: str, target_labels: list[str]) -> float:
     text = _norm(peer_profile)
@@ -125,7 +116,6 @@ def _target_mention_penalty(peer_profile: str, target_labels: list[str]) -> floa
         mentions += text.count(label)
     return min(0.15, mentions * 0.04)
 
-
 def _incumbent_penalty(url: str) -> float:
     host = (urlparse(url).hostname or "").lower()
     if host.startswith("www."):
@@ -135,10 +125,8 @@ def _incumbent_penalty(url: str) -> float:
             return INCUMBENT_PENALTY
     return 0.0
 
-
 def _exploratory_combined(doc_tfidf: float, field_tfidf: float, doc_jaccard: float) -> float:
     return 0.50 * doc_tfidf + 0.30 * field_tfidf + 0.20 * doc_jaccard
-
 
 def bmc_core_profile_text(row: dict[str, str], deck_id: str | None = None) -> str:
     """Segment + value proposition only — what the company does."""
@@ -152,10 +140,8 @@ def bmc_core_profile_text(row: dict[str, str], deck_id: str | None = None) -> st
             lines.append(f"{field}: {value}")
     return "\n".join(lines)
 
-
 PREFILTER_MIN_SCORE = 0.20
 MIN_SNIPPET_CHARS = 80
-
 
 def select_candidates_for_deep_scoring(
     ranked: list[tuple[object, float]],
@@ -208,10 +194,8 @@ def select_candidates_for_deep_scoring(
 
     return selected
 
-
 def _snippet_penalties(peer_url: str) -> float:
     return _host_penalty(peer_url) + _incumbent_penalty(peer_url)
-
 
 def batch_snippet_prefilter_scores(
     target_row: dict[str, str],
@@ -242,7 +226,6 @@ def batch_snippet_prefilter_scores(
         adjusted = max(0.0, float(sim) - _snippet_penalties(url))
         scores.append(round(adjusted, 4))
     return scores
-
 
 def score_peer(
     target_profile: str,

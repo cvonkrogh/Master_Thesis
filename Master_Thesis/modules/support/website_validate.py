@@ -13,13 +13,13 @@ _MODULES_DIR = Path(__file__).resolve().parent.parent
 if str(_MODULES_DIR) not in sys.path:
     sys.path.insert(0, str(_MODULES_DIR))
 
-from support.local_llm import chat_json  # noqa: E402
-from support.web_fetch import (  # noqa: E402
+from support.local_llm import chat_json
+from support.web_fetch import (
     fetch_homepage_snippet,
     iter_website_candidates,
     try_url,
 )
-from support.schema import BMC_FIELDS  # noqa: E402
+from support.schema import BMC_FIELDS
 
 BMC_CONTEXT_FIELDS = (
     "value_proposition",
@@ -46,14 +46,12 @@ Mark matches=false when:
 
 Be conservative: when unsure, set matches=false and confidence=low."""
 
-
 class WebsiteMatchResult(BaseModel):
     matches: bool = Field(description="True if the website belongs to the pitch-deck startup.")
     confidence: Literal["high", "medium", "low"] = Field(
         description="How confident you are in the matches decision.",
     )
     reason: str = Field(description="One short sentence explaining the decision.")
-
 
 def load_deck_context(
     deck_id: str,
@@ -86,7 +84,6 @@ def load_deck_context(
 
     return ctx
 
-
 def format_deck_context(ctx: dict[str, str]) -> str:
     lines = [
         f"Startup name: {ctx.get('startup_name', '')}",
@@ -101,7 +98,6 @@ def format_deck_context(ctx: dict[str, str]) -> str:
         lines.append("Pitch deck excerpts:")
         lines.append(ctx["slide_excerpts"])
     return "\n".join(lines)
-
 
 def validate_website_match(
     deck_context: dict[str, str],
@@ -131,12 +127,10 @@ def validate_website_match(
         temperature=0.0,
     )
 
-
 def _accept_match(result: WebsiteMatchResult) -> bool:
     if not result.matches:
         return False
     return result.confidence in ("high", "medium")
-
 
 def discover_website_validated(
     startup_name: str,

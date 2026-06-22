@@ -11,28 +11,23 @@ from functools import lru_cache
 from pathlib import Path
 from typing import Optional
 
-import fitz  
-
+import fitz
 
 MIN_NATIVE_CHARS = 30
-MIN_OCR_ALPHA_RATIO = 0.5  # OCR result must be ≥50% letters/digits, else treat as noise
+MIN_OCR_ALPHA_RATIO = 0.5
 OCR_DPI = 300
 OCR_ENGINES = ("auto", "rapidocr", "tesseract")
 DEFAULT_PDF_DIR = Path("data/pitch_decks")
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from support.csv_bmc import canonical_deck_id  # noqa: E402
-from support.paths import DEFAULT_MODULE_01_SLIDES_CSV  # noqa: E402
-from support.slides_store import slide_row, write_slides_csv  # noqa: E402
+from support.csv_bmc import canonical_deck_id
+from support.paths import DEFAULT_MODULE_01_SLIDES_CSV
+from support.slides_store import slide_row, write_slides_csv
 
-# Markers that mean PyMuPDF returned glyphs it couldn't map to real characters.
-# Most commonly seen with subset CFF/Type1 fonts that ship without a ToUnicode
-# table, or when the producer munged the encoding.
 _GARBLE_PATTERNS = (
     re.compile(r"\(cid:\d+\)"),
     re.compile(r"\ufffd"),
 )
-
 
 @dataclass
 class Slide:
@@ -42,13 +37,11 @@ class Slide:
     source: str
     char_count: int
 
-
 def _clean_text(text: str) -> str:
     """Normalize whitespace while preserving line breaks."""
     lines = [re.sub(r"[ \t]+", " ", ln).strip() for ln in text.splitlines()]
     lines = [ln for ln in lines if ln]
     return "\n".join(lines)
-
 
 def _split_title_body(text: str) -> tuple[str, str]:
     """Use the first non-empty line as a rough title, the rest as body."""
@@ -59,7 +52,6 @@ def _split_title_body(text: str) -> tuple[str, str]:
     body = parts[1].strip() if len(parts) > 1 else ""
     return title, body
 
-
 def _looks_garbled(text: str) -> bool:
     """Detect native text that's structurally junk (bad font encoding, etc.)."""
     if not text:
@@ -67,14 +59,12 @@ def _looks_garbled(text: str) -> bool:
     for pat in _GARBLE_PATTERNS:
         if pat.search(text):
             return True
-    # Heuristic: very long strings of letters with almost no spaces are usually
-    # the result of a missing ToUnicode CMap (glyphs concatenated as one blob).
+
     if len(text) > 80:
         space_ratio = (text.count(" ") + text.count("\n")) / len(text)
         if space_ratio < 0.02:
             return True
     return False
-
 
 def _alpha_ratio(text: str) -> float:
     """Fraction of characters that are letters or digits — a crude noise filter."""
@@ -83,12 +73,10 @@ def _alpha_ratio(text: str) -> float:
     keep = sum(1 for c in text if c.isalnum())
     return keep / len(text)
 
-
 def _rasterize_page(page: "fitz.Page", dpi: int = OCR_DPI) -> bytes:
     """Render a PDF page to a PNG byte string."""
     pix = page.get_pixmap(dpi=dpi, alpha=False)
     return pix.tobytes("png")
-
 
 @lru_cache(maxsize=1)
 def _load_rapidocr():
@@ -101,7 +89,6 @@ def _load_rapidocr():
         ) from e
     return RapidOCR()
 
-
 def _ocr_page_rapidocr(page: "fitz.Page", dpi: int = OCR_DPI) -> str:
     """OCR a page with the pure-Python RapidOCR (ONNX) engine."""
     import numpy as np
@@ -113,7 +100,6 @@ def _ocr_page_rapidocr(page: "fitz.Page", dpi: int = OCR_DPI) -> str:
     if not result:
         return ""
     return "\n".join(line[1] for line in result)
-
 
 def _ocr_page_tesseract(page: "fitz.Page", dpi: int = OCR_DPI) -> str:
     """OCR a page with Tesseract (requires the `tesseract` binary)."""
@@ -133,12 +119,11 @@ def _ocr_page_tesseract(page: "fitz.Page", dpi: int = OCR_DPI) -> str:
             "Tesseract binary not found. Install it with: brew install tesseract"
         ) from e
 
-
 def _resolve_ocr_engine(preferred: str) -> str:
     """Pick an OCR engine, defaulting to RapidOCR when 'auto'."""
     if preferred == "auto":
         try:
-            import rapidocr_onnxruntime 
+            import rapidocr_onnxruntime
             return "rapidocr"
         except ImportError:
             return "tesseract"
@@ -146,14 +131,12 @@ def _resolve_ocr_engine(preferred: str) -> str:
         raise ValueError(f"Unknown OCR engine: {preferred!r}")
     return preferred
 
-
 def _ocr_page(page: "fitz.Page", engine: str, dpi: int = OCR_DPI) -> str:
     if engine == "rapidocr":
         return _ocr_page_rapidocr(page, dpi)
     if engine == "tesseract":
         return _ocr_page_tesseract(page, dpi)
     raise ValueError(f"Unknown OCR engine: {engine!r}")
-
 
 def _open_pdf(pdf_path: Path) -> "fitz.Document":
     """Open a PDF, surfacing a helpful error for encrypted/corrupt files."""
@@ -170,7 +153,6 @@ def _open_pdf(pdf_path: Path) -> "fitz.Document":
                 f"(e.g. `qpdf --decrypt in.pdf out.pdf`) and re-run."
             )
     return doc
-
 
 def extract_slides(
     pdf_path: Path,
@@ -241,12 +223,10 @@ def extract_slides(
             )
     return slides
 
-
 def save_slides(slides: list[Slide], out_path: Path) -> None:
     out_path.parent.mkdir(parents=True, exist_ok=True)
     payload = [asdict(s) for s in slides]
     out_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2))
-
 
 def _summarize(slides: list[Slide]) -> str:
     by_source: dict[str, int] = {}
@@ -255,7 +235,6 @@ def _summarize(slides: list[Slide]) -> str:
     parts = [f"{k}={v}" for k, v in sorted(by_source.items())]
     total_chars = sum(s.char_count for s in slides)
     return f"{len(slides)} slides ({', '.join(parts)}), {total_chars} chars total"
-
 
 def _resolve_pdf_inputs(pdfs: list[Path]) -> list[Path]:
     """Expand the CLI's pdf args into a concrete list of PDF files.
@@ -285,7 +264,6 @@ def _resolve_pdf_inputs(pdfs: list[Path]) -> list[Path]:
     if not resolved:
         raise FileNotFoundError("No PDF files matched the given inputs.")
     return resolved
-
 
 def main(argv: Optional[list[str]] = None) -> int:
     parser = argparse.ArgumentParser(
@@ -339,7 +317,6 @@ def main(argv: Optional[list[str]] = None) -> int:
     print(f"[01] Wrote {len(all_rows)} slide rows ({decks} decks) -> {args.out}")
 
     return 0
-
 
 if __name__ == "__main__":
     raise SystemExit(main())

@@ -20,27 +20,23 @@ from difflib import SequenceMatcher
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from support.csv_bmc import load_gt_bmc_rows, load_screening_bmc_rows  # noqa: E402
-from support.paths import (  # noqa: E402
+from support.csv_bmc import load_gt_bmc_rows, load_screening_bmc_rows
+from support.paths import (
     DEFAULT_EVAL_FILL_METRICS,
     DEFAULT_EVAL_MODULE_02,
     DEFAULT_GT_BMC_PD,
     resolve_screening_bmc,
 )
-from support.schema import BMC_FIELDS  # noqa: E402
+from support.schema import BMC_FIELDS
 
-# Content similarity thresholds (combined Jaccard + sequence ratio, 0–1).
 SIM_HIGH_MATCH = 0.75
 SIM_PARTIAL_MATCH = 0.35
-
 
 def _norm(text: str) -> str:
     return re.sub(r"\s+", " ", (text or "").strip().lower())
 
-
 def _tokens(text: str) -> set[str]:
     return {t for t in re.findall(r"[a-z0-9]+", _norm(text)) if len(t) > 1}
-
 
 def jaccard(a: str, b: str) -> float:
     ta, tb = _tokens(a), _tokens(b)
@@ -50,7 +46,6 @@ def jaccard(a: str, b: str) -> float:
         return 0.0
     return len(ta & tb) / len(ta | tb)
 
-
 def seq_ratio(a: str, b: str) -> float:
     if not a.strip() and not b.strip():
         return 1.0
@@ -58,10 +53,8 @@ def seq_ratio(a: str, b: str) -> float:
         return 0.0
     return SequenceMatcher(None, _norm(a), _norm(b)).ratio()
 
-
 def combined_similarity(a: str, b: str) -> float:
     return 0.5 * jaccard(a, b) + 0.5 * seq_ratio(a, b)
-
 
 def auto_score(gt: str, pred: str) -> int:
     gt_s, pred_s = gt.strip(), pred.strip()
@@ -78,7 +71,6 @@ def auto_score(gt: str, pred: str) -> int:
         return 1
     return 0
 
-
 @dataclass
 class FieldResult:
     deck_id: str
@@ -92,8 +84,7 @@ class FieldResult:
     seq_ratio: float
     combined: float
     score_0_2: int
-    embed_sim: float | None = None  # cosine similarity; only set when both filled (TP)
-
+    embed_sim: float | None = None
 
 def compare(gt_rows: list[dict[str, str]], pred_by_deck: dict[str, dict[str, str]]) -> list[FieldResult]:
     results: list[FieldResult] = []
@@ -125,7 +116,6 @@ def compare(gt_rows: list[dict[str, str]], pred_by_deck: dict[str, dict[str, str
             )
     return results
 
-
 def _lexical_score_gt_cell(r: FieldResult) -> float:
     """Lexical combined_sim for GT-filled aggregate (FN → 0)."""
     if r.gt_filled and r.pred_filled:
@@ -134,7 +124,6 @@ def _lexical_score_gt_cell(r: FieldResult) -> float:
         return 0.0
     return 0.0
 
-
 def _embed_score_gt_cell(r: FieldResult) -> float | None:
     """Embedding sim for GT-filled aggregate; None if embeddings not computed."""
     if not r.gt_filled:
@@ -142,7 +131,6 @@ def _embed_score_gt_cell(r: FieldResult) -> float | None:
     if r.gt_filled and r.pred_filled:
         return r.embed_sim if r.embed_sim is not None else 0.0
     return 0.0
-
 
 def summarize(results: list[FieldResult]) -> dict:
     n = len(results)
@@ -161,7 +149,7 @@ def summarize(results: list[FieldResult]) -> dict:
     tn = both_empty
     fp = extra
     fn = missed
-    # Fill-status agreement only (empty vs non-empty). Not text/content correctness.
+
     accuracy = (tp + tn) / n
     precision = tp / (tp + fp) if (tp + fp) else None
     recall = tp / (tp + fn) if (tp + fn) else None
@@ -311,7 +299,6 @@ def summarize(results: list[FieldResult]) -> dict:
         "fill_match_cells": fill_match,
     }
 
-
 FILL_METRICS_COLUMNS = [
     "module",
     "gt_path",
@@ -340,7 +327,6 @@ FILL_METRICS_COLUMNS = [
     "mean_score_0_1",
 ]
 
-# Written as strings (e.g. "0.489") so Excel does not drop the leading "0."
 RATE_METRIC_COLUMNS = frozenset(
     {
         "accuracy",
@@ -358,12 +344,10 @@ RATE_METRIC_COLUMNS = frozenset(
     }
 )
 
-
 def _fmt_rate_0_1(value: float | int | str | None) -> str:
     if value is None or value == "":
         return ""
     return f"{float(value):.3f}"
-
 
 def _fill_metrics_row(
     module: str,
@@ -418,7 +402,6 @@ def _fill_metrics_row(
         "mean_score_0_1": _fmt_rate_0_1(summary["content_score_0_1"]),
     }
 
-
 def write_fill_metrics_csv(
     path: Path,
     module: str,
@@ -446,7 +429,6 @@ def write_fill_metrics_csv(
                 if col in out and out[col] not in (None, ""):
                     out[col] = _fmt_rate_0_1(out[col])
             w.writerow(out)
-
 
 def run_evaluation(
     gt_path: Path,
@@ -626,7 +608,6 @@ def run_evaluation(
 
     return 0
 
-
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
         description="Evaluate Module 02 deck-only BMC vs pitch-deck GT (gt_bmc_pd.csv)."
@@ -693,7 +674,6 @@ def main(argv: list[str] | None = None) -> int:
         use_embeddings=not args.no_embeddings,
         embed_model=args.embed_model,
     )
-
 
 if __name__ == "__main__":
     raise SystemExit(main())

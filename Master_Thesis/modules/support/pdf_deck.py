@@ -8,16 +8,13 @@ from support.csv_bmc import canonical_deck_id
 
 DEFAULT_PDF_DIR = Path("data/pitch_decks")
 
-# Filename aliases (Vision deck file may be Vision.pdf; GT id is Vision).
 PDF_NAME_ALIASES: dict[str, list[str]] = {
     "Vision": ["Vision", "Connectly"],
 }
 
-
 def pdf_lookup_names(deck_id: str) -> list[str]:
     canon = canonical_deck_id(deck_id)
     return PDF_NAME_ALIASES.get(canon, [canon])
-
 
 def resolve_pdf_path(deck_id: str, pdf_dir: Path = DEFAULT_PDF_DIR) -> Path | None:
     for name in pdf_lookup_names(deck_id):
@@ -25,7 +22,6 @@ def resolve_pdf_path(deck_id: str, pdf_dir: Path = DEFAULT_PDF_DIR) -> Path | No
         if path.exists():
             return path
     return None
-
 
 def extract_pdf_slides(pdf_path: Path, *, use_ocr: bool = True, verbose: bool = False) -> list[dict]:
     """Extract slides from PDF using Module 01 logic."""

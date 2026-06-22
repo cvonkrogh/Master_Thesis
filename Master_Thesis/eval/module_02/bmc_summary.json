@@ -31,15 +31,15 @@
     "mean_lexical_sim_both_filled": 0.264,
     "high_match_rate_gt_filled": 0.004,
     "partial_match_rate_gt_filled": 0.162,
-    "mean_embedding_sim_gt_filled": 0.346,
-    "mean_embedding_sim_both_filled": 0.502,
-    "embedding_high_match_rate_gt_filled": 0.104,
+    "mean_embedding_sim_gt_filled": 0.128,
+    "mean_embedding_sim_both_filled": 0.187,
+    "embedding_high_match_rate_gt_filled": 0.008,
     "embeddings_computed": true,
     "mean_similarity_all_cells": 0.307
   },
-  "embedding_similarity_when_both_filled": 0.502,
-  "embedding_similarity_when_gt_filled": 0.346,
-  "embedding_high_match_rate_gt_filled": 0.104,
+  "embedding_similarity_when_both_filled": 0.187,
+  "embedding_similarity_when_gt_filled": 0.128,
+  "embedding_high_match_rate_gt_filled": 0.008,
   "content_similarity_when_both_filled": 0.264,
   "content_similarity_when_gt_filled": 0.182,
   "content_high_match_rate_gt_filled": 0.004,
@@ -115,110 +115,12 @@
     }
   },
   "by_deck": {
-    "Belgian Boys": {
-      "fill_match_rate": 0.667,
-      "gt_filled": 5,
-      "pred_filled": 6,
-      "mean_combined_sim_when_both_filled": 0.124,
-      "mean_score_0_2": 0.444
-    },
-    "Blueocean": {
-      "fill_match_rate": 0.556,
-      "gt_filled": 4,
-      "pred_filled": 6,
-      "mean_combined_sim_when_both_filled": 0.236,
-      "mean_score_0_2": 0.444
-    },
-    "Mysten Labs": {
-      "fill_match_rate": 0.556,
-      "gt_filled": 4,
-      "pred_filled": 6,
-      "mean_combined_sim_when_both_filled": 0.11,
-      "mean_score_0_2": 0.444
-    },
-    "Waterplan": {
-      "fill_match_rate": 0.556,
-      "gt_filled": 5,
-      "pred_filled": 1,
-      "mean_combined_sim_when_both_filled": 0.206,
-      "mean_score_0_2": 0.889
-    },
-    "Sharpist": {
-      "fill_match_rate": 0.444,
-      "gt_filled": 6,
-      "pred_filled": 5,
-      "mean_combined_sim_when_both_filled": 0.37,
-      "mean_score_0_2": 0.333
-    },
-    "Pilgrim Soul": {
-      "fill_match_rate": 0.222,
-      "gt_filled": 5,
-      "pred_filled": 2,
-      "mean_combined_sim_when_both_filled": null,
-      "mean_score_0_2": 0.444
-    },
-    "lottielab": {
-      "fill_match_rate": 0.444,
-      "gt_filled": 6,
-      "pred_filled": 3,
-      "mean_combined_sim_when_both_filled": 0.24,
-      "mean_score_0_2": 0.444
-    },
-    "Origin": {
-      "fill_match_rate": 0.556,
-      "gt_filled": 5,
-      "pred_filled": 7,
-      "mean_combined_sim_when_both_filled": 0.119,
-      "mean_score_0_2": 0.222
-    },
-    "Scipher Medicine": {
-      "fill_match_rate": 0.889,
-      "gt_filled": 6,
-      "pred_filled": 7,
-      "mean_combined_sim_when_both_filled": 0.317,
-      "mean_score_0_2": 0.667
-    },
-    "Fluence": {
-      "fill_match_rate": 0.444,
-      "gt_filled": 5,
-      "pred_filled": 8,
-      "mean_combined_sim_when_both_filled": 0.14,
-      "mean_score_0_2": 0.0
-    },
-    "Experify": {
-      "fill_match_rate": 0.556,
-      "gt_filled": 7,
-      "pred_filled": 5,
-      "mean_combined_sim_when_both_filled": 0.278,
-      "mean_score_0_2": 0.333
-    },
-    "morty": {
-      "fill_match_rate": 0.889,
-      "gt_filled": 6,
-      "pred_filled": 7,
-      "mean_combined_sim_when_both_filled": 0.272,
-      "mean_score_0_2": 0.556
-    },
-    "Sable": {
+    "Lollipop": {
       "fill_match_rate": 0.778,
-      "gt_filled": 6,
-      "pred_filled": 4,
-      "mean_combined_sim_when_both_filled": 0.652,
-      "mean_score_0_2": 1.111
-    },
-    "Playhouse": {
-      "fill_match_rate": 0.667,
-      "gt_filled": 6,
-      "pred_filled": 5,
-      "mean_combined_sim_when_both_filled": 0.365,
-      "mean_score_0_2": 0.778
-    },
-    "Juro": {
-      "fill_match_rate": 0.333,
-      "gt_filled": 4,
-      "pred_filled": 6,
-      "mean_combined_sim_when_both_filled": 0.255,
-      "mean_score_0_2": 0.222
+      "gt_filled": 5,
+      "pred_filled": 7,
+      "mean_combined_sim_when_both_filled": 0.228,
+      "mean_score_0_2": 0.444
     },
     "Influx": {
       "fill_match_rate": 0.556,
@@ -227,11 +129,74 @@
       "mean_combined_sim_when_both_filled": 0.153,
       "mean_score_0_2": 0.444
     },
-    "EQL": {
-      "fill_match_rate": 0.778,
+    "LiefergrŸn": {
+      "fill_match_rate": 0.667,
+      "gt_filled": 4,
+      "pred_filled": 7,
+      "mean_combined_sim_when_both_filled": 0.189,
+      "mean_score_0_2": 0.444
+    },
+    "LoanWell": {
+      "fill_match_rate": 0.556,
       "gt_filled": 5,
       "pred_filled": 7,
-      "mean_combined_sim_when_both_filled": 0.322,
+      "mean_combined_sim_when_both_filled": 0.406,
+      "mean_score_0_2": 0.444
+    },
+    "Sharpist": {
+      "fill_match_rate": 0.444,
+      "gt_filled": 6,
+      "pred_filled": 5,
+      "mean_combined_sim_when_both_filled": 0.37,
+      "mean_score_0_2": 0.333
+    },
+    "lottielab": {
+      "fill_match_rate": 0.444,
+      "gt_filled": 6,
+      "pred_filled": 3,
+      "mean_combined_sim_when_both_filled": 0.24,
+      "mean_score_0_2": 0.444
+    },
+    "Scipher Medicine": {
+      "fill_match_rate": 0.889,
+      "gt_filled": 6,
+      "pred_filled": 7,
+      "mean_combined_sim_when_both_filled": 0.317,
+      "mean_score_0_2": 0.667
+    },
+    "Sable": {
+      "fill_match_rate": 0.778,
+      "gt_filled": 6,
+      "pred_filled": 4,
+      "mean_combined_sim_when_both_filled": 0.652,
+      "mean_score_0_2": 1.111
+    },
+    "Fluence": {
+      "fill_match_rate": 0.444,
+      "gt_filled": 5,
+      "pred_filled": 8,
+      "mean_combined_sim_when_both_filled": 0.14,
+      "mean_score_0_2": 0.0
+    },
+    "IMMO": {
+      "fill_match_rate": 0.667,
+      "gt_filled": 6,
+      "pred_filled": 5,
+      "mean_combined_sim_when_both_filled": 0.25,
+      "mean_score_0_2": 0.556
+    },
+    "Bespoken_spirits": {
+      "fill_match_rate": 0.556,
+      "gt_filled": 5,
+      "pred_filled": 5,
+      "mean_combined_sim_when_both_filled": 0.402,
+      "mean_score_0_2": 0.556
+    },
+    "Palta": {
+      "fill_match_rate": 0.889,
+      "gt_filled": 6,
+      "pred_filled": 7,
+      "mean_combined_sim_when_both_filled": 0.231,
       "mean_score_0_2": 0.667
     },
     "multus": {
@@ -241,75 +206,19 @@
       "mean_combined_sim_when_both_filled": 0.261,
       "mean_score_0_2": 0.778
     },
-    "Palta": {
-      "fill_match_rate": 0.889,
-      "gt_filled": 6,
-      "pred_filled": 7,
-      "mean_combined_sim_when_both_filled": 0.231,
-      "mean_score_0_2": 0.667
-    },
-    "banxware": {
+    "8base": {
       "fill_match_rate": 0.556,
-      "gt_filled": 6,
-      "pred_filled": 6,
-      "mean_combined_sim_when_both_filled": 0.289,
-      "mean_score_0_2": 0.333
-    },
-    "Mustard": {
-      "fill_match_rate": 0.667,
-      "gt_filled": 6,
-      "pred_filled": 5,
-      "mean_combined_sim_when_both_filled": 0.224,
-      "mean_score_0_2": 0.667
-    },
-    "AI Rudder": {
-      "fill_match_rate": 0.444,
       "gt_filled": 4,
-      "pred_filled": 7,
-      "mean_combined_sim_when_both_filled": 0.191,
+      "pred_filled": 8,
+      "mean_combined_sim_when_both_filled": 0.202,
       "mean_score_0_2": 0.222
     },
-    "Cowboy": {
+    "Juro": {
       "fill_match_rate": 0.333,
       "gt_filled": 4,
       "pred_filled": 6,
-      "mean_combined_sim_when_both_filled": 0.228,
-      "mean_score_0_2": 0.333
-    },
-    "Mojo": {
-      "fill_match_rate": 0.333,
-      "gt_filled": 4,
-      "pred_filled": 6,
-      "mean_combined_sim_when_both_filled": 0.162,
+      "mean_combined_sim_when_both_filled": 0.255,
       "mean_score_0_2": 0.222
-    },
-    "Bigblue": {
-      "fill_match_rate": 0.889,
-      "gt_filled": 6,
-      "pred_filled": 7,
-      "mean_combined_sim_when_both_filled": 0.475,
-      "mean_score_0_2": 1.0
-    },
-    "PlayPlay": {
-      "fill_match_rate": 0.444,
-      "gt_filled": 4,
-      "pred_filled": 3,
-      "mean_combined_sim_when_both_filled": 0.197,
-      "mean_score_0_2": 0.667
-    },
-    "Macro": {
-      "fill_match_rate": 0.556,
-      "gt_filled": 5,
-      "pred_filled": 3,
-      "mean_combined_sim_when_both_filled": 0.396,
-      "mean_score_0_2": 0.778
-    },
-    "Jobox": {
-      "fill_match_rate": 0.778,
-      "gt_filled": 6,
-      "pred_filled": 6,
-      "mean_combined_sim_when_both_filled": 0.296,
-      "mean_score_0_2": 0.667
     },
     "Kryptomon": {
       "fill_match_rate": 0.444,
@@ -318,6 +227,27 @@
       "mean_combined_sim_when_both_filled": 0.249,
       "mean_score_0_2": 0.333
     },
+    "Belgian Boys": {
+      "fill_match_rate": 0.667,
+      "gt_filled": 5,
+      "pred_filled": 6,
+      "mean_combined_sim_when_both_filled": 0.124,
+      "mean_score_0_2": 0.444
+    },
+    "Circular": {
+      "fill_match_rate": 0.667,
+      "gt_filled": 5,
+      "pred_filled": 6,
+      "mean_combined_sim_when_both_filled": 0.192,
+      "mean_score_0_2": 0.444
+    },
+    "Osso VR": {
+      "fill_match_rate": 0.444,
+      "gt_filled": 5,
+      "pred_filled": 4,
+      "mean_combined_sim_when_both_filled": 0.31,
+      "mean_score_0_2": 0.444
+    },
     "Tive": {
       "fill_match_rate": 0.556,
       "gt_filled": 4,
@@ -325,26 +255,12 @@
       "mean_combined_sim_when_both_filled": 0.113,
       "mean_score_0_2": 0.667
     },
-    "Lollipop": {
+    "Vision": {
       "fill_match_rate": 0.778,
-      "gt_filled": 5,
+      "gt_filled": 9,
       "pred_filled": 7,
-      "mean_combined_sim_when_both_filled": 0.228,
-      "mean_score_0_2": 0.444
-    },
-    "Tomo": {
-      "fill_match_rate": 0.556,
-      "gt_filled": 5,
-      "pred_filled": 7,
-      "mean_combined_sim_when_both_filled": 0.105,
-      "mean_score_0_2": 0.222
-    },
-    "8base": {
-      "fill_match_rate": 0.556,
-      "gt_filled": 4,
-      "pred_filled": 8,
-      "mean_combined_sim_when_both_filled": 0.202,
-      "mean_score_0_2": 0.222
+      "mean_combined_sim_when_both_filled": 0.226,
+      "mean_score_0_2": 0.0
     },
     "Ownwell": {
       "fill_match_rate": 0.556,
@@ -360,54 +276,26 @@
       "mean_combined_sim_when_both_filled": 0.29,
       "mean_score_0_2": 0.444
     },
-    "LoanWell": {
-      "fill_match_rate": 0.556,
-      "gt_filled": 5,
-      "pred_filled": 7,
-      "mean_combined_sim_when_both_filled": 0.406,
-      "mean_score_0_2": 0.444
-    },
-    "Bespoken_spirits": {
-      "fill_match_rate": 0.556,
-      "gt_filled": 5,
-      "pred_filled": 5,
-      "mean_combined_sim_when_both_filled": 0.402,
-      "mean_score_0_2": 0.556
-    },
-    "Audience Town": {
-      "fill_match_rate": 0.667,
-      "gt_filled": 6,
-      "pred_filled": 5,
-      "mean_combined_sim_when_both_filled": 0.299,
-      "mean_score_0_2": 0.556
-    },
-    "Aura": {
-      "fill_match_rate": 0.778,
-      "gt_filled": 5,
-      "pred_filled": 5,
-      "mean_combined_sim_when_both_filled": 0.365,
-      "mean_score_0_2": 0.889
-    },
-    "Ageras": {
-      "fill_match_rate": 0.667,
+    "Cowboy": {
+      "fill_match_rate": 0.333,
       "gt_filled": 4,
-      "pred_filled": 7,
-      "mean_combined_sim_when_both_filled": 0.297,
-      "mean_score_0_2": 0.556
+      "pred_filled": 6,
+      "mean_combined_sim_when_both_filled": 0.228,
+      "mean_score_0_2": 0.333
     },
-    "Bower": {
-      "fill_match_rate": 0.778,
-      "gt_filled": 7,
+    "Bigblue": {
+      "fill_match_rate": 0.889,
+      "gt_filled": 6,
       "pred_filled": 7,
-      "mean_combined_sim_when_both_filled": 0.175,
+      "mean_combined_sim_when_both_filled": 0.475,
+      "mean_score_0_2": 1.0
+    },
+    "Origin": {
+      "fill_match_rate": 0.556,
+      "gt_filled": 5,
+      "pred_filled": 7,
+      "mean_combined_sim_when_both_filled": 0.119,
       "mean_score_0_2": 0.222
-    },
-    "Vision": {
-      "fill_match_rate": 0.778,
-      "gt_filled": 9,
-      "pred_filled": 7,
-      "mean_combined_sim_when_both_filled": 0.226,
-      "mean_score_0_2": 0.0
     },
     "HTEC": {
       "fill_match_rate": 0.556,
@@ -416,26 +304,33 @@
       "mean_combined_sim_when_both_filled": 0.186,
       "mean_score_0_2": 0.667
     },
-    "Osso VR": {
-      "fill_match_rate": 0.444,
+    "Pilgrim Soul": {
+      "fill_match_rate": 0.222,
       "gt_filled": 5,
-      "pred_filled": 4,
-      "mean_combined_sim_when_both_filled": 0.31,
+      "pred_filled": 2,
+      "mean_combined_sim_when_both_filled": null,
       "mean_score_0_2": 0.444
     },
-    "LiefergrŸn": {
-      "fill_match_rate": 0.667,
+    "Mojo": {
+      "fill_match_rate": 0.333,
       "gt_filled": 4,
-      "pred_filled": 7,
-      "mean_combined_sim_when_both_filled": 0.189,
-      "mean_score_0_2": 0.444
+      "pred_filled": 6,
+      "mean_combined_sim_when_both_filled": 0.162,
+      "mean_score_0_2": 0.222
     },
-    "IMMO": {
+    "Audience Town": {
       "fill_match_rate": 0.667,
       "gt_filled": 6,
       "pred_filled": 5,
-      "mean_combined_sim_when_both_filled": 0.25,
+      "mean_combined_sim_when_both_filled": 0.299,
       "mean_score_0_2": 0.556
+    },
+    "AI Rudder": {
+      "fill_match_rate": 0.444,
+      "gt_filled": 4,
+      "pred_filled": 7,
+      "mean_combined_sim_when_both_filled": 0.191,
+      "mean_score_0_2": 0.222
     },
     "Muck Rack": {
       "fill_match_rate": 0.889,
@@ -444,12 +339,82 @@
       "mean_combined_sim_when_both_filled": 0.283,
       "mean_score_0_2": 0.778
     },
+    "EQL": {
+      "fill_match_rate": 0.778,
+      "gt_filled": 5,
+      "pred_filled": 7,
+      "mean_combined_sim_when_both_filled": 0.322,
+      "mean_score_0_2": 0.667
+    },
+    "Aura": {
+      "fill_match_rate": 0.778,
+      "gt_filled": 5,
+      "pred_filled": 5,
+      "mean_combined_sim_when_both_filled": 0.365,
+      "mean_score_0_2": 0.889
+    },
+    "Playhouse": {
+      "fill_match_rate": 0.667,
+      "gt_filled": 6,
+      "pred_filled": 5,
+      "mean_combined_sim_when_both_filled": 0.365,
+      "mean_score_0_2": 0.778
+    },
+    "Macro": {
+      "fill_match_rate": 0.556,
+      "gt_filled": 5,
+      "pred_filled": 3,
+      "mean_combined_sim_when_both_filled": 0.396,
+      "mean_score_0_2": 0.778
+    },
+    "morty": {
+      "fill_match_rate": 0.889,
+      "gt_filled": 6,
+      "pred_filled": 7,
+      "mean_combined_sim_when_both_filled": 0.272,
+      "mean_score_0_2": 0.556
+    },
     "Ibble": {
       "fill_match_rate": 0.667,
       "gt_filled": 4,
       "pred_filled": 7,
-      "mean_combined_sim_when_both_filled": 0.139,
+      "mean_combined_sim_when_both_filled": 0.138,
       "mean_score_0_2": 0.444
+    },
+    "Mysten Labs": {
+      "fill_match_rate": 0.556,
+      "gt_filled": 4,
+      "pred_filled": 6,
+      "mean_combined_sim_when_both_filled": 0.11,
+      "mean_score_0_2": 0.444
+    },
+    "PlayPlay": {
+      "fill_match_rate": 0.444,
+      "gt_filled": 4,
+      "pred_filled": 3,
+      "mean_combined_sim_when_both_filled": 0.197,
+      "mean_score_0_2": 0.667
+    },
+    "Waterplan": {
+      "fill_match_rate": 0.556,
+      "gt_filled": 5,
+      "pred_filled": 1,
+      "mean_combined_sim_when_both_filled": 0.206,
+      "mean_score_0_2": 0.889
+    },
+    "Blueocean": {
+      "fill_match_rate": 0.556,
+      "gt_filled": 4,
+      "pred_filled": 6,
+      "mean_combined_sim_when_both_filled": 0.236,
+      "mean_score_0_2": 0.444
+    },
+    "Jobox": {
+      "fill_match_rate": 0.778,
+      "gt_filled": 6,
+      "pred_filled": 6,
+      "mean_combined_sim_when_both_filled": 0.296,
+      "mean_score_0_2": 0.667
     },
     "Calaxy": {
       "fill_match_rate": 0.444,
@@ -458,17 +423,52 @@
       "mean_combined_sim_when_both_filled": 0.394,
       "mean_score_0_2": 0.333
     },
-    "Circular": {
+    "Bower": {
+      "fill_match_rate": 0.778,
+      "gt_filled": 7,
+      "pred_filled": 7,
+      "mean_combined_sim_when_both_filled": 0.175,
+      "mean_score_0_2": 0.222
+    },
+    "Ageras": {
       "fill_match_rate": 0.667,
-      "gt_filled": 5,
+      "gt_filled": 4,
+      "pred_filled": 7,
+      "mean_combined_sim_when_both_filled": 0.297,
+      "mean_score_0_2": 0.556
+    },
+    "Experify": {
+      "fill_match_rate": 0.556,
+      "gt_filled": 7,
+      "pred_filled": 5,
+      "mean_combined_sim_when_both_filled": 0.278,
+      "mean_score_0_2": 0.333
+    },
+    "Mustard": {
+      "fill_match_rate": 0.667,
+      "gt_filled": 6,
+      "pred_filled": 5,
+      "mean_combined_sim_when_both_filled": 0.224,
+      "mean_score_0_2": 0.667
+    },
+    "banxware": {
+      "fill_match_rate": 0.556,
+      "gt_filled": 6,
       "pred_filled": 6,
-      "mean_combined_sim_when_both_filled": 0.192,
-      "mean_score_0_2": 0.444
+      "mean_combined_sim_when_both_filled": 0.289,
+      "mean_score_0_2": 0.333
+    },
+    "Tomo": {
+      "fill_match_rate": 0.556,
+      "gt_filled": 5,
+      "pred_filled": 7,
+      "mean_combined_sim_when_both_filled": 0.105,
+      "mean_score_0_2": 0.222
     }
   },
   "max_bmc_cells": 450,
   "gt_cells_filled": 260,
   "pred_cells_filled": 278,
   "fill_match_cells": 270,
-  "embed_model": "all-MiniLM-L6-v2"
+  "embed_model": "tfidf_fallback"
 }

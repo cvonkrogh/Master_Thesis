@@ -5,14 +5,14 @@ Chintan's requirement: no cloud LLM for extraction. This module calls a model
 running locally via Ollama's HTTP API (default http://127.0.0.1:11434).
 
 Setup:
-    brew install ollama          # macOS
-    ollama serve                 # start server (or run Ollama app)
-    ollama pull llama3.1:8b     # download a model once
+    brew install ollama
+    ollama serve
+    ollama pull llama3.1:8b
 
 Environment (optional, in .env):
     OLLAMA_HOST=http://127.0.0.1:11434
     OLLAMA_MODEL=llama3.1:8b
-    OLLAMA_TIMEOUT=3600          # seconds per request (default 1800 = 30 min)
+    OLLAMA_TIMEOUT=3600
 """
 
 from __future__ import annotations
@@ -28,20 +28,17 @@ from pydantic import BaseModel, ValidationError
 
 DEFAULT_OLLAMA_HOST = "http://127.0.0.1:11434"
 DEFAULT_OLLAMA_MODEL = "llama3.1:8b"
-DEFAULT_TIMEOUT = 1800.0  # 30 min — local 8B models can be slow on larger decks
+DEFAULT_TIMEOUT = 1800.0
 
 T = TypeVar("T", bound=BaseModel)
-
 
 def ollama_host() -> str:
     load_dotenv()
     return os.getenv("OLLAMA_HOST", DEFAULT_OLLAMA_HOST).rstrip("/")
 
-
 def ollama_model(default: str = DEFAULT_OLLAMA_MODEL) -> str:
     load_dotenv()
     return os.getenv("OLLAMA_MODEL", default)
-
 
 def ollama_timeout(default: float = DEFAULT_TIMEOUT) -> float:
     load_dotenv()
@@ -49,7 +46,6 @@ def ollama_timeout(default: float = DEFAULT_TIMEOUT) -> float:
     if not raw:
         return default
     return float(raw)
-
 
 def check_ollama(model: str | None = None) -> None:
     """Raise RuntimeError if Ollama is not reachable or model is missing."""
@@ -70,14 +66,12 @@ def check_ollama(model: str | None = None) -> None:
             f"Model {model!r} not found in Ollama. Run: ollama pull {model}"
         )
 
-
 def _extract_json(text: str) -> dict:
     text = text.strip()
     if text.startswith("```"):
         text = re.sub(r"^```(?:json)?\s*", "", text)
         text = re.sub(r"\s*```$", "", text)
     return json.loads(text)
-
 
 def _resolve_json_refs(schema: dict) -> dict:
     """Inline $ref / $defs so Ollama gets a flat JSON Schema."""
@@ -99,11 +93,9 @@ def _resolve_json_refs(schema: dict) -> dict:
     resolved.pop("definitions", None)
     return resolved
 
-
 def _ollama_json_format(schema_model: type[BaseModel]) -> dict:
     """JSON Schema for Ollama's structured `format` parameter."""
     return _resolve_json_refs(schema_model.model_json_schema())
-
 
 _JSON_OUTPUT_RULES = (
     "\n\nOUTPUT FORMAT (critical):\n"
@@ -112,7 +104,6 @@ _JSON_OUTPUT_RULES = (
     "- `evidence`: object mapping each schema field name to a list of slide numbers (use [] if unknown).\n"
     "Do NOT return a JSON Schema, $defs, properties, or $ref. Return actual extracted values only."
 )
-
 
 def _call_ollama_chat(
     host: str,
@@ -140,7 +131,6 @@ def _call_ollama_chat(
         raise RuntimeError("Ollama returned empty content.")
     return raw
 
-
 def chat_json(
     messages: list[dict[str, str]],
     schema_model: type[T],
@@ -167,7 +157,7 @@ def chat_json(
         data = _extract_json(raw)
         return schema_model.model_validate(data)
     except (json.JSONDecodeError, ValidationError):
-        # One retry: small models sometimes echo schema on the first attempt.
+
         retry_messages = payload_messages + [
             {
                 "role": "user",

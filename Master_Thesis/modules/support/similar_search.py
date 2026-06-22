@@ -28,7 +28,6 @@ from support.web_fetch import (
 QUERY_SLEEP_SEC = 3.0
 MAX_URLS_PER_QUERY = 4
 
-# Hosts that are almost never a single startup homepage
 SKIP_HOST_SUFFIXES = (
     "wikipedia.org",
     "linkedin.com",
@@ -81,10 +80,8 @@ SKIP_HOST_SUFFIXES = (
     "ideasai.com",
 )
 
-# TLDs / org types that are rarely a startup company homepage
 SKIP_HOST_TLDS = (".gov", ".edu")
 
-# Path patterns: listicles, directories, news, software listings, comparison pages
 LISTICLE_PATH_HINTS = (
     "/blog/",
     "/blog",
@@ -176,7 +173,6 @@ EXTRA_LISTICLE_PATH_HINTS = (
     "/what-to-",
 )
 
-# Value props that are too vague for useful search queries
 GENERIC_VP_PHRASES = frozenset(
     {
         "intelligent safety category",
@@ -190,7 +186,6 @@ GENERIC_VP_PHRASES = frozenset(
     }
 )
 
-# Short or dictionary-like names that collide on the open web (condiments, games, etc.).
 AMBIGUOUS_BRAND_NAMES = frozenset(
     {
         "aura",
@@ -222,13 +217,11 @@ LISTICLE_PATH_MARKERS = (
     "/reviews/",
 )
 
-
 @dataclass
 class PeerCandidate:
     peer_name: str
     url: str
     source: str
-
 
 def _first_phrase(text: str, max_len: int = 80) -> str:
     text = (text or "").strip()
@@ -238,7 +231,6 @@ def _first_phrase(text: str, max_len: int = 80) -> str:
         if sep in text:
             return text.split(sep)[0].strip()[:max_len]
     return text[:max_len].strip()
-
 
 def _short_phrase(text: str, max_words: int = 6) -> str:
     """First clause of a phrase, capped to ``max_words`` words.
@@ -250,7 +242,7 @@ def _short_phrase(text: str, max_words: int = 6) -> str:
     t = (text or "").strip()
     if not t:
         return ""
-    # Cut at the earliest clause separator (handles ", color; aroma." etc.).
+
     cut = min(
         (t.find(sep) for sep in (",", ";", "|", ".") if sep in t),
         default=-1,
@@ -259,7 +251,6 @@ def _short_phrase(text: str, max_words: int = 6) -> str:
         t = t[:cut].strip()
     words = t.split()
     return " ".join(words[:max_words]).strip(" ,;:-")
-
 
 def _is_generic_vp(vp: str) -> bool:
     v = vp.strip().lower()
@@ -270,7 +261,6 @@ def _is_generic_vp(vp: str) -> bool:
     if v.endswith(" category") or " category " in v:
         return True
     return False
-
 
 def _searchable_vp(bmc_row: dict[str, str], max_words: int = 6) -> str:
     """Pick the best short, specific phrase for search.
@@ -296,7 +286,6 @@ def _searchable_vp(bmc_row: dict[str, str], max_words: int = 6) -> str:
             fallback = fallback or short
     return fallback
 
-
 def is_ambiguous_brand(name: str) -> bool:
     """True when a bare brand token is likely to match unrelated web results."""
     token = (name or "").strip().lower()
@@ -304,11 +293,10 @@ def is_ambiguous_brand(name: str) -> bool:
         return True
     if token in AMBIGUOUS_BRAND_NAMES:
         return True
-    # Single short tokens and common English words are risky without BMC context.
+
     if " " not in token and len(token) <= 6:
         return True
     return False
-
 
 def _bmc_context_label(bmc_row: dict[str, str], max_words: int = 5) -> str:
     """Short sector/product phrase to disambiguate name-based queries."""
@@ -318,11 +306,9 @@ def _bmc_context_label(bmc_row: dict[str, str], max_words: int = 5) -> str:
         return f"{seg} {vp}"
     return vp or seg
 
-
 def is_listicle_url(url: str) -> bool:
     path = (urlparse(url).path or "").lower()
     return any(marker in path for marker in LISTICLE_PATH_MARKERS)
-
 
 def brand_from_domain(url: str) -> str:
     """Registrable brand token from a URL/domain (e.g. https://connectly.ai -> connectly)."""
@@ -331,7 +317,6 @@ def brand_from_domain(url: str) -> str:
         return ""
     base = domain.split(".")[0]
     return base.replace("-", " ").strip()
-
 
 def build_search_queries(
     bmc_row: dict[str, str],
@@ -366,8 +351,6 @@ def build_search_queries(
         seen.add(key)
         queries.append(q)
 
-    # Anchor on segment + value proposition first: this finds peer companies by
-    # what they do, not by a (possibly ambiguous) brand name.
     if seg and vp:
         add(f"{seg} {vp} startup")
     if vp:
@@ -380,8 +363,6 @@ def build_search_queries(
     context = _bmc_context_label(bmc_row)
     ambiguous = is_ambiguous_brand(name)
 
-    # Name queries: always anchor on BMC context for ambiguous brands; never bare
-    # "startups similar to aura" (pulls games, condiments, generic listicles).
     if name and len(name) > 2:
         if ambiguous:
             if context:
@@ -400,7 +381,6 @@ def build_search_queries(
         add(f"{vp} subscription startup")
 
     return queries[:8]
-
 
 def build_vc_sector_queries(
     bmc_row: dict[str, str],
@@ -433,7 +413,6 @@ def build_vc_sector_queries(
         add(f"top {seg} startups")
 
     return queries[:4]
-
 
 def build_competitor_queries(
     bmc_row: dict[str, str],
@@ -480,7 +459,6 @@ def build_competitor_queries(
 
     return queries[:6]
 
-
 def build_all_search_queries(
     bmc_row: dict[str, str],
     *,
@@ -507,7 +485,6 @@ def build_all_search_queries(
         + [(q, "competitor") for q in comp]
         + [(q, "vc") for q in vc]
     )
-
 
 _NAME_STOP = frozenset(
     {
@@ -538,7 +515,6 @@ _NAME_STOP = frozenset(
         "about",
     }
 )
-
 
 def extract_startup_names_from_results(results: list[dict], max_names: int = 8) -> list[str]:
     """Pull plausible company names from search titles/snippets (VC/sector lists)."""
@@ -580,7 +556,6 @@ def extract_startup_names_from_results(results: list[dict], max_names: int = 8) 
 
     return names[:max_names]
 
-
 def resolve_startup_homepage(
     name: str,
     client: httpx.Client,
@@ -596,10 +571,8 @@ def resolve_startup_homepage(
                 return resolved
     return None
 
-
 def _host(url: str) -> str:
     return (urlparse(url).hostname or "").lower()
-
 
 def _domain_key(url: str) -> str:
     host = _host(url)
@@ -607,13 +580,11 @@ def _domain_key(url: str) -> str:
         host = host[4:]
     return host
 
-
 def _path_depth(url: str) -> int:
     path = (urlparse(url).path or "").strip("/")
     if not path:
         return 0
     return len(path.split("/"))
-
 
 def _matches_excluded(domain: str, exclude_domains: set[str]) -> bool:
     if not domain:
@@ -625,7 +596,6 @@ def _matches_excluded(domain: str, exclude_domains: set[str]) -> bool:
         if domain == ex or base == ex or ex in base or base in ex:
             return True
     return False
-
 
 def should_skip_url(url: str, exclude_domains: set[str]) -> bool:
     norm = normalize_url(url)
@@ -646,11 +616,10 @@ def should_skip_url(url: str, exclude_domains: set[str]) -> bool:
     path = (urlparse(norm).path or "").lower()
     if any(h in path for h in LISTICLE_PATH_HINTS):
         return True
-    # Deep paths are usually articles or directory entries, not homepages
+
     if _path_depth(norm) > 2:
         return True
     return False
-
 
 def should_skip_url_strict(url: str, exclude_domains: set[str]) -> bool:
     """Prefer company homepages; reject articles and deep paths."""
@@ -680,12 +649,10 @@ def should_skip_url_strict(url: str, exclude_domains: set[str]) -> bool:
         return True
     return False
 
-
 def peer_name_from_url(url: str) -> str:
     domain = _domain_key(url)
     base = domain.split(".")[0] if domain else "unknown"
     return base.replace("-", " ").title()
-
 
 def _resolve_strict(
     query: str,
@@ -704,7 +671,6 @@ def _resolve_strict(
         if len(urls) >= max_urls:
             break
     return urls
-
 
 def _find_listicle_urls(
     query: str,
@@ -734,7 +700,6 @@ def _find_listicle_urls(
         if len(found) >= max_urls:
             break
     return found
-
 
 def extract_startup_homepage_links(
     html: str,
@@ -769,7 +734,6 @@ def extract_startup_homepage_links(
             break
     return found
 
-
 def _fetch_listicle_html(url: str, client: httpx.Client) -> str:
     try:
         resp = client.get(url, follow_redirects=True, timeout=HTTP_TIMEOUT)
@@ -781,7 +745,6 @@ def _fetch_listicle_html(url: str, client: httpx.Client) -> str:
     if "html" not in ct.lower():
         return ""
     return resp.text
-
 
 def _run_listicle_harvest_pass(
     bmc_row: dict[str, str],
@@ -872,7 +835,6 @@ def _run_listicle_harvest_pass(
 
     return added
 
-
 def _run_vc_seed_pass(
     bmc_row: dict[str, str],
     client: httpx.Client,
@@ -906,7 +868,6 @@ def _run_vc_seed_pass(
             if add(peer):
                 added += 1
     return added
-
 
 def collect_peer_candidates(
     bmc_row: dict[str, str],
@@ -991,7 +952,6 @@ def collect_peer_candidates(
         )
 
     return candidates[:max_candidates]
-
 
 def target_exclude_domains(deck_id: str, target_url: str = "") -> set[str]:
     domains = {slugify(deck_id)}

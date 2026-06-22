@@ -18,7 +18,6 @@ CACHE_FIELDNAMES = [
     *BMC_FIELDS,
 ]
 
-
 def peer_domain_key(url: str) -> str:
     """Normalized registrable domain for cache lookup."""
     norm = normalize_url(url) or (url or "").strip()
@@ -26,7 +25,6 @@ def peer_domain_key(url: str) -> str:
     if host.startswith("www."):
         host = host[4:]
     return host
-
 
 def load_peer_bmc_cache(path: Path) -> dict[str, dict[str, str]]:
     """Return {domain: row} from cache CSV."""
@@ -43,7 +41,6 @@ def load_peer_bmc_cache(path: Path) -> dict[str, dict[str, str]]:
             cache[domain] = {k: str(row.get(k) or "").strip() for k in CACHE_FIELDNAMES}
             cache[domain]["domain"] = domain
     return cache
-
 
 def get_cached_peer_bmc(
     url: str,
@@ -66,7 +63,6 @@ def get_cached_peer_bmc(
         return None
     return {name: (row.get(name) or "").strip() for name in BMC_FIELDS}
 
-
 def upsert_peer_bmc_cache(
     cache: dict[str, dict[str, str]],
     *,
@@ -87,7 +83,6 @@ def upsert_peer_bmc_cache(
         "model": model,
         **{name: (peer_bmc.get(name) or "").strip() for name in BMC_FIELDS},
     }
-
 
 def write_peer_bmc_cache(path: Path, cache: dict[str, dict[str, str]]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)

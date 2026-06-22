@@ -8,10 +8,9 @@ import re
 import unicodedata
 from pathlib import Path
 
-from support.paths import DEFAULT_GT_BMC_PD  # noqa: TC001 — runtime import
+from support.paths import DEFAULT_GT_BMC_PD
 from support.schema import BMC_FIELDS
 
-# Legacy numeric ids 1–10 in older GT exports; prefer startup_name when present.
 GT_ROW_TO_DECK: dict[str, str] = {
     "1": "Palta",
     "2": "Aura",
@@ -25,7 +24,6 @@ GT_ROW_TO_DECK: dict[str, str] = {
     "10": "multus",
 }
 
-# PDF / pipeline deck_id stems that differ from GT startup_name.
 DECK_ALIASES: dict[str, str] = {
     "Connectly": "Vision",
     "AI_rudder": "AI Rudder",
@@ -34,13 +32,11 @@ DECK_ALIASES: dict[str, str] = {
     "scipher": "Scipher Medicine",
 }
 
-# Public brand name for website/search (GT deck_id → startup name).
 DECK_STARTUP_NAMES: dict[str, str] = {
     "Vision": "Connectly",
 }
 
 _gt_startup_names_cache: list[str] | None = None
-
 
 def _normalize_deck_key(text: str) -> str:
     """Fold accents/punctuation for PDF stem ↔ GT startup_name matching."""
@@ -48,9 +44,8 @@ def _normalize_deck_key(text: str) -> str:
     s = "".join(c for c in s if not unicodedata.combining(c))
     s = s.replace("Ÿ", "u").replace("ÿ", "u")
     s = re.sub(r"[^a-z0-9]+", "", s.lower())
-    s = re.sub(r"gr[uuy]n$", "grun", s)  # Liefergrün / LiefergrŸn
+    s = re.sub(r"gr[uuy]n$", "grun", s)
     return s
-
 
 def _gt_startup_names(gt_path: Path = DEFAULT_GT_BMC_PD) -> list[str]:
     global _gt_startup_names_cache
@@ -58,14 +53,12 @@ def _gt_startup_names(gt_path: Path = DEFAULT_GT_BMC_PD) -> list[str]:
         _gt_startup_names_cache = [r["deck_id"] for r in load_gt_bmc_rows(gt_path)]
     return _gt_startup_names_cache
 
-
 def _deck_id_from_gt_row(row: dict[str, str]) -> str:
     startup = (row.get("startup_name") or "").strip()
     raw_id = (row.get("deck_id") or "").strip()
     if startup:
         return startup
     return GT_ROW_TO_DECK.get(raw_id, raw_id)
-
 
 def canonical_deck_id(deck_id: str) -> str:
     """Normalize pipeline deck id to GT startup_name (Connectly → Vision, etc.)."""
@@ -86,11 +79,9 @@ def canonical_deck_id(deck_id: str) -> str:
         pass
     return deck_id
 
-
 def startup_name_for_deck(deck_id: str) -> str:
     """Brand name for web discovery / peer search (Vision → Connectly)."""
     return DECK_STARTUP_NAMES.get(canonical_deck_id(deck_id), canonical_deck_id(deck_id))
-
 
 def write_bmc_csv(path: Path, rows: list[dict[str, str]]) -> None:
     """Write deck_id + 9 BMC columns."""
@@ -101,7 +92,6 @@ def write_bmc_csv(path: Path, rows: list[dict[str, str]]) -> None:
         w.writeheader()
         for row in rows:
             w.writerow({k: row.get(k, "") for k in fieldnames})
-
 
 def _open_gt_csv(path: Path):
     """Open GT file trying common Excel export encodings."""
@@ -115,12 +105,10 @@ def _open_gt_csv(path: Path):
             continue
     raise ValueError(f"{path}: could not decode as UTF-8 or Latin-1/Windows-1252")
 
-
 def _detect_delimiter(first_line: str) -> str:
     if first_line.count(";") > first_line.count(","):
         return ";"
     return ","
-
 
 def load_gt_bmc_rows(gt_path: Path = DEFAULT_GT_BMC_PD) -> list[dict[str, str]]:
     """Load pitch-deck BMC GT CSV and return BMC fields per deck in GT order."""
@@ -143,7 +131,6 @@ def load_gt_bmc_rows(gt_path: Path = DEFAULT_GT_BMC_PD) -> list[dict[str, str]]:
                 rec[field] = (row.get(field) or "").strip()
             records.append(rec)
     return records
-
 
 def load_gt_row(deck_id: str, gt_path: Path = DEFAULT_GT_BMC_PD) -> dict[str, str]:
     """Load one GT row (all columns present in the CSV)."""
@@ -168,7 +155,6 @@ def load_gt_row(deck_id: str, gt_path: Path = DEFAULT_GT_BMC_PD) -> dict[str, st
             return out
     return {}
 
-
 def write_gt_bmc(
     gt_path: Path = DEFAULT_GT_BMC_PD,
     out_path: Path | None = None,
@@ -178,7 +164,6 @@ def write_gt_bmc(
     if out_path is not None:
         write_bmc_csv(out_path, rows)
     return rows
-
 
 def pred_by_deck_from_screening(screening_csv: Path) -> dict[str, dict[str, str]]:
     """Read full screening.csv; return canonical deck_id -> BMC fields."""
@@ -196,7 +181,6 @@ def pred_by_deck_from_screening(screening_csv: Path) -> dict[str, dict[str, str]
         by_deck[canonical] = {f: (row.get(f) or "").strip() for f in BMC_FIELDS}
     return by_deck
 
-
 def screening_bmc_rows_aligned(
     gt_rows: list[dict[str, str]],
     pred_by_deck: dict[str, dict[str, str]],
@@ -208,7 +192,6 @@ def screening_bmc_rows_aligned(
         for g in gt_rows
     ]
 
-
 def write_screening_bmc_from_preds(
     pred_by_deck: dict[str, dict[str, str]],
     out_path: Path,
@@ -219,7 +202,6 @@ def write_screening_bmc_from_preds(
     rows = screening_bmc_rows_aligned(gt_rows, pred_by_deck)
     write_bmc_csv(out_path, rows)
     return rows
-
 
 def write_screening_bmc(
     screening_csv: Path,
@@ -240,7 +222,6 @@ def write_screening_bmc(
     write_bmc_csv(out_path, rows)
     return rows
 
-
 def pred_by_deck_from_bmc_json(json_dir: Path) -> dict[str, dict[str, str]]:
     """Load {deck}.bmc.json files; map Connectly -> Vision for GT alignment."""
     by_deck: dict[str, dict[str, str]] = {}
@@ -251,7 +232,6 @@ def pred_by_deck_from_bmc_json(json_dir: Path) -> dict[str, dict[str, str]]:
         canonical = canonical_deck_id(deck_id)
         by_deck[canonical] = {f: str(fields.get(f) or "").strip() for f in BMC_FIELDS}
     return by_deck
-
 
 def load_screening_bmc_rows(path: Path) -> list[dict[str, str]]:
     """Load screening_bmc.csv as ordered list of rows."""
@@ -268,10 +248,8 @@ def load_screening_bmc_rows(path: Path) -> list[dict[str, str]]:
         out.append(rec)
     return out
 
-
 def bmc_by_deck_from_csv(path: Path) -> dict[str, dict[str, str]]:
     return {r["deck_id"]: r for r in load_screening_bmc_rows(path)}
-
 
 def write_enriched_bmc(
     rows: list[dict[str, str]],

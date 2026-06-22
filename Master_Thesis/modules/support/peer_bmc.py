@@ -17,7 +17,6 @@ Rules:
 4. For each field, list supporting page URLs in evidence (empty list if value is "").
 """
 
-
 def build_peer_bmc_model() -> type[BaseModel]:
     fields_model = create_model(
         "PeerBmcFields",
@@ -38,19 +37,17 @@ def build_peer_bmc_model() -> type[BaseModel]:
     )
 
     class PeerBmcExtraction(BaseModel):
-        fields: fields_model = Field(  # type: ignore[valid-type]
+        fields: fields_model = Field(
             description="BMC fields inferred from the website.",
         )
-        evidence: evidence_model = Field(  # type: ignore[valid-type]
+        evidence: evidence_model = Field(
             description="Supporting URLs per field.",
         )
 
     PeerBmcExtraction.model_rebuild()
     return PeerBmcExtraction
 
-
 PEER_BMC_MODEL = build_peer_bmc_model()
-
 
 def _build_user_prompt(peer_name: str, url: str, pages: list[tuple[str, str]]) -> str:
     lines = [
@@ -68,7 +65,6 @@ def _build_user_prompt(peer_name: str, url: str, pages: list[tuple[str, str]]) -
         lines.append("")
     lines.append("Return all nine BMC fields plus evidence URLs.")
     return "\n".join(lines)
-
 
 def extract_peer_bmc(
     peer_name: str,
@@ -89,6 +85,6 @@ def extract_peer_bmc(
         model=model,
         temperature=0.0,
     )
-    fields = result.fields.model_dump()  # type: ignore[attr-defined]
+    fields = result.fields.model_dump()
     raw = {name: str(fields.get(name) or "").strip() for name in BMC_FIELDS}
     return clamp_bmc_row(raw)

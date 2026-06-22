@@ -9,7 +9,6 @@ DEFAULT_EMBED_MODEL = "all-MiniLM-L6-v2"
 _model = None
 _model_name: str | None = None
 
-
 def _tfidf_pairwise_batch(gt_texts: list[str], pred_texts: list[str]) -> list[float]:
     from sklearn.feature_extraction.text import TfidfVectorizer
     from sklearn.metrics.pairwise import cosine_similarity
@@ -19,7 +18,6 @@ def _tfidf_pairwise_batch(gt_texts: list[str], pred_texts: list[str]) -> list[fl
         mat = TfidfVectorizer().fit_transform([gt, pred])
         sims.append(round(float(cosine_similarity(mat[0], mat[1])[0][0]), 3))
     return sims
-
 
 def _sentence_transformer_batch(
     gt_texts: list[str],
@@ -41,7 +39,6 @@ def _sentence_transformer_batch(
     pred_emb = _model.encode(pred_texts, normalize_embeddings=True, show_progress_bar=False)
     return [round(float(a @ b), 3) for a, b in zip(gt_emb, pred_emb, strict=True)]
 
-
 def pair_cosine_similarity(
     text_a: str,
     text_b: str,
@@ -50,7 +47,6 @@ def pair_cosine_similarity(
     """Single-pair cosine similarity (0–1). Returns (score, method_label)."""
     scores, method = batch_cosine_similarity([text_a], [text_b], model_name=model_name)
     return scores[0], method
-
 
 def batch_cosine_similarity(
     gt_texts: list[str],
@@ -71,7 +67,6 @@ def batch_cosine_similarity(
             file=sys.stderr,
         )
         return _tfidf_pairwise_batch(gt_texts, pred_texts), "tfidf_fallback"
-
 
 def apply_embedding_similarity(
     results: list,

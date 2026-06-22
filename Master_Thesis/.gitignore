@@ -1,22 +1,13 @@
-# Python
 __pycache__/
 *.py[cod]
 *.egg-info/
 .venv/
 venv/
 .venv_x86_backup/
-
-# Pipeline outputs & logs (regenerate locally; too large for git)
 output/
 logs/
-
-# Secrets
 .env
 .env.local
-
-# OS
 .DS_Store
-
-# IDE
 .vscode/
 .idea/

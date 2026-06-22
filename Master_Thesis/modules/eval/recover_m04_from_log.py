@@ -30,18 +30,18 @@ RANKED_FIELDNAMES = _m04.RANKED_FIELDNAMES
 TOP5_FIELDNAMES = _m04.TOP5_FIELDNAMES
 VC_SUMMARY_FIELDNAMES = _m04.VC_SUMMARY_FIELDNAMES
 _build_vc_summary_row = _m04._build_vc_summary_row
-from support.csv_bmc import bmc_by_deck_from_csv, startup_name_for_deck  # noqa: E402
-from support.paths import (  # noqa: E402
+from support.csv_bmc import bmc_by_deck_from_csv, startup_name_for_deck
+from support.paths import (
     DEFAULT_MODULE_04_DIR,
     DEFAULT_PEER_BMC_CACHE_CSV,
     resolve_enriched_bmc,
 )
-from support.peer_bmc_cache import get_cached_peer_bmc, load_peer_bmc_cache  # noqa: E402
-from support.profile_text import bmc_fields_filled_count, bmc_row_to_profile_text  # noqa: E402
-from support.schema import BMC_FIELDS  # noqa: E402
-from support.similar_score import score_peer  # noqa: E402
-from support.similar_search import brand_from_domain, target_exclude_domains  # noqa: E402
-from support.websites import load_websites_csv, lookup_website_info  # noqa: E402
+from support.peer_bmc_cache import get_cached_peer_bmc, load_peer_bmc_cache
+from support.profile_text import bmc_fields_filled_count, bmc_row_to_profile_text
+from support.schema import BMC_FIELDS
+from support.similar_score import score_peer
+from support.similar_search import brand_from_domain, target_exclude_domains
+from support.websites import load_websites_csv, lookup_website_info
 
 PEER_RE = re.compile(
     r"^\[04\] (.+?): peer (\d+)/(\d+) (.+?) \((https?://[^\)]+)\) prefilter=([\d.]+)"
@@ -62,7 +62,6 @@ VC_STD_RE = re.compile(
     r"^\[04\] (.+?): VC signal — (\w+) \((\d+) strong in top-5\)$"
 )
 
-
 @dataclass
 class PendingPeer:
     name: str
@@ -70,7 +69,6 @@ class PendingPeer:
     prefilter: float
     from_cache: bool = False
     skipped: bool = False
-
 
 @dataclass
 class DeckRun:
@@ -83,7 +81,6 @@ class DeckRun:
     no_peers: bool = False
     vc_label: str = ""
     vc_note: str = ""
-
 
 def _parse_log(path: Path) -> list[DeckRun]:
     runs: list[DeckRun] = []
@@ -146,10 +143,8 @@ def _parse_log(path: Path) -> list[DeckRun]:
 
     return runs
 
-
 def _peer_bmc_from_cache(cache_row: dict[str, str]) -> dict[str, str]:
     return {f: (cache_row.get(f) or "").strip() for f in BMC_FIELDS}
-
 
 def _target_labels(deck_id: str, websites_by: dict) -> list[str]:
     info = lookup_website_info(deck_id, websites_by)
@@ -158,7 +153,6 @@ def _target_labels(deck_id: str, websites_by: dict) -> list[str]:
         info.get("discovered_website") or info.get("website_url") or ""
     ).strip()
     return [deck_id, label, brand_from_domain(domain)]
-
 
 def recover(
     *,
@@ -292,7 +286,6 @@ def recover(
     print(f"[recover] vc_diligence_summary.csv -> {len(vc_rows)} rows ({p3})")
     print(f"[recover] search_queries.csv -> {len(query_rows)} rows ({p4})")
 
-
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Recover M04 CSVs from pipeline log.")
     parser.add_argument(
@@ -323,7 +316,6 @@ def main(argv: list[str] | None = None) -> int:
         top_k=args.top_k,
     )
     return 0
-
 
 if __name__ == "__main__":
     raise SystemExit(main())
