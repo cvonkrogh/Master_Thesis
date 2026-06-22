@@ -1,100 +1,70 @@
 # Master Thesis — BMC Pipeline from Pitch Decks
 
 **Thesis:** *Structuring Early-Stage Deal Flow: An Evidence-Grounded BMC Pipeline from Pitch Decks*  
-**Author:** Constantin von Krogh · BITM, University of Amsterdam
+Constantin von Krogh · BITM, University of Amsterdam
 
-This repository is the **reproducible research artifact** for the thesis: a local-LLM pipeline that turns pitch-deck PDFs into structured Business Model Canvas (BMC) profiles, enriches missing fields from public websites, and finds similar startups. Everything runs on your machine via **Ollama** — no cloud LLM API required.
+This repository is the **reproducible research artifact** for the thesis. It contains a local-LLM pipeline that turns pitch-deck PDFs into structured Business Model Canvas (BMC) profiles, enriches missing fields from public websites, and finds similar startups. Everything runs via **Ollama** on your machine — no cloud LLM API.
 
-The repo ships with the **50-deck evaluation corpus**, **deck-only ground truth**, **frozen pipeline outputs**, **evaluation summaries**, and **inter-rater agreement data** (Fleiss' κ = 0.78 on the ten-deck pilot).
+The repo ships with the full **50-deck corpus**, **deck-only ground truth**, **frozen pipeline outputs**, **evaluation summaries**, and **inter-rater agreement data** from the annotation pilot (Fleiss' κ ≈ 0.78).
 
 ---
 
-## Repository layout
+## What's in this repo
 
 ```
-├── README.md
-├── requirements.txt
-├── .gitignore
-│
 ├── modules/
 │   ├── pipeline/           # Modules 01–04 + model_selection.py
-│   ├── support/            # Shared helpers (LLM, CSV, web fetch, paths)
-│   └── eval/               # Evaluation scripts
+│   ├── support/            # LLM client, CSV helpers, web fetch, paths
+│   └── eval/               # evaluate_bmc, evaluate_enriched_bmc, M04 rubric
 │
 ├── data/
-│   ├── pitch_decks/        # 50 pitch-deck PDFs (input corpus)
+│   ├── pitch_decks/        # 50 pitch-deck PDFs
 │   └── gt/
-│       └── gt_pd_bmc_50.csv   # Deck-only ground truth (Module 02 eval)
+│       └── gt_pd_bmc_50.csv   # Deck-only ground truth (Module 02)
 │
-├── docs/
-│   └── kappa/              # Inter-rater agreement (10-deck pilot)
-│       ├── gt_bmc_k.csv        # Primary annotator
-│       ├── bmc_jonas_k.csv     # Second annotator
-│       ├── bmc_max_k.csv       # Third annotator
-│       └── kappa.csv           # Fleiss' κ computation (κ ≈ 0.78)
+├── docs/kappa/             # Inter-rater agreement (10-deck pilot)
+│   ├── gt_bmc_k.csv            Primary annotator
+│   ├── bmc_jonas_k.csv         Second annotator
+│   ├── bmc_max_k.csv           Third annotator
+│   └── kappa.csv               Fleiss' κ computation
 │
-├── output/                 # Frozen thesis run (Modules 01–04)
-│   ├── module_01/          # slides.csv
-│   ├── module_02/          # screening_bmc.csv
-│   ├── module_03/          # websites.csv, enriched_bmc.csv
-│   └── module_04/          # peer rankings, search queries, peer BMC cache
-│
-└── eval/                   # Metric summaries from the thesis run
-    ├── module_02/
-    ├── module_03/
-    └── module_04/
+├── output/module_01–04/    # Frozen thesis run
+└── eval/module_02–04/      # Metric summaries
 ```
 
----
+**Module 01** extracts slide text from PDFs (native text + OCR fallback) → `output/module_01/slides.csv`.
 
-## Prerequisites
+**Module 02** extracts a deck-only BMC (nine fields) via local LLM → `output/module_02/screening_bmc.csv`. Evaluated against `data/gt/gt_pd_bmc_50.csv`.
 
-- **Python 3.10+**
-- **[Ollama](https://ollama.com/)** — local LLM server (default model: `llama3.1:8b`)
-- **Optional:** `tesseract` for OCR fallback in Module 01 (`brew install tesseract` on macOS)
+**Module 03** discovers validated company websites and fills **empty** BMC cells only → `output/module_03/enriched_bmc.csv`.
+
+**Module 04** searches for peer startups, extracts their BMC from the web, and ranks by embedding similarity → `output/module_04/` (peer rankings, search queries, peer BMC cache).
 
 ---
 
 ## Setup
 
-Clone the repo and create a virtual environment:
+**Requirements:** Python 3.10+, [Ollama](https://ollama.com/). Optional: `brew install tesseract` for OCR fallback in Module 01.
 
 ```bash
 git clone https://github.com/cvonkrogh/Master_Thesis.git
 cd Master_Thesis
 
 python3 -m venv .venv
-source .venv/bin/activate   # Windows: .venv\Scripts\activate
+source .venv/bin/activate          # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
-```
 
-Start Ollama and pull the default model:
-
-```bash
 ollama serve
-ollama pull llama3.1:8b
+ollama pull llama3.1:8b            # default; override with OLLAMA_MODEL
 ```
 
-Optional environment variables (defaults shown):
-
-```bash
-export OLLAMA_HOST=http://127.0.0.1:11434
-export OLLAMA_MODEL=llama3.1:8b
-export OLLAMA_TIMEOUT=3600    # seconds per LLM request
-```
+Optional env vars: `OLLAMA_HOST` (default `http://127.0.0.1:11434`), `OLLAMA_MODEL`, `OLLAMA_TIMEOUT` (default 1800 s).
 
 ---
 
-## Pipeline overview
+## Run the pipeline
 
-| Module | Script | Input → output | What it does |
-|--------|--------|----------------|--------------|
-| **01** | `01_pdf_to_slides.py` | PDF → `output/module_01/slides.csv` | Extract slide text (native + OCR fallback) |
-| **02** | `02_bmc_extract.py` | slides → `output/module_02/screening_bmc.csv` | Deck-only BMC extraction (9 fields) |
-| **03** | `03_enrich_bmc.py` | screening BMC → `output/module_03/enriched_bmc.csv` | Fill **empty** BMC cells from validated websites |
-| **04** | `04_find_similar_startups.py` | enriched BMC → peer rankings | Web search + peer BMC extraction + embedding similarity |
-
-Run from the repo root:
+Run from the repo root, in order:
 
 ```bash
 python modules/pipeline/01_pdf_to_slides.py
@@ -103,95 +73,57 @@ python modules/pipeline/03_enrich_bmc.py
 python modules/pipeline/04_find_similar_startups.py --all
 ```
 
-### Useful flags
+| Module | Input → output | Notes |
+|--------|----------------|-------|
+| **01** | PDF → `slides.csv` | Native text + OCR fallback |
+| **02** | slides → `screening_bmc.csv` | Deck-only BMC; `--with-pdf` optional |
+| **03** | screening BMC → `enriched_bmc.csv` | Fills **empty** cells only from validated websites |
+| **04** | enriched BMC → ranked peers | Two-stage scoring + peer BMC cache |
 
-**Module 02** — run on a subset of decks:
+**Subset runs:** `--decks Aura,Macro` on Modules 02–03. Module 04: `--deck Aura` or `--all`; `--force` to redo cached peers. Other flags: `--max-candidates 15`, `--max-llm-peers 5`.
 
-```bash
-python modules/pipeline/02_bmc_extract.py --decks Aura,Macro
-```
-
-**Module 03** — same subset syntax:
-
-```bash
-python modules/pipeline/03_enrich_bmc.py --decks Palta,Sable
-```
-
-**Module 04** — single deck or full corpus; `--force` re-runs cached peers:
-
-```bash
-python modules/pipeline/04_find_similar_startups.py --deck Aura
-python modules/pipeline/04_find_similar_startups.py --all --force
-```
-
-Additional Module 04 options: `--max-candidates 15`, `--max-llm-peers 5`.
-
-**Naming note:** ground truth uses `Vision` for the Connectly deck (`Vision.pdf`; web search uses brand *Connectly*).
+**Naming:** ground truth uses `Vision` for the Connectly deck (`Vision.pdf`; web search uses brand *Connectly*).
 
 ---
 
-## Evaluation
-
-After running the pipeline (or using the bundled frozen `output/`), evaluate each module:
+## Evaluate
 
 ```bash
-# Module 02 — deck-only BMC vs ground truth
-python modules/eval/evaluate_bmc.py
-
-# Module 03 — web enrichment completeness and web lift
-python modules/eval/evaluate_enriched_bmc.py
-
-# Module 04 — build manual peer-relevance rubric template
-python modules/eval/build_m04_rubric_template.py
+python modules/eval/evaluate_bmc.py              # M02 vs gt_pd_bmc_50.csv
+python modules/eval/evaluate_enriched_bmc.py     # M03 completeness + web lift
 ```
 
-| Module | What is measured | Ground truth / rubric |
-|--------|------------------|------------------------|
-| **02** | Fill precision/recall + lexical/embedding content similarity | `data/gt/gt_pd_bmc_50.csv` |
-| **03** | 9/9 field completeness, web lift, deck-overwrite check | No per-field GT (completeness target) |
-| **04** | Qualitative peer relevance (C/A/W/U rubric) | `eval/module_04/peer_relevance_rubric.csv` |
+- **Module 02:** fill precision/recall + lexical/embedding content similarity vs deck-only ground truth.
+- **Module 03:** 9/9 field completeness, web lift, deck-overwrite check — no per-field GT.
+- **Module 04:** automated diligence labels in `output/module_04/vc_diligence_summary.csv`; manual C/A/W/U coding reported in the thesis (Section 4.4.3).
 
-Evaluation outputs are written to `eval/module_02/`, `eval/module_03/`, and `eval/module_04/`. The repo also includes **frozen summaries** from the thesis run for direct inspection.
+Model benchmark (5 pilot decks): `python modules/pipeline/model_selection.py`
 
-**Model benchmark** (5 pilot decks, optional):
-
-```bash
-python modules/pipeline/model_selection.py
-```
+Results land in `eval/module_02/`, `eval/module_03/`, and `output/module_04/`. The bundled folders contain **frozen summaries** from the thesis run.
 
 ---
 
 ## Inter-rater agreement (`docs/kappa/`)
 
-Ground-truth annotation was validated on the **first ten decks** of the corpus (Palta, Aura, Bespoken_spirits, Jobox, Macro, Sable, Sharpist, Vision, morty, multus). Three independent coders applied the same explicit-only fill/empty rules:
+Before completing the full 50-deck ground truth, annotation rules were validated on the **first ten corpus decks** (Palta, Aura, Bespoken_spirits, Jobox, Macro, Sable, Sharpist, Vision, morty, multus). Three coders independently annotated the same decks under explicit-only rules:
 
-| File | Description |
-|------|-------------|
-| `gt_bmc_k.csv` | Primary annotator (full BMC text per field) |
-| `bmc_jonas_k.csv` | Second annotator |
-| `bmc_max_k.csv` | Third annotator |
-| `kappa.csv` | Binary fill/empty labels + Fleiss' κ math (κ ≈ 0.78) |
+- `gt_bmc_k.csv`, `bmc_jonas_k.csv`, `bmc_max_k.csv` — full BMC text per annotator
+- `kappa.csv` — binary fill/empty labels and Fleiss' κ math (**κ ≈ 0.78**, substantial agreement)
 
-High κ confirms consistent **fill presence** under the protocol; it does not measure wording similarity (that is evaluated separately in Module 02).
+κ measures whether coders agree a field should be **filled**, not whether they wrote similar text. Content similarity is evaluated separately in Module 02.
 
 ---
 
 ## Frozen outputs vs re-running
 
-The bundled `output/` and `eval/` folders contain the **thesis run** used in the written results. You can inspect these immediately without re-running anything.
+You can inspect `output/` and `eval/` immediately without re-running anything — these are the results reported in the thesis.
 
-Re-running Modules **03** and **04** may produce **slightly different results** because they depend on live web search and page content. Module **04** caches peer BMC profiles in `output/module_04/peer_bmc_cache.csv` to speed up subsequent runs.
+Re-running Modules **03** and **04** may differ slightly (live web search and page content). Module 04 reuses peer profiles via `output/module_04/peer_bmc_cache.csv`.
 
 ---
 
 ## Citation
 
-If you use this artifact, please cite the thesis:
-
 > von Krogh, C. (2025). *Structuring Early-Stage Deal Flow: An Evidence-Grounded BMC Pipeline from Pitch Decks*. Master's thesis, University of Amsterdam.
 
----
-
-## License
-
-Academic research artifact. Pitch decks remain the property of their respective companies; included here solely for reproducibility under fair academic use.
+Pitch decks remain the property of their respective companies; included here for academic reproducibility.

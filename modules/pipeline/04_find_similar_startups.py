@@ -38,9 +38,9 @@ _MODULES_DIR = Path(__file__).resolve().parent.parent
 if str(_MODULES_DIR) not in sys.path:
     sys.path.insert(0, str(_MODULES_DIR))
 
-from support.csv_bmc import bmc_by_deck_from_csv
-from support.local_llm import check_ollama, ollama_model
-from support.paths import (
+from support.csv_bmc import bmc_by_deck_from_csv  # noqa: E402
+from support.local_llm import check_ollama, ollama_model  # noqa: E402
+from support.paths import (  # noqa: E402
     DEFAULT_MODULE_04_DIR,
     DEFAULT_PEER_BMC_CACHE_CSV,
     DEFAULT_PEERS_RANKED_CSV,
@@ -50,30 +50,30 @@ from support.paths import (
     resolve_enriched_bmc,
     resolve_websites_csv,
 )
-from support.peer_bmc_cache import (
+from support.peer_bmc_cache import (  # noqa: E402
     get_cached_peer_bmc,
     load_peer_bmc_cache,
     peer_domain_key,
     upsert_peer_bmc_cache,
     write_peer_bmc_cache,
 )
-from support.peer_bmc import extract_peer_bmc
-from support.profile_text import bmc_fields_filled_count, bmc_row_to_profile_text
-from support.schema import BMC_FIELDS
-from support.similar_score import (
+from support.peer_bmc import extract_peer_bmc  # noqa: E402
+from support.profile_text import bmc_fields_filled_count, bmc_row_to_profile_text  # noqa: E402
+from support.schema import BMC_FIELDS  # noqa: E402
+from support.similar_score import (  # noqa: E402
     PREFILTER_MIN_SCORE,
     batch_snippet_prefilter_scores,
     score_peer,
     select_candidates_for_deep_scoring,
 )
-from support.similar_search import (
+from support.similar_search import (  # noqa: E402
     brand_from_domain,
     build_all_search_queries,
     collect_peer_candidates,
     target_exclude_domains,
 )
-from support.web_fetch import USER_AGENT, fetch_homepage_snippet, fetch_pages_with_retry
-from support.websites import load_websites_csv, lookup_website_info
+from support.web_fetch import USER_AGENT, fetch_homepage_snippet, fetch_pages_with_retry  # noqa: E402
+from support.websites import load_websites_csv, lookup_website_info  # noqa: E402
 
 TAG = "04"
 
@@ -123,15 +123,18 @@ VC_SUMMARY_FIELDNAMES = [
 
 QUERY_LOG_FIELDNAMES = ["target_deck_id", "anchor", "query_rank", "query"]
 
+
 def _slug(name: str) -> str:
     import re
 
     s = re.sub(r"[^a-zA-Z0-9]+", "_", name.strip().lower())
     return s.strip("_") or "peer"
 
+
 def _target_website(deck_id: str, websites_by: dict[str, dict[str, str]]) -> str:
     info = lookup_website_info(deck_id, websites_by)
     return (info.get("discovered_website") or info.get("website_url") or "").strip()
+
 
 def _write_csv(path: Path, fieldnames: list[str], rows: list[dict[str, object]]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -141,11 +144,13 @@ def _write_csv(path: Path, fieldnames: list[str], rows: list[dict[str, object]])
         for row in rows:
             writer.writerow({k: row.get(k, "") for k in fieldnames})
 
+
 def _load_csv_rows(path: Path) -> list[dict[str, object]]:
     if not path.exists():
         return []
     with path.open(encoding="utf-8", newline="") as f:
         return list(csv.DictReader(f))
+
 
 def _peers_by_deck_from_rows(
     rows: list[dict[str, object]],
@@ -157,6 +162,7 @@ def _peers_by_deck_from_rows(
             out.setdefault(did, []).append(row)
     return out
 
+
 def _rows_excluding_decks(
     rows: list[dict[str, object]],
     deck_ids: set[str],
@@ -165,11 +171,13 @@ def _rows_excluding_decks(
 ) -> list[dict[str, object]]:
     return [r for r in rows if str(r.get(deck_key) or "") not in deck_ids]
 
+
 def _startup_label(deck_id: str, websites_by_pipeline: dict[str, dict[str, str]]) -> str:
     from support.csv_bmc import startup_name_for_deck
 
     info = lookup_website_info(deck_id, websites_by_pipeline)
     return (info.get("startup_name") or startup_name_for_deck(deck_id)).strip()
+
 
 def _uniqueness_label(
     strong_count: int,
@@ -190,6 +198,7 @@ def _uniqueness_label(
     if strong_count <= 3:
         return "moderate"
     return "crowded"
+
 
 def _vc_note(
     label: str,
@@ -233,6 +242,7 @@ def _vc_note(
         )
     return f"Insufficient peer signal ({peers_scored} scored); manual comp research needed."
 
+
 def _build_vc_summary_row(
     deck_id: str,
     *,
@@ -275,6 +285,7 @@ def _build_vc_summary_row(
             candidates_discovered=candidates_discovered,
         ),
     }
+
 
 def _deep_score_candidate(
     deck_id: str,
@@ -359,6 +370,7 @@ def _deep_score_candidate(
         **scores,
         **peer_bmc,
     }
+
 
 def process_deck(
     deck_id: str,
@@ -538,6 +550,7 @@ def process_deck(
         flush=True,
     )
     return scored_rows, summary_row
+
 
 def main(argv: Optional[list[str]] = None) -> int:
     parser = argparse.ArgumentParser(
@@ -776,26 +789,11 @@ def main(argv: Optional[list[str]] = None) -> int:
         write_peer_bmc_cache(cache_path, peer_cache)
         print(f"[{TAG}] Peer BMC cache -> {cache_path} ({len(peer_cache)} domains)", flush=True)
 
-    if all_top5:
-        eval_dir = Path("eval") / "module_04"
-        eval_dir.mkdir(parents=True, exist_ok=True)
-        from eval.build_m04_rubric_template import main as build_rubric_main
-
-        build_rubric_main(
-            [
-                "--module-04-dir",
-                str(args.out_dir),
-                "--top-k",
-                str(args.top_k),
-                "--out",
-                str(eval_dir / "peer_relevance_rubric.csv"),
-            ]
-        )
-
     attempted = len(deck_ids) - skipped
     if attempted > 0 and failures == attempted:
         return 1
     return 0
+
 
 if __name__ == "__main__":
     raise SystemExit(main())

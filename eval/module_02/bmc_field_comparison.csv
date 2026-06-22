@@ -1,168 +1,168 @@
 deck_id,field,gt_filled,pred_filled,fill_match,gt,pred,jaccard,seq_ratio,combined_sim,embed_sim,score_0_2
-Palta,customer_segments,True,True,True,"health and wellbeing consumers, womenÕs health users, femtech users, mobile subscription app users",Women's health and wellness,0.273,0.288,0.28,0.203,0
-Palta,value_proposition,True,True,True,AI-based health and wellbeing products,Personalized health and wellness services through mobile apps,0.167,0.545,0.356,0.171,1
-Palta,channels,True,True,True,"app stores, mobile app distribution","Mobile app downloads, subscription-based model",0.25,0.469,0.36,0.319,1
+Palta,customer_segments,True,True,True,"health and wellbeing consumers, womenÕs health users, femtech users, mobile subscription app users",Women's health and wellness,0.273,0.288,0.28,0.576,0
+Palta,value_proposition,True,True,True,AI-based health and wellbeing products,Personalized health and wellness services through mobile apps,0.167,0.545,0.356,0.501,1
+Palta,channels,True,True,True,"app stores, mobile app distribution","Mobile app downloads, subscription-based model",0.25,0.469,0.36,0.645,1
 Palta,customer_relationships,False,True,False,,Long-term relationships with users through data collection and personalized recommendations,0.0,0.0,0.0,,0
-Palta,revenue_model,True,True,True,subscription,$5OOn ARR (Annual Recurring Revenue) goal in 3 years,0.0,0.188,0.094,0.0,0
-Palta,key_resources,True,True,True,"data, AI research, talent management, access to capital",Unique data points collected from user behavior and surveys,0.062,0.175,0.119,0.063,0
-Palta,key_activities,True,True,True,"improve and create health products, cross-sell across ecosystem","Data experiments, AI-driven research, and talent management",0.062,0.295,0.179,0.063,0
+Palta,revenue_model,True,True,True,subscription,$5OOn ARR (Annual Recurring Revenue) goal in 3 years,0.0,0.188,0.094,0.223,0
+Palta,key_resources,True,True,True,"data, AI research, talent management, access to capital",Unique data points collected from user behavior and surveys,0.062,0.175,0.119,0.128,0
+Palta,key_activities,True,True,True,"improve and create health products, cross-sell across ecosystem","Data experiments, AI-driven research, and talent management",0.062,0.295,0.179,0.057,0
 Palta,key_partners,False,False,True,,,1.0,1.0,1.0,,2
 Palta,cost_structure,False,False,True,,,1.0,1.0,1.0,,2
-Aura,customer_segments,True,True,True,"people, families",people & families,1.0,0.909,0.955,1.0,2
-Aura,value_proposition,True,True,True,"safer internet for people and families, intelligent safety, unified solution","Intelligent Safety Category, proactive protection against digital threats",0.125,0.376,0.25,0.127,0
+Aura,customer_segments,True,True,True,"people, families",people & families,1.0,0.909,0.955,0.944,2
+Aura,value_proposition,True,True,True,"safer internet for people and families, intelligent safety, unified solution","Intelligent Safety Category, proactive protection against digital threats",0.125,0.376,0.25,0.558,0
 Aura,channels,False,False,True,,,1.0,1.0,1.0,,2
 Aura,customer_relationships,False,True,False,,"simple UI/UX, smart features across all areas of life",0.0,0.0,0.0,,0
-Aura,revenue_model,True,True,True,Òper monthÓ pricing,"$3.54/Honth, $8.00/Hanth, $14.99/1onth, $124.00/Honih",0.0,0.167,0.083,0.0,0
-Aura,key_resources,True,True,True,"proactive protection, simple UI/UX","proprietary IP, machine learning, automation, continuous feature development",0.0,0.345,0.173,0.0,0
+Aura,revenue_model,True,True,True,Òper monthÓ pricing,"$3.54/Honth, $8.00/Hanth, $14.99/1onth, $124.00/Honih",0.0,0.167,0.083,0.331,0
+Aura,key_resources,True,True,True,"proactive protection, simple UI/UX","proprietary IP, machine learning, automation, continuous feature development",0.0,0.345,0.173,0.222,0
 Aura,key_activities,True,False,False,subscription implied by Òper monthÓ pricing,,0.0,0.0,0.0,,0
 Aura,key_partners,False,False,True,,,1.0,1.0,1.0,,2
 Aura,cost_structure,False,False,True,,,1.0,1.0,1.0,,2
 Bespoken_spirits,customer_segments,True,False,False,"distillers, rectifiers, breweries, retailers, hotels, bars/restaurants",,0.0,0.0,0.0,,0
-Bespoken_spirits,value_proposition,True,True,True,"design, engineer, and precisely control spirits; deliver premium quality tailored spirits in days rather than decades","Tailoring spirits for a desired outcome, enhancing products to meet taste, color, and aroma profiles",0.074,0.304,0.189,0.107,0
+Bespoken_spirits,value_proposition,True,True,True,"design, engineer, and precisely control spirits; deliver premium quality tailored spirits in days rather than decades","Tailoring spirits for a desired outcome, enhancing products to meet taste, color, and aroma profiles",0.074,0.304,0.189,0.691,0
 Bespoken_spirits,channels,False,True,False,,"Distilleries, rectifiers, breweries, retailers, hotels, bars/restaurants",0.0,0.0,0.0,,0
 Bespoken_spirits,customer_relationships,False,True,False,,"Customization as a service, producing customized spirit for customers, private labeled 'look-a-like' for big brand whiskey at lower price point",0.0,0.0,0.0,,0
-Bespoken_spirits,revenue_model,True,True,True,"selling spirits, maturation as a service, customization as a service","Sells spirits, maturation as a service (MaaS), customization as a service (CaaS)",0.556,0.878,0.717,0.742,1
-Bespoken_spirits,key_resources,True,True,True,"ACTivation technology, data","Bespoken ACTivation technology, proprietary technology to instill the barrel into the spirit",0.182,0.42,0.301,0.291,0
+Bespoken_spirits,revenue_model,True,True,True,"selling spirits, maturation as a service, customization as a service","Sells spirits, maturation as a service (MaaS), customization as a service (CaaS)",0.556,0.878,0.717,0.788,1
+Bespoken_spirits,key_resources,True,True,True,"ACTivation technology, data","Bespoken ACTivation technology, proprietary technology to instill the barrel into the spirit",0.182,0.42,0.301,0.524,0
 Bespoken_spirits,key_activities,True,False,False,"tailor spirits, design recipes, bulk maturation, customization",,0.0,0.0,0.0,,0
 Bespoken_spirits,key_partners,False,False,True,,,1.0,1.0,1.0,,2
 Bespoken_spirits,cost_structure,False,False,True,,,1.0,1.0,1.0,,2
-Jobox,customer_segments,True,True,True,"skilled professionals, pros, field pros, plumbers, locksmiths, home service pros","Skilled professionals, field pros",0.5,0.584,0.542,0.672,1
-Jobox,value_proposition,True,True,True,send pros the right jobs for free; operating system for pros; managed marketplace,Managed marketplace with workflow tools and fintech integration,0.118,0.264,0.191,0.096,0
-Jobox,channels,True,True,True,"app, SMS, phone number, marketplace, APIs","Phone number, in-app messaging, video calls",0.3,0.476,0.388,0.304,1
+Jobox,customer_segments,True,True,True,"skilled professionals, pros, field pros, plumbers, locksmiths, home service pros","Skilled professionals, field pros",0.5,0.584,0.542,0.7,1
+Jobox,value_proposition,True,True,True,send pros the right jobs for free; operating system for pros; managed marketplace,Managed marketplace with workflow tools and fintech integration,0.118,0.264,0.191,0.471,0
+Jobox,channels,True,True,True,"app, SMS, phone number, marketplace, APIs","Phone number, in-app messaging, video calls",0.3,0.476,0.388,0.547,1
 Jobox,customer_relationships,False,True,False,,"Pro's microsite, online profiles, vetted and reliable pros",0.0,0.0,0.0,,0
 Jobox,revenue_model,False,False,True,,,1.0,1.0,1.0,,2
-Jobox,key_resources,True,True,True,"location, skills set, availability, tools, phone number, fintech","Integrated fintech, managed marketplace, auto-dispatch system",0.071,0.176,0.124,0.072,0
-Jobox,key_activities,True,True,True,"job matching, scheduling, workflow tools, payments, inventory tracking, business control","Job matching, calendar integration, monitoring system",0.143,0.326,0.235,0.151,0
+Jobox,key_resources,True,True,True,"location, skills set, availability, tools, phone number, fintech","Integrated fintech, managed marketplace, auto-dispatch system",0.071,0.176,0.124,0.434,0
+Jobox,key_activities,True,True,True,"job matching, scheduling, workflow tools, payments, inventory tracking, business control","Job matching, calendar integration, monitoring system",0.143,0.326,0.235,0.528,0
 Jobox,key_partners,True,False,False,"third-party lead generators, lenders?",,0.0,0.0,0.0,,0
 Jobox,cost_structure,False,False,True,,,1.0,1.0,1.0,,2
 Macro,customer_segments,True,False,False,"knowledge workers, professional services, email/document users",,0.0,0.0,0.0,,0
-Macro,value_proposition,True,True,True,"fast new productivity suite; upgrade email, documents, PDFs, office docs",upgraded office suite with extensible formats,0.143,0.308,0.225,0.151,0
-Macro,channels,True,True,True,"email, calendar, PDF, Office, chat","email, PDF/Office attachments",0.5,0.635,0.567,0.51,1
+Macro,value_proposition,True,True,True,"fast new productivity suite; upgrade email, documents, PDFs, office docs",upgraded office suite with extensible formats,0.143,0.308,0.225,0.588,0
+Macro,channels,True,True,True,"email, calendar, PDF, Office, chat","email, PDF/Office attachments",0.5,0.635,0.567,0.581,1
 Macro,customer_relationships,False,True,False,,"collaborative, friendly",0.0,0.0,0.0,,0
 Macro,revenue_model,False,False,True,,,1.0,1.0,1.0,,2
 Macro,key_resources,True,False,False,"extensible formats, Office/email/PDF infrastructure",,0.0,0.0,0.0,,0
 Macro,key_activities,True,False,False,"upgrade old formats and apps, sync everything and everybody",,0.0,0.0,0.0,,0
 Macro,key_partners,False,False,True,,,1.0,1.0,1.0,,2
 Macro,cost_structure,False,False,True,,,1.0,1.0,1.0,,2
-Sable,customer_segments,True,True,True,"internationals in the U.S., new-to-America internationals",New-to-America internationals,0.667,0.674,0.671,0.755,1
-Sable,value_proposition,True,True,True,digital banking for internationals; access financial products and build credit history from day one,Easily access financial products and build credit history from day one,0.667,0.781,0.724,0.683,1
-Sable,channels,True,True,True,mobile phone,"Mobile phone, passport",0.667,0.706,0.686,0.709,1
+Sable,customer_segments,True,True,True,"internationals in the U.S., new-to-America internationals",New-to-America internationals,0.667,0.674,0.671,0.943,1
+Sable,value_proposition,True,True,True,digital banking for internationals; access financial products and build credit history from day one,Easily access financial products and build credit history from day one,0.667,0.781,0.724,0.768,1
+Sable,channels,True,True,True,mobile phone,"Mobile phone, passport",0.667,0.706,0.686,0.656,1
 Sable,customer_relationships,False,False,True,,,1.0,1.0,1.0,,2
 Sable,revenue_model,False,False,True,,,1.0,1.0,1.0,,2
-Sable,key_resources,True,True,True,"14 banking products, team experience",Team with experience in launching 14 banking products,0.625,0.427,0.526,0.676,1
+Sable,key_resources,True,True,True,"14 banking products, team experience",Team with experience in launching 14 banking products,0.625,0.427,0.526,0.885,1
 Sable,key_activities,True,False,False,"launch banking products, give access to credit card, bank account, savings account",,0.0,0.0,0.0,,0
 Sable,key_partners,True,False,False,"Visa, The Bancorp, Capital One, Amazon, American Express, Accenture, McKinsey & Company, Sberbank, Affirm",,0.0,0.0,0.0,,0
 Sable,cost_structure,False,False,True,,,1.0,1.0,1.0,,2
 Sharpist,customer_segments,True,False,False,"enterprises, HR customers, learners, coaches",,0.0,0.0,0.0,,0
-Sharpist,value_proposition,True,True,True,retain and grow talent; holistic platform for one-on-one digital coaching and learning,one-on-one digital coaching and learning,0.5,0.635,0.567,0.683,1
-Sharpist,channels,True,True,True,"mobile, web","mobile & web learning, people analytics dashboard, digital content Library",0.222,0.235,0.229,0.355,0
+Sharpist,value_proposition,True,True,True,retain and grow talent; holistic platform for one-on-one digital coaching and learning,one-on-one digital coaching and learning,0.5,0.635,0.567,0.89,1
+Sharpist,channels,True,True,True,"mobile, web","mobile & web learning, people analytics dashboard, digital content Library",0.222,0.235,0.229,0.537,0
 Sharpist,customer_relationships,False,True,False,,"individualized digital coaching, cohort-based learning",0.0,0.0,0.0,,0
 Sharpist,revenue_model,False,True,False,,"$150B+ market, projected ARR FY 2021, gross margin",0.0,0.0,0.0,,0
 Sharpist,key_resources,True,False,False,"coach matching, digital content library, people analytics, learning system",,0.0,0.0,0.0,,0
-Sharpist,key_activities,True,True,True,"coaching, learning ecosystem, coach matching, micro tasks, activity tracking",corporate learning ecosystem for every stakeholder,0.154,0.476,0.315,0.16,0
+Sharpist,key_activities,True,True,True,"coaching, learning ecosystem, coach matching, micro tasks, activity tracking",corporate learning ecosystem for every stakeholder,0.154,0.476,0.315,0.372,0
 Sharpist,key_partners,True,False,False,Gallup,,0.0,0.0,0.0,,0
 Sharpist,cost_structure,False,False,True,,,1.0,1.0,1.0,,2
-Vision,customer_segments,True,True,True,"businesses, growing companies, enterprise, SMB DIY","Ecommerce, Fintech, Travel & Healthcare",0.0,0.292,0.146,0.0,0
-Vision,value_proposition,True,True,True,most intelligent platform for message-based marketing; convert customer connections into revenue,Message-first Al-powered marketing solution for businesses to have meaningful 2-way dialogue with customers,0.125,0.365,0.245,0.127,0
-Vision,channels,True,True,True,"message channels, WhatsApp, SMS, Messenger, Instagram, API","WhatsApp, SMS, Email, CRM, and other messaging channels",0.25,0.407,0.329,0.253,0
-Vision,customer_relationships,True,True,True,"2-way dialogue, unified inbox, CRM & integrations","Personalized communications, Direct API access, No-code campaign builders",0.0,0.213,0.107,0.0,0
-Vision,revenue_model,True,True,True,"flat subscription, cost per message, payments in thread","Flat subscription model with indicative pricing per message (average ACVs: $2-20k for SMB, $30-200k+ for Enterprise)",0.2,0.456,0.328,0.2,0
+Vision,customer_segments,True,True,True,"businesses, growing companies, enterprise, SMB DIY","Ecommerce, Fintech, Travel & Healthcare",0.0,0.292,0.146,0.588,0
+Vision,value_proposition,True,True,True,most intelligent platform for message-based marketing; convert customer connections into revenue,Message-first Al-powered marketing solution for businesses to have meaningful 2-way dialogue with customers,0.125,0.365,0.245,0.603,0
+Vision,channels,True,True,True,"message channels, WhatsApp, SMS, Messenger, Instagram, API","WhatsApp, SMS, Email, CRM, and other messaging channels",0.25,0.407,0.329,0.834,0
+Vision,customer_relationships,True,True,True,"2-way dialogue, unified inbox, CRM & integrations","Personalized communications, Direct API access, No-code campaign builders",0.0,0.213,0.107,0.377,0
+Vision,revenue_model,True,True,True,"flat subscription, cost per message, payments in thread","Flat subscription model with indicative pricing per message (average ACVs: $2-20k for SMB, $30-200k+ for Enterprise)",0.2,0.456,0.328,0.675,0
 Vision,key_resources,True,False,False,"AI, machine learning, cloud platform",,0.0,0.0,0.0,,0
-Vision,key_activities,True,True,True,"automate, listen, interpret, prioritize messages; marketing automation","Building messaging infrastructure for businesses, Automating 2-way communication at scale",0.0,0.314,0.157,0.0,0
+Vision,key_activities,True,True,True,"automate, listen, interpret, prioritize messages; marketing automation","Building messaging infrastructure for businesses, Automating 2-way communication at scale",0.0,0.314,0.157,0.548,0
 Vision,key_partners,True,False,False,"WhatsApp BSP, Twilio?",,0.0,0.0,0.0,,0
-Vision,cost_structure,True,True,True,subscription with per-message margin,"Cost per message given at margin ~5-20%, Payments in thread: % of transaction value",0.2,0.336,0.268,0.239,0
-morty,customer_segments,True,True,True,"consumers, lenders, borrowers, home buyers",Consumers and lenders,0.333,0.54,0.437,0.356,1
-morty,value_proposition,True,True,True,"mortgage marketplace, digitally native platform, autonomous mortgage",Autonomous mortgage marketplace with technology-driven growth and operations,0.25,0.431,0.34,0.301,0
-morty,channels,True,True,True,"API, marketplace, self-service","Digital platform, API, and partnerships",0.125,0.319,0.222,0.127,0
+Vision,cost_structure,True,True,True,subscription with per-message margin,"Cost per message given at margin ~5-20%, Payments in thread: % of transaction value",0.2,0.336,0.268,0.537,0
+morty,customer_segments,True,True,True,"consumers, lenders, borrowers, home buyers",Consumers and lenders,0.333,0.54,0.437,0.871,1
+morty,value_proposition,True,True,True,"mortgage marketplace, digitally native platform, autonomous mortgage",Autonomous mortgage marketplace with technology-driven growth and operations,0.25,0.431,0.34,0.803,0
+morty,channels,True,True,True,"API, marketplace, self-service","Digital platform, API, and partnerships",0.125,0.319,0.222,0.582,0
 morty,customer_relationships,False,True,False,,"Self-service, pre-approvals, and streamlined transactions",0.0,0.0,0.0,,0
 morty,revenue_model,False,False,True,,,1.0,1.0,1.0,,2
-morty,key_resources,True,True,True,"technology, lenders, partners, pricing engine, underwriting engine","Industry's largest lenders, technology, and infrastructure",0.2,0.29,0.245,0.16,0
-morty,key_activities,True,True,True,"mortgage acquisition, quoting, underwriting, closing, matching","Autonomous acquisition, sales, and operations",0.1,0.393,0.246,0.102,0
-morty,key_partners,True,True,True,"largest lenders, product & API partners","Multiple partners, including THRIVE CAPITAL, LERER HIPPEAU, FJLABS, metaprop, techstars",0.071,0.206,0.139,0.077,0
+morty,key_resources,True,True,True,"technology, lenders, partners, pricing engine, underwriting engine","Industry's largest lenders, technology, and infrastructure",0.2,0.29,0.245,0.599,0
+morty,key_activities,True,True,True,"mortgage acquisition, quoting, underwriting, closing, matching","Autonomous acquisition, sales, and operations",0.1,0.393,0.246,0.504,0
+morty,key_partners,True,True,True,"largest lenders, product & API partners","Multiple partners, including THRIVE CAPITAL, LERER HIPPEAU, FJLABS, metaprop, techstars",0.071,0.206,0.139,0.504,0
 morty,cost_structure,False,False,True,,,1.0,1.0,1.0,,2
 multus,customer_segments,True,False,False,"cultivated meat companies, scale-up stage companies, pilot-stage companies, research-stage companies",,0.0,0.0,0.0,,0
-multus,value_proposition,True,True,True,make cultivated meat sustainable and affordable; growth media nutrients,"Cultivated meat represents a step-change in food production, providing a sustainable and affordable choice.",0.294,0.506,0.4,0.305,1
+multus,value_proposition,True,True,True,make cultivated meat sustainable and affordable; growth media nutrients,"Cultivated meat represents a step-change in food production, providing a sustainable and affordable choice.",0.294,0.506,0.4,0.777,1
 multus,channels,True,False,False,"website, email, social",,0.0,0.0,0.0,,0
 multus,customer_relationships,False,False,True,,,1.0,1.0,1.0,,2
 multus,revenue_model,False,False,True,,,1.0,1.0,1.0,,2
-multus,key_resources,True,True,True,"Proliferum M, Serum P, animal-free serum substitute, growth media","STEM CELLS, NUTRIENTS, BIOREACTOR",0.0,0.245,0.122,0.0,0
+multus,key_resources,True,True,True,"Proliferum M, Serum P, animal-free serum substitute, growth media","STEM CELLS, NUTRIENTS, BIOREACTOR",0.0,0.245,0.122,0.344,0
 multus,key_activities,True,False,False,"create nutrients, sell growth media, cultivate meat production support",,0.0,0.0,0.0,,0
 multus,key_partners,True,False,False,"Imperial College London, Indie Bio",,0.0,0.0,0.0,,0
 multus,cost_structure,False,False,True,,,1.0,1.0,1.0,,2
-8base,customer_segments,True,True,True,"developers, software development teams, businesses building web/mobile apps","startups and established organizations, mid-sized and large organizations",0.0,0.23,0.115,0.0,0
-8base,value_proposition,True,True,True,"serverless application development platform; build, deploy, and scale products without managing infrastructure","low-code foundation for building and running digital products, internal apps, and more; low-code and no-code tools to transform how software is built and maintained",0.065,0.35,0.207,0.123,0
+8base,customer_segments,True,True,True,"developers, software development teams, businesses building web/mobile apps","startups and established organizations, mid-sized and large organizations",0.0,0.23,0.115,0.371,0
+8base,value_proposition,True,True,True,"serverless application development platform; build, deploy, and scale products without managing infrastructure","low-code foundation for building and running digital products, internal apps, and more; low-code and no-code tools to transform how software is built and maintained",0.065,0.35,0.207,0.476,0
 8base,channels,False,True,False,,"multi-tenant SaaS, marketplaces, portals, customer network-centric apps, experiences, business process management applications",0.0,0.0,0.0,,0
 8base,customer_relationships,False,True,False,,"customer success, multi-tenant SaaS, marketplaces, and portal support for startups and established organizations",0.0,0.0,0.0,,0
 8base,revenue_model,False,True,False,,$10 million equity round; 10x recurring revenues in 18-24 months,0.0,0.0,0.0,,0
-8base,key_resources,True,True,True,"serverless platform, GraphQL API, cloud infrastructure","8base platform, AWS, Google Cloud (coming soon)",0.182,0.495,0.338,0.184,0
-8base,key_activities,True,True,True,"build and run serverless backend, GraphQL API layer, deploy applications","development of low-code and no-code tools, expanding integrations, marketing to ecosystem of solution partners",0.043,0.253,0.148,0.037,0
+8base,key_resources,True,True,True,"serverless platform, GraphQL API, cloud infrastructure","8base platform, AWS, Google Cloud (coming soon)",0.182,0.495,0.338,0.409,0
+8base,key_activities,True,True,True,"build and run serverless backend, GraphQL API layer, deploy applications","development of low-code and no-code tools, expanding integrations, marketing to ecosystem of solution partners",0.043,0.253,0.148,0.239,0
 8base,key_partners,False,True,False,,"solution partners, IBM, NATO, OTAN, BIGFOOT, iilicollabugrow, Livo, VIZSLA, LEADVLT, ICAPITAL, photag",0.0,0.0,0.0,,0
 8base,cost_structure,False,False,True,,,1.0,1.0,1.0,,2
-Ageras,customer_segments,True,True,True,"small and medium-sized businesses (SMEs), self-employed, accountants, bookkeepers",Small and Medium-sized Enterprises (SMEs),0.455,0.557,0.506,0.491,1
-Ageras,value_proposition,True,True,True,marketplace connecting businesses with accountants and financial services; one platform for all accounting needs,Enabling success for SMEs through a preferred ecosystem,0.05,0.251,0.151,0.054,0
+Ageras,customer_segments,True,True,True,"small and medium-sized businesses (SMEs), self-employed, accountants, bookkeepers",Small and Medium-sized Enterprises (SMEs),0.455,0.557,0.506,0.733,1
+Ageras,value_proposition,True,True,True,marketplace connecting businesses with accountants and financial services; one platform for all accounting needs,Enabling success for SMEs through a preferred ecosystem,0.05,0.251,0.151,0.449,0
 Ageras,channels,False,True,False,,"Online marketplace, accounting software, payroll software, financial services",0.0,0.0,0.0,,0
 Ageras,customer_relationships,False,True,False,,Long-term relationships with customers,0.0,0.0,0.0,,0
 Ageras,revenue_model,False,True,False,,"Subscription-based model, revenue from software sales and financial services",0.0,0.0,0.0,,0
-Ageras,key_resources,True,True,True,"marketplace platform, accountant network, financial data","Software platforms, financial services, human resources",0.091,0.45,0.271,0.092,0
-Ageras,key_activities,True,True,True,"connect SMEs with accountants, bookkeeping services, financial services marketplace","Developing and maintaining software platforms, providing financial services",0.143,0.38,0.261,0.196,0
+Ageras,key_resources,True,True,True,"marketplace platform, accountant network, financial data","Software platforms, financial services, human resources",0.091,0.45,0.271,0.546,0
+Ageras,key_activities,True,True,True,"connect SMEs with accountants, bookkeeping services, financial services marketplace","Developing and maintaining software platforms, providing financial services",0.143,0.38,0.261,0.473,0
 Ageras,key_partners,False,False,True,,,1.0,1.0,1.0,,2
 Ageras,cost_structure,False,False,True,,,1.0,1.0,1.0,,2
-AI Rudder,customer_segments,True,True,True,"banks, financial institutions, enterprise call centers","B2C communications, Banks, Airlines, Merchant chats, Insurance",0.083,0.362,0.223,0.085,0
-AI Rudder,value_proposition,True,True,True,AI-powered voice assistants for customer service; human-like AI voice calls at scale,Multi-lingual conversational AI solution for customer experience,0.176,0.324,0.25,0.205,0
+AI Rudder,customer_segments,True,True,True,"banks, financial institutions, enterprise call centers","B2C communications, Banks, Airlines, Merchant chats, Insurance",0.083,0.362,0.223,0.571,0
+AI Rudder,value_proposition,True,True,True,AI-powered voice assistants for customer service; human-like AI voice calls at scale,Multi-lingual conversational AI solution for customer experience,0.176,0.324,0.25,0.502,0
 AI Rudder,channels,False,True,False,,"SaaS solution, full stack of AI technology",0.0,0.0,0.0,,0
 AI Rudder,customer_relationships,False,True,False,,"High net revenue retention (NRR) with big accounts, Highly scalable",0.0,0.0,0.0,,0
 AI Rudder,revenue_model,False,True,False,,"Bundled pricing, Acquisition, Activation, Revenue, Retention by use cases",0.0,0.0,0.0,,0
 AI Rudder,key_resources,True,False,False,"AI/ML models, voice technology, language processing",,0.0,0.0,0.0,,0
-AI Rudder,key_activities,True,True,True,"voice AI outbound/inbound calls, customer service automation","Acquire New, Improve, Increase average revenue per user (ARPU), Quick onboarding journey",0.0,0.203,0.101,0.0,0
+AI Rudder,key_activities,True,True,True,"voice AI outbound/inbound calls, customer service automation","Acquire New, Improve, Increase average revenue per user (ARPU), Quick onboarding journey",0.0,0.203,0.101,0.26,0
 AI Rudder,key_partners,False,True,False,,"Microsoft, CooTek, Seagate, Zendesk",0.0,0.0,0.0,,0
 AI Rudder,cost_structure,False,False,True,,,1.0,1.0,1.0,,2
-Audience Town,customer_segments,True,True,True,"real estate companies, consumer brands, home builders, mortgage lenders, real estate advertisers",Home movers,0.091,0.15,0.12,0.105,0
-Audience Town,value_proposition,True,True,True,people-based advertising analytics platform for real estate; self-service advertising platform for the home,Consolidated ad platform focused on finding home movers,0.111,0.407,0.259,0.133,0
-Audience Town,channels,True,True,True,self-service ads platform,"Online advertising, self-service platform",0.5,0.636,0.568,0.51,1
+Audience Town,customer_segments,True,True,True,"real estate companies, consumer brands, home builders, mortgage lenders, real estate advertisers",Home movers,0.091,0.15,0.12,0.388,0
+Audience Town,value_proposition,True,True,True,people-based advertising analytics platform for real estate; self-service advertising platform for the home,Consolidated ad platform focused on finding home movers,0.111,0.407,0.259,0.687,0
+Audience Town,channels,True,True,True,self-service ads platform,"Online advertising, self-service platform",0.5,0.636,0.568,0.869,1
 Audience Town,customer_relationships,False,False,True,,,1.0,1.0,1.0,,2
 Audience Town,revenue_model,False,True,False,,Payment subscription / MRR,0.0,0.0,0.0,,0
 Audience Town,key_resources,True,False,False,"audience data, real estate consumer data, analytics platform",,0.0,0.0,0.0,,0
-Audience Town,key_activities,True,True,True,"advertising analytics, audience targeting, campaign measurement for real estate","Data management, ML engine, campaign task & notification center",0.062,0.437,0.25,0.063,0
+Audience Town,key_activities,True,True,True,"advertising analytics, audience targeting, campaign measurement for real estate","Data management, ML engine, campaign task & notification center",0.062,0.437,0.25,0.316,0
 Audience Town,key_partners,True,False,False,"Toll Brothers, homie, Lennar, Sunrun, BEAR",,0.0,0.0,0.0,,0
 Audience Town,cost_structure,False,False,True,,,1.0,1.0,1.0,,2
 banxware,customer_segments,True,False,False,"digital platforms, marketplaces, payment service providers, merchants on platforms",,0.0,0.0,0.0,,0
-banxware,value_proposition,True,True,True,embedded lending; enable platforms to offer revenue-based financing to their merchants,"Embedded Cash Advance Product, Loan application in the merchant's comfort zone",0.048,0.415,0.231,0.042,0
+banxware,value_proposition,True,True,True,embedded lending; enable platforms to offer revenue-based financing to their merchants,"Embedded Cash Advance Product, Loan application in the merchant's comfort zone",0.048,0.415,0.231,0.566,0
 banxware,channels,False,True,False,,"Platforms (6 different), Merchant's own platform",0.0,0.0,0.0,,0
 banxware,customer_relationships,False,True,False,,Seamlessly and conveniently integrated into any non-financial business or service,0.0,0.0,0.0,,0
 banxware,revenue_model,True,False,False,"revenue-based financing fees, lending margin",,0.0,0.0,0.0,,0
-banxware,key_resources,True,True,True,"lending technology, BaaS partner, SPV structure, risk models","Banxware platform, Third-party providers (e.g. ReFinITIV, IDnow)",0.0,0.226,0.113,0.0,0
-banxware,key_activities,True,True,True,"embedded loan origination, underwriting, capital deployment to platform merchants","Loan decision engine, Risk assessment, Collection, KYC/AML checks",0.059,0.288,0.173,0.06,0
-banxware,key_partners,True,True,True,"PAYONE, Lieferando / Just Eat Takeaway, PENTA, Ratepay, PPRO, Klarna, finleap","PAYONE, Lieferando/Just Eat Takeaway, PENTA, VvRB",0.545,0.73,0.638,0.57,1
+banxware,key_resources,True,True,True,"lending technology, BaaS partner, SPV structure, risk models","Banxware platform, Third-party providers (e.g. ReFinITIV, IDnow)",0.0,0.226,0.113,0.122,0
+banxware,key_activities,True,True,True,"embedded loan origination, underwriting, capital deployment to platform merchants","Loan decision engine, Risk assessment, Collection, KYC/AML checks",0.059,0.288,0.173,0.414,0
+banxware,key_partners,True,True,True,"PAYONE, Lieferando / Just Eat Takeaway, PENTA, Ratepay, PPRO, Klarna, finleap","PAYONE, Lieferando/Just Eat Takeaway, PENTA, VvRB",0.545,0.73,0.638,0.848,1
 banxware,cost_structure,False,False,True,,,1.0,1.0,1.0,,2
 Blueocean,customer_segments,True,False,False,"brand analytics buyers, marketing teams, brand managers, enterprise companies",,0.0,0.0,0.0,,0
-Blueocean,value_proposition,True,True,True,automated always-on brand tracking; AI/ML-powered brand analytics platform; continuous competitive brand intelligence,"Always-on brand tracking, providing live updates and actionable insights",0.211,0.444,0.327,0.276,0
+Blueocean,value_proposition,True,True,True,automated always-on brand tracking; AI/ML-powered brand analytics platform; continuous competitive brand intelligence,"Always-on brand tracking, providing live updates and actionable insights",0.211,0.444,0.327,0.727,0
 Blueocean,channels,False,True,False,,"B2B, B2C, any vertical (e.g. Google, Microsoft, Alteryx)",0.0,0.0,0.0,,0
 Blueocean,customer_relationships,False,True,False,,"Direct relationship with brands, agencies, consultants, and employees",0.0,0.0,0.0,,0
 Blueocean,revenue_model,False,False,True,,,1.0,1.0,1.0,,2
-Blueocean,key_resources,True,True,True,"ML/AI platform, brand analytics models, Silicon Valley team","Machine learning, AI, data scientists, and experienced team members",0.125,0.333,0.229,0.126,0
-Blueocean,key_activities,True,True,True,"automated brand tracking, competitive intelligence, brand performance analytics","Ingesting, transforming, sharing data; answering business questions",0.0,0.301,0.151,0.0,0
+Blueocean,key_resources,True,True,True,"ML/AI platform, brand analytics models, Silicon Valley team","Machine learning, AI, data scientists, and experienced team members",0.125,0.333,0.229,0.551,0
+Blueocean,key_activities,True,True,True,"automated brand tracking, competitive intelligence, brand performance analytics","Ingesting, transforming, sharing data; answering business questions",0.0,0.301,0.151,0.165,0
 Blueocean,key_partners,False,True,False,,"Qualtrics, Avalara, Looker, and other industry partners",0.0,0.0,0.0,,0
 Blueocean,cost_structure,False,False,True,,,1.0,1.0,1.0,,2
-Calaxy,customer_segments,True,True,True,"creators, influencers, fans","Influencers, Creators",0.667,0.625,0.646,0.709,1
-Calaxy,value_proposition,True,True,True,open social marketplace for creators and fans; decentralized personal token economy; creator monetization platform,Decentralized tools for creating personal tokens to own and control connection with fans,0.227,0.436,0.331,0.23,0
+Calaxy,customer_segments,True,True,True,"creators, influencers, fans","Influencers, Creators",0.667,0.625,0.646,0.855,1
+Calaxy,value_proposition,True,True,True,open social marketplace for creators and fans; decentralized personal token economy; creator monetization platform,Decentralized tools for creating personal tokens to own and control connection with fans,0.227,0.436,0.331,0.566,0
 Calaxy,channels,False,True,False,,"Calaxy app, Social media platforms",0.0,0.0,0.0,,0
 Calaxy,customer_relationships,False,True,False,,Creators control engagement & monetization with their communities,0.0,0.0,0.0,,0
 Calaxy,revenue_model,False,True,False,,Token issuance by creators (15% of token balance),0.0,0.0,0.0,,0
 Calaxy,key_resources,True,False,False,"blockchain/token infrastructure, creator platform, HBAR network",,0.0,0.0,0.0,,0
-Calaxy,key_activities,True,True,True,"creator token issuance, fan club management, creator-fan transactions","Development of decentralized tools, Token system development",0.083,0.326,0.204,0.049,0
+Calaxy,key_activities,True,True,True,"creator token issuance, fan club management, creator-fan transactions","Development of decentralized tools, Token system development",0.083,0.326,0.204,0.286,0
 Calaxy,key_partners,True,False,False,Hedera Hashgraph (HBAR),,0.0,0.0,0.0,,0
 Calaxy,cost_structure,False,False,True,,,1.0,1.0,1.0,,2
 Circular,customer_segments,True,False,False,"textile brands, fashion supply chain, waste aggregators, brands with textile waste",,0.0,0.0,0.0,,0
-Circular,value_proposition,True,True,True,patented technology to separate and recycle polycotton blends into Lyocell and Polyester; first industrial-scale solution,"Circular products made from recycled polycotton blends, competing with virgin producers on cost",0.077,0.426,0.251,0.071,0
+Circular,value_proposition,True,True,True,patented technology to separate and recycle polycotton blends into Lyocell and Polyester; first industrial-scale solution,"Circular products made from recycled polycotton blends, competing with virgin producers on cost",0.077,0.426,0.251,0.714,0
 Circular,channels,False,True,False,,"Supply chain, brands, and retailers",0.0,0.0,0.0,,0
 Circular,customer_relationships,False,False,True,,,1.0,1.0,1.0,,2
 Circular,revenue_model,False,True,False,,"Sell to brands supply chain, produce with partners, source from waste aggregators",0.0,0.0,0.0,,0
-Circular,key_resources,True,True,True,"patented separation technology, chemical process, textile recycling IP","Waste cotton waste (all colors & ratios), polycotton blends feedstock",0.0,0.259,0.129,0.0,0
-Circular,key_activities,True,True,True,"collect polycotton waste, chemically separate fibers, produce Lyocell and Polyester, sell recycled fibers","Produce circular products, accept blended color polycottons, combine with high yields",0.045,0.316,0.181,0.041,0
-Circular,key_partners,True,True,True,"waste aggregators, fashion brands' supply chains","LUXURY BRAND, ICONIC-AMERICAN DESIGNER BRAND, FASHION GROUP, SUSTAINABILITY BRAND, PATAGONIA",0.071,0.343,0.207,0.053,0
+Circular,key_resources,True,True,True,"patented separation technology, chemical process, textile recycling IP","Waste cotton waste (all colors & ratios), polycotton blends feedstock",0.0,0.259,0.129,0.337,0
+Circular,key_activities,True,True,True,"collect polycotton waste, chemically separate fibers, produce Lyocell and Polyester, sell recycled fibers","Produce circular products, accept blended color polycottons, combine with high yields",0.045,0.316,0.181,0.535,0
+Circular,key_partners,True,True,True,"waste aggregators, fashion brands' supply chains","LUXURY BRAND, ICONIC-AMERICAN DESIGNER BRAND, FASHION GROUP, SUSTAINABILITY BRAND, PATAGONIA",0.071,0.343,0.207,0.48,0
 Circular,cost_structure,False,False,True,,,1.0,1.0,1.0,,2
-Cowboy,customer_segments,True,True,True,"urban riders, commuters, e-bike users","urban mobility, commuters across Europe and the US",0.182,0.552,0.367,0.191,1
-Cowboy,value_proposition,True,True,True,smart electric bike; power riders to map their own paths; connected urban mobility,"e-bikes move people 2xfaster, e-bikes provide a psychological boost and meaningful workout, cleaner than cars",0.0,0.178,0.089,0.0,0
+Cowboy,customer_segments,True,True,True,"urban riders, commuters, e-bike users","urban mobility, commuters across Europe and the US",0.182,0.552,0.367,0.602,1
+Cowboy,value_proposition,True,True,True,smart electric bike; power riders to map their own paths; connected urban mobility,"e-bikes move people 2xfaster, e-bikes provide a psychological boost and meaningful workout, cleaner than cars",0.0,0.178,0.089,0.5,0
 Cowboy,channels,False,True,False,,"Direct-to-Consumer, Integrated App, Recurring Revenue",0.0,0.0,0.0,,0
 Cowboy,customer_relationships,False,True,False,,"Theft insurance and Cowboy Care, maintenance Subscriptions, after-sales experience",0.0,0.0,0.0,,0
 Cowboy,revenue_model,False,True,False,,"Multi-revenue streams: bike sales, accessory sales, subscription services",0.0,0.0,0.0,,0
@@ -170,71 +170,71 @@ Cowboy,key_resources,True,False,False,"e-bike hardware, connected software, moto
 Cowboy,key_activities,True,False,False,"design and sell e-bikes, connected app features, urban mobility",,0.0,0.0,0.0,,0
 Cowboy,key_partners,False,True,False,,"Hardware Club, Index Ventures, Tiger Global, Exor Seeds, Slam Capital, HCVC",0.0,0.0,0.0,,0
 Cowboy,cost_structure,False,False,True,,,1.0,1.0,1.0,,2
-EQL,customer_segments,True,True,True,"global brands, sneaker brands, retailers doing limited drops","Global brands, retailers, and customers seeking scarce goods",0.25,0.567,0.408,0.299,1
-EQL,value_proposition,True,True,True,hype commerce platform for scarce product releases; Run Fair¨ algorithm; power high-demand product launches,"EQL's launch platform manages hype, ensuring fair launches and product availability",0.25,0.432,0.341,0.288,0
+EQL,customer_segments,True,True,True,"global brands, sneaker brands, retailers doing limited drops","Global brands, retailers, and customers seeking scarce goods",0.25,0.567,0.408,0.654,1
+EQL,value_proposition,True,True,True,hype commerce platform for scarce product releases; Run Fair¨ algorithm; power high-demand product launches,"EQL's launch platform manages hype, ensuring fair launches and product availability",0.25,0.432,0.341,0.605,0
 EQL,channels,False,True,False,,"E-commerce platforms, social media, and online marketplaces",0.0,0.0,0.0,,0
 EQL,customer_relationships,False,True,False,,"Fairness Union: retailers agree to run launches fairly, customers play by fair rules",0.0,0.0,0.0,,0
 EQL,revenue_model,False,False,True,,,1.0,1.0,1.0,,2
-EQL,key_resources,True,True,True,"Run Fair¨ algorithm, platform technology, 10 markets","Proprietary technology stack, custom domains, EQLizer algorithm",0.167,0.435,0.301,0.168,0
-EQL,key_activities,True,True,True,"manage high-heat product launches, fair balloting, demand capture, consumer protection","Launch platform management, hype infrastructure, analytics, automation",0.0,0.346,0.173,0.0,0
-EQL,key_partners,True,True,True,"Courir, Foot Locker, Crocs, Culture Kings, Fast Times, Sullivans Cove, Insight Partners, Airtree Ventures","Insight Partners, Airtree Ventures",0.286,0.489,0.387,0.41,1
+EQL,key_resources,True,True,True,"Run Fair¨ algorithm, platform technology, 10 markets","Proprietary technology stack, custom domains, EQLizer algorithm",0.167,0.435,0.301,0.455,0
+EQL,key_activities,True,True,True,"manage high-heat product launches, fair balloting, demand capture, consumer protection","Launch platform management, hype infrastructure, analytics, automation",0.0,0.346,0.173,0.306,0
+EQL,key_partners,True,True,True,"Courir, Foot Locker, Crocs, Culture Kings, Fast Times, Sullivans Cove, Insight Partners, Airtree Ventures","Insight Partners, Airtree Ventures",0.286,0.489,0.387,0.542,1
 EQL,cost_structure,False,False,True,,,1.0,1.0,1.0,,2
-Fluence,customer_segments,True,True,True,"utilities, grid operators, renewable energy developers, industrial energy users","Licensed therapists, physicians, psychologists, social workers, and coaches",0.0,0.299,0.149,0.0,0
-Fluence,value_proposition,True,True,True,energy storage technology and services; digital applications for energy storage optimization,"Accessible, credentialed professional trainings online and in-person for psychedelic therapy and integration",0.105,0.24,0.173,0.115,0
+Fluence,customer_segments,True,True,True,"utilities, grid operators, renewable energy developers, industrial energy users","Licensed therapists, physicians, psychologists, social workers, and coaches",0.0,0.299,0.149,0.254,0
+Fluence,value_proposition,True,True,True,energy storage technology and services; digital applications for energy storage optimization,"Accessible, credentialed professional trainings online and in-person for psychedelic therapy and integration",0.105,0.24,0.173,-0.056,0
 Fluence,channels,False,True,False,,"Online classes and workshops, on-demand content, consultation services, therapist cohort training (clinical trials)",0.0,0.0,0.0,,0
 Fluence,customer_relationships,False,True,False,,"Community-based learning platform with synchronous and asynchronous tools, individualized feedback, patient referrals",0.0,0.0,0.0,,0
 Fluence,revenue_model,False,True,False,,"$750K+ in sales, self-funded to date, currently pursuing seed financing",0.0,0.0,0.0,,0
-Fluence,key_resources,True,True,True,"energy storage technology, battery systems, digital platform, Fluos software","Licensed therapists, researchers, physicians with deep roots in psychedelic therapy and clinical trials",0.0,0.19,0.095,0.0,0
-Fluence,key_activities,True,True,True,"design and deploy energy storage systems, optimize grid-scale storage, software-defined storage management","Protocol design and custom training modules for drug development companies, consultation services, therapist cohort training (clinical trials)",0.077,0.21,0.143,0.055,0
+Fluence,key_resources,True,True,True,"energy storage technology, battery systems, digital platform, Fluos software","Licensed therapists, researchers, physicians with deep roots in psychedelic therapy and clinical trials",0.0,0.19,0.095,-0.039,0
+Fluence,key_activities,True,True,True,"design and deploy energy storage systems, optimize grid-scale storage, software-defined storage management","Protocol design and custom training modules for drug development companies, consultation services, therapist cohort training (clinical trials)",0.077,0.21,0.143,0.008,0
 Fluence,key_partners,True,False,False,"AES, Siemens",,0.0,0.0,0.0,,0
 Fluence,cost_structure,False,True,False,,"Self-funded to date, currently pursuing seed financing",0.0,0.0,0.0,,0
-Hello Heart,customer_segments,True,True,True,"health plan members, employers, employees with hypertension, health plans","self-insured employers, health plans, PBMs",0.273,0.487,0.38,0.336,1
-Hello Heart,value_proposition,True,True,True,digital program for heart health; personalized guidance to lower blood pressure; connected blood pressure monitor,"digital solution for heart health, medication management, personalized AI-driven app",0.263,0.457,0.36,0.213,1
+Hello Heart,customer_segments,True,True,True,"health plan members, employers, employees with hypertension, health plans","self-insured employers, health plans, PBMs",0.273,0.487,0.38,0.632,1
+Hello Heart,value_proposition,True,True,True,digital program for heart health; personalized guidance to lower blood pressure; connected blood pressure monitor,"digital solution for heart health, medication management, personalized AI-driven app",0.263,0.457,0.36,0.625,1
 Hello Heart,channels,False,True,False,,"health plans, PBMs, employer sales process",0.0,0.0,0.0,,0
 Hello Heart,customer_relationships,False,True,False,,engagement through digital coaching and reminders,0.0,0.0,0.0,,0
 Hello Heart,revenue_model,False,True,False,,"$1,865 reduction in total medical costs per participant per year",0.0,0.0,0.0,,0
 Hello Heart,key_resources,True,False,False,"mobile app, connected blood pressure monitor, clinical algorithms, heart health content",,0.0,0.0,0.0,,0
-Hello Heart,key_activities,True,True,True,"track blood pressure, deliver heart health coaching, partner with health plans and employers","AI development, app deployment, user engagement",0.0,0.259,0.129,0.0,0
+Hello Heart,key_activities,True,True,True,"track blood pressure, deliver heart health coaching, partner with health plans and employers","AI development, app deployment, user engagement",0.0,0.259,0.129,0.182,0
 Hello Heart,key_partners,False,True,False,,"Validation Institute, Noam Bardin (Waze), Eric Roza (Datalogix)",0.0,0.0,0.0,,0
 Hello Heart,cost_structure,False,False,True,,,1.0,1.0,1.0,,2
 HTEC,customer_segments,True,False,False,"technology companies, enterprises, R&D customers, software product companies",,0.0,0.0,0.0,,0
-HTEC,value_proposition,True,True,True,technology and R&D services; software development and engineering services; innovation partner,"Delight,notjustdeliver. Where creativity meets deep engineering",0.071,0.331,0.201,0.054,0
+HTEC,value_proposition,True,True,True,technology and R&D services; software development and engineering services; innovation partner,"Delight,notjustdeliver. Where creativity meets deep engineering",0.071,0.331,0.201,0.291,0
 HTEC,channels,False,False,True,,,1.0,1.0,1.0,,2
 HTEC,customer_relationships,False,True,False,,We deliver technology excellence while establishing strong bonds with our clients whom we treat as partners and peers,0.0,0.0,0.0,,0
 HTEC,revenue_model,True,False,False,service fees / R&D contracts,,0.0,0.0,0.0,,0
-HTEC,key_resources,True,True,True,"engineering talent, technology capabilities, offices across multiple locations","1200+ professionals, Talent acquisition dynamic, 80 Goal, 200 Morhyhes, Monhlyhres EOY2022",0.056,0.286,0.171,0.057,0
+HTEC,key_resources,True,True,True,"engineering talent, technology capabilities, offices across multiple locations","1200+ professionals, Talent acquisition dynamic, 80 Goal, 200 Morhyhes, Monhlyhres EOY2022",0.056,0.286,0.171,0.295,0
 HTEC,key_activities,True,False,False,"software development, product engineering, R&D services, team augmentation",,0.0,0.0,0.0,,0
 HTEC,key_partners,False,False,True,,,1.0,1.0,1.0,,2
 HTEC,cost_structure,False,False,True,,,1.0,1.0,1.0,,2
-Ibble,customer_segments,True,True,True,"creators, photographers, visual content creators, social media users","Younger mobile users (18-40 years old), Global, North America",0.062,0.202,0.132,0.053,0
-Ibble,value_proposition,True,True,True,creator-first social platform; photographers and visual creators monetize their content; fair monetization for creators,Reinventing social media to spark curiosity through public or private conversations,0.042,0.366,0.204,0.038,0
+Ibble,customer_segments,True,True,True,"creators, photographers, visual content creators, social media users","Younger mobile users (18-40 years old), Global, North America",0.062,0.202,0.132,0.333,0
+Ibble,value_proposition,True,True,True,creator-first social platform; photographers and visual creators monetize their content; fair monetization for creators,Reinventing social media to spark curiosity through public or private conversations,0.042,0.366,0.204,0.394,0
 Ibble,channels,False,True,False,,"Mobile-first platform, Video and audio content, Short-form video",0.0,0.0,0.0,,0
 Ibble,customer_relationships,False,True,False,,"Asynchronous conversation, Users connect and guide each other",0.0,0.0,0.0,,0
 Ibble,revenue_model,False,False,True,,,1.0,1.0,1.0,,2
-Ibble,key_resources,True,True,True,"social platform, content infrastructure, creator tools","Proprietary way to stream low-latency validation in real-time, Full ML system for video, audio, and news",0.0,0.19,0.095,0.0,0
-Ibble,key_activities,True,True,True,"host and monetize visual content, creator community, content distribution","Hyper-targeting people's interests through the platform, Encouraging exciting conversation",0.0,0.245,0.123,0.0,0
+Ibble,key_resources,True,True,True,"social platform, content infrastructure, creator tools","Proprietary way to stream low-latency validation in real-time, Full ML system for video, audio, and news",0.0,0.19,0.095,0.175,0
+Ibble,key_activities,True,True,True,"host and monetize visual content, creator community, content distribution","Hyper-targeting people's interests through the platform, Encouraging exciting conversation",0.0,0.245,0.123,0.228,0
 Ibble,key_partners,False,True,False,,"Content creators (celebrities), Advertisers, Google, YouTube, Instagram",0.0,0.0,0.0,,0
 Ibble,cost_structure,False,False,True,,,1.0,1.0,1.0,,2
 Influx,customer_segments,True,False,False,"e-commerce businesses, SaaS companies, online businesses needing customer support",,0.0,0.0,0.0,,0
-Influx,value_proposition,True,True,True,on-demand customer support teams; 24/7 support agents as a service; flexible support staffing,Career development and growth opportunities,0.0,0.25,0.125,0.0,0
+Influx,value_proposition,True,True,True,on-demand customer support teams; 24/7 support agents as a service; flexible support staffing,Career development and growth opportunities,0.0,0.25,0.125,0.104,0
 Influx,channels,False,True,False,,"Internal mobility, part-time projects, rotations, remote work",0.0,0.0,0.0,,0
 Influx,customer_relationships,False,True,False,,"Manager-employee relationships, employee self-directed career paths",0.0,0.0,0.0,,0
 Influx,revenue_model,True,False,False,per-agent or per-ticket pricing,,0.0,0.0,0.0,,0
-Influx,key_resources,True,True,True,"trained support agents, support infrastructure, quality management","Work Genome platform, predictive intelligence",0.0,0.396,0.198,0.0,0
-Influx,key_activities,True,True,True,"provide trained customer support agents, 24/7 support coverage, customer service operations",Connecting critical systems and data at key points in the employee life cycle,0.0,0.274,0.137,0.0,0
+Influx,key_resources,True,True,True,"trained support agents, support infrastructure, quality management","Work Genome platform, predictive intelligence",0.0,0.396,0.198,0.176,0
+Influx,key_activities,True,True,True,"provide trained customer support agents, 24/7 support coverage, customer service operations",Connecting critical systems and data at key points in the employee life cycle,0.0,0.274,0.137,0.34,0
 Influx,key_partners,False,False,True,,,1.0,1.0,1.0,,2
 Influx,cost_structure,False,False,True,,,1.0,1.0,1.0,,2
 lottielab,customer_segments,True,False,False,"developers, designers, animators, product managers",,0.0,0.0,0.0,,0
-lottielab,value_proposition,True,True,True,"world's easiest animation platform for product teams; end-to-end animation editing platform (Create, Collaborate, Deploy, Manage) Ñ 5x faster than existing tools",product animation platform for product teams,0.263,0.39,0.327,0.424,0
+lottielab,value_proposition,True,True,True,"world's easiest animation platform for product teams; end-to-end animation editing platform (Create, Collaborate, Deploy, Manage) Ñ 5x faster than existing tools",product animation platform for product teams,0.263,0.39,0.327,0.795,0
 lottielab,channels,False,True,False,,"web, mobile apps, and other digital products",0.0,0.0,0.0,,0
-lottielab,customer_relationships,True,True,True,"community building, Discord community, waitlist",collaborative editing tool for product teams,0.0,0.308,0.154,0.0,0
+lottielab,customer_relationships,True,True,True,"community building, Discord community, waitlist",collaborative editing tool for product teams,0.0,0.308,0.154,0.229,0
 lottielab,revenue_model,False,False,True,,,1.0,1.0,1.0,,2
 lottielab,key_resources,True,False,False,"animation editing platform, Lottie format support, multiplayer collaboration, component/asset library",,0.0,0.0,0.0,,0
 lottielab,key_activities,True,False,False,"animation creation, team collaboration, deployment to iOS/Android/web, animation asset management",,0.0,0.0,0.0,,0
 lottielab,key_partners,True,False,False,"Webflow, Framer, Elementor",,0.0,0.0,0.0,,0
 lottielab,cost_structure,False,False,True,,,1.0,1.0,1.0,,2
-Juro,customer_segments,True,True,True,"legal teams, in-house counsel, operations teams, businesses managing contracts","Companies, legal teams",0.2,0.22,0.21,0.347,0
-Juro,value_proposition,True,True,True,AI-native contract management platform; agree and manage contracts faster; collaborative contract workspace,Browser-native contract automation platform,0.214,0.387,0.3,0.311,0
+Juro,customer_segments,True,True,True,"legal teams, in-house counsel, operations teams, businesses managing contracts","Companies, legal teams",0.2,0.22,0.21,0.809,0
+Juro,value_proposition,True,True,True,AI-native contract management platform; agree and manage contracts faster; collaborative contract workspace,Browser-native contract automation platform,0.214,0.387,0.3,0.564,0
 Juro,channels,False,True,False,,"Integrated tools, browser-based editor",0.0,0.0,0.0,,0
 Juro,customer_relationships,False,True,False,,"Collaborative workflow, data-rich repository",0.0,0.0,0.0,,0
 Juro,revenue_model,False,True,False,,"$xXm+ ARR, growing predictably and sustainably",0.0,0.0,0.0,,0
@@ -243,34 +243,34 @@ Juro,key_activities,True,False,False,"contract creation, negotiation, signing, m
 Juro,key_partners,False,True,False,,"Seedcamp, Point Nine Capital, various angel investors",0.0,0.0,0.0,,0
 Juro,cost_structure,False,False,True,,,1.0,1.0,1.0,,2
 Kryptomon,customer_segments,True,False,False,"gamers, NFT collectors, blockchain game players, play-to-earn users",,0.0,0.0,0.0,,0
-Kryptomon,value_proposition,True,True,True,"blockchain-based digital pets game; create, breed, train, and battle Kryptomons; play-to-earn NFT game","NFT blockchain based game with play-and-earn mechanics, where Pokemon meets Tamagotchi meets CryptoKitties",0.318,0.385,0.351,0.304,1
+Kryptomon,value_proposition,True,True,True,"blockchain-based digital pets game; create, breed, train, and battle Kryptomons; play-to-earn NFT game","NFT blockchain based game with play-and-earn mechanics, where Pokemon meets Tamagotchi meets CryptoKitties",0.318,0.385,0.351,0.678,1
 Kryptomon,channels,False,True,False,,"Social media channels (TG, Tw, FB, LI, Twitch, Discord, Medium), Strategic partnerships, PR, Paid Media, BTL & Guerilla marketing, Events",0.0,0.0,0.0,,0
 Kryptomon,customer_relationships,False,False,True,,,1.0,1.0,1.0,,2
-Kryptomon,revenue_model,True,True,True,"NFT sales, in-game transactions, token economy",Free-to-play model with optional purchase of Loot Boxes using $KMoN Coin,0.0,0.356,0.178,0.0,0
+Kryptomon,revenue_model,True,True,True,"NFT sales, in-game transactions, token economy",Free-to-play model with optional purchase of Loot Boxes using $KMoN Coin,0.0,0.356,0.178,0.309,0
 Kryptomon,key_resources,True,False,False,"blockchain infrastructure, NFT smart contracts, game engine, Kryptomon IP",,0.0,0.0,0.0,,0
 Kryptomon,key_activities,True,False,False,"breed, train, and battle digital pets; NFT marketplace; play-to-earn mechanics",,0.0,0.0,0.0,,0
-Kryptomon,key_partners,True,True,True,Binance Smart Chain,"Simplex, Tofu, Binance NFT, Poolz, BakerySwap",0.125,0.312,0.219,0.136,0
+Kryptomon,key_partners,True,True,True,Binance Smart Chain,"Simplex, Tofu, Binance NFT, Poolz, BakerySwap",0.125,0.312,0.219,0.34,0
 Kryptomon,cost_structure,False,True,False,,"Legal (5.0%), Listing & Token Activities (15.0%), Game Development & HR Scaleup (50.0%), Marketing (30.0%)",0.0,0.0,0.0,,0
-LiefergrŸn,customer_segments,True,True,True,"consumers ordering groceries, online grocery shoppers","Electronics, Pharma, Fashion, Foodboxes",0.0,0.261,0.13,0.0,0
-LiefergrŸn,value_proposition,True,True,True,sustainable last-mile grocery delivery; eco-friendly grocery delivery,"FAST, FLEXIBLE, SUSTAINABLE deliveries with real-time tracking and maximum flexibility",0.059,0.361,0.21,0.044,0
+LiefergrŸn,customer_segments,True,True,True,"consumers ordering groceries, online grocery shoppers","Electronics, Pharma, Fashion, Foodboxes",0.0,0.261,0.13,0.332,0
+LiefergrŸn,value_proposition,True,True,True,sustainable last-mile grocery delivery; eco-friendly grocery delivery,"FAST, FLEXIBLE, SUSTAINABLE deliveries with real-time tracking and maximum flexibility",0.059,0.361,0.21,0.582,0
 LiefergrŸn,channels,False,True,False,,Microhubs distributed throughout the city for efficient tours and resource-saving way,0.0,0.0,0.0,,0
 LiefergrŸn,customer_relationships,False,True,False,,Provide customers a parcel tracking experience they can plan with; Communicating on 1-hour time slot to provide maximum of flexibility,0.0,0.0,0.0,,0
 LiefergrŸn,revenue_model,False,True,False,,"$12.50 delivery fee, $2.50 compensation for zero-emission deliveries",0.0,0.0,0.0,,0
-LiefergrŸn,key_resources,True,True,True,"delivery infrastructure, green logistics, rider network","Microhubs distributed throughout the city, cargo bikes or e-vans",0.0,0.286,0.143,0.0,0
-LiefergrŸn,key_activities,True,True,True,"last-mile grocery delivery, sustainable logistics operations",Transforming logistics with sustainable cargo bikes or e-vans and microhubs,0.133,0.415,0.274,0.138,0
+LiefergrŸn,key_resources,True,True,True,"delivery infrastructure, green logistics, rider network","Microhubs distributed throughout the city, cargo bikes or e-vans",0.0,0.286,0.143,0.404,0
+LiefergrŸn,key_activities,True,True,True,"last-mile grocery delivery, sustainable logistics operations",Transforming logistics with sustainable cargo bikes or e-vans and microhubs,0.133,0.415,0.274,0.609,0
 LiefergrŸn,key_partners,False,False,True,,,1.0,1.0,1.0,,2
 LiefergrŸn,cost_structure,False,False,True,,,1.0,1.0,1.0,,2
-Lollipop,customer_segments,True,True,True,"grocery shoppers, families, home cooks","Home cooks, busy professionals, health-conscious individuals",0.2,0.204,0.202,0.206,0
-Lollipop,value_proposition,True,True,True,personalised meal planning and grocery shopping platform; meal plan + grocery basket in one place; companion app for meal inspiration and effortless grocery stock-up,"Personalized meal planning, speedy delivery, and a wide range of products",0.115,0.294,0.205,0.187,0
+Lollipop,customer_segments,True,True,True,"grocery shoppers, families, home cooks","Home cooks, busy professionals, health-conscious individuals",0.2,0.204,0.202,0.711,0
+Lollipop,value_proposition,True,True,True,personalised meal planning and grocery shopping platform; meal plan + grocery basket in one place; companion app for meal inspiration and effortless grocery stock-up,"Personalized meal planning, speedy delivery, and a wide range of products",0.115,0.294,0.205,0.647,0
 Lollipop,channels,False,True,False,,"Mobile app, website, partnerships with grocery stores (e.g. Sainsbury's)",0.0,0.0,0.0,,0
 Lollipop,customer_relationships,False,True,False,,"Companion app for recipe suggestions, AI-led assistant for meal planning",0.0,0.0,0.0,,0
 Lollipop,revenue_model,False,False,True,,,1.0,1.0,1.0,,2
-Lollipop,key_resources,True,True,True,"meal planning platform, grocery integration (Sainsbury's live stock 30K products), recipe content library, Pioneers community","Partnerships with popular recipes sites, integration with grocery stores",0.095,0.325,0.21,0.085,0
-Lollipop,key_activities,True,True,True,"personalised meal planning, grocery basket building, recipe inspiration, grocery delivery slot booking","Meal planning, delivery logistics, customer support",0.214,0.392,0.303,0.202,0
-Lollipop,key_partners,True,True,True,"Sainsbury's, BBC Good Food (goodfood)","Sainsbury's, UK's most popular recipe site (BRAND PARTNER)",0.083,0.358,0.221,0.087,0
+Lollipop,key_resources,True,True,True,"meal planning platform, grocery integration (Sainsbury's live stock 30K products), recipe content library, Pioneers community","Partnerships with popular recipes sites, integration with grocery stores",0.095,0.325,0.21,0.723,0
+Lollipop,key_activities,True,True,True,"personalised meal planning, grocery basket building, recipe inspiration, grocery delivery slot booking","Meal planning, delivery logistics, customer support",0.214,0.392,0.303,0.733,0
+Lollipop,key_partners,True,True,True,"Sainsbury's, BBC Good Food (goodfood)","Sainsbury's, UK's most popular recipe site (BRAND PARTNER)",0.083,0.358,0.221,0.679,0
 Lollipop,cost_structure,False,False,True,,,1.0,1.0,1.0,,2
-Mojo,customer_segments,True,True,True,"sports coaches, athletes, teams, sports content creators",Professional and amateur athletes,0.111,0.292,0.202,0.093,0
-Mojo,value_proposition,True,True,True,mobile video creation platform for sports; create professional-quality sports highlight videos easily,Invest in an athlete's career with statistical performance-based payouts,0.0,0.243,0.121,0.0,0
+Mojo,customer_segments,True,True,True,"sports coaches, athletes, teams, sports content creators",Professional and amateur athletes,0.111,0.292,0.202,0.607,0
+Mojo,value_proposition,True,True,True,mobile video creation platform for sports; create professional-quality sports highlight videos easily,Invest in an athlete's career with statistical performance-based payouts,0.0,0.243,0.121,0.29,0
 Mojo,channels,False,True,False,,"Mobile app, web platform",0.0,0.0,0.0,,0
 Mojo,customer_relationships,False,True,False,,"Build a portfolio, buy or sell shares",0.0,0.0,0.0,,0
 Mojo,revenue_model,False,True,False,,Payouts based on simple weighting of athlete's career performance,0.0,0.0,0.0,,0
@@ -279,28 +279,28 @@ Mojo,key_activities,True,False,False,"video creation, sports highlight productio
 Mojo,key_partners,False,True,False,,"Thrive Capital, Tiger Global, others",0.0,0.0,0.0,,0
 Mojo,cost_structure,False,False,True,,,1.0,1.0,1.0,,2
 Mysten Labs,customer_segments,True,False,False,"developers, blockchain developers, web3 builders, enterprises",,0.0,0.0,0.0,,0
-Mysten Labs,value_proposition,True,True,True,high-performance blockchain infrastructure; Sui blockchain; Move programming language for web3 development,"Polaris web3 platform abstracts away all L1&L2 complexities, enabling developers to build, deploy, manage their web3 products.",0.037,0.181,0.109,0.065,0
+Mysten Labs,value_proposition,True,True,True,high-performance blockchain infrastructure; Sui blockchain; Move programming language for web3 development,"Polaris web3 platform abstracts away all L1&L2 complexities, enabling developers to build, deploy, manage their web3 products.",0.037,0.181,0.109,0.375,0
 Mysten Labs,channels,False,True,False,,"Open networks, co-development with existing networks",0.0,0.0,0.0,,0
 Mysten Labs,customer_relationships,False,False,True,,,1.0,1.0,1.0,,2
 Mysten Labs,revenue_model,False,True,False,,Components launched one by one with service/tokenization model built-in; token stakes in partner networks,0.0,0.0,0.0,,0
-Mysten Labs,key_resources,True,True,True,"Sui blockchain, Move language, core engineering team, blockchain infrastructure","Polaris SDK, celo, Move, Narwal, Sommeller, native L1",0.067,0.182,0.124,0.057,0
-Mysten Labs,key_activities,True,True,True,"develop and operate Sui blockchain, build Move language ecosystem, support web3 developers","Engineering work, integration with major L1, co-development with partners",0.0,0.196,0.098,0.0,0
+Mysten Labs,key_resources,True,True,True,"Sui blockchain, Move language, core engineering team, blockchain infrastructure","Polaris SDK, celo, Move, Narwal, Sommeller, native L1",0.067,0.182,0.124,0.198,0
+Mysten Labs,key_activities,True,True,True,"develop and operate Sui blockchain, build Move language ecosystem, support web3 developers","Engineering work, integration with major L1, co-development with partners",0.0,0.196,0.098,0.341,0
 Mysten Labs,key_partners,False,True,False,,"Celo, Sommelier.finance, partner networks (e.g. L1's & L2's)",0.0,0.0,0.0,,0
 Mysten Labs,cost_structure,False,False,True,,,1.0,1.0,1.0,,2
-Origin,customer_segments,True,True,True,"DeFi users, crypto holders, DAOs, protocol treasuries","Premium travelers, Millennials & GenX",0.0,0.222,0.111,0.0,0
-Origin,value_proposition,True,True,True,Origin Dollar (OUSD) - yield-generating stablecoin; Origin Story NFT platform,Personalized travel experience with ML/Al superpowered travel curators,0.0,0.204,0.102,0.0,0
+Origin,customer_segments,True,True,True,"DeFi users, crypto holders, DAOs, protocol treasuries","Premium travelers, Millennials & GenX",0.0,0.222,0.111,0.19,0
+Origin,value_proposition,True,True,True,Origin Dollar (OUSD) - yield-generating stablecoin; Origin Story NFT platform,Personalized travel experience with ML/Al superpowered travel curators,0.0,0.204,0.102,0.074,0
 Origin,channels,False,True,False,,"Mobile app, Online platform",0.0,0.0,0.0,,0
 Origin,customer_relationships,False,True,False,,"High-touch service, Personalized support",0.0,0.0,0.0,,0
-Origin,revenue_model,True,True,True,"yield from DeFi strategies, protocol fees","Membership model, Unlimited service for shorter trips",0.0,0.277,0.138,0.0,0
+Origin,revenue_model,True,True,True,"yield from DeFi strategies, protocol fees","Membership model, Unlimited service for shorter trips",0.0,0.277,0.138,0.177,0
 Origin,key_resources,True,False,False,"smart contracts, DeFi protocol integrations, stablecoin mechanism",,0.0,0.0,0.0,,0
-Origin,key_activities,True,True,True,"yield generation through DeFi strategies, stablecoin minting and redemption, NFT marketplace","Scaling Al services, Developing internal tool stack",0.0,0.252,0.126,0.0,0
+Origin,key_activities,True,True,True,"yield generation through DeFi strategies, stablecoin minting and redemption, NFT marketplace","Scaling Al services, Developing internal tool stack",0.0,0.252,0.126,0.193,0
 Origin,key_partners,False,True,False,,"Netflix, Google, Airbnb, Stitch Fix, Convey, Wealthfront, ETCIPTIGNALTRAVEL",0.0,0.0,0.0,,0
 Origin,cost_structure,False,False,True,,,1.0,1.0,1.0,,2
-Ownwell,customer_segments,True,True,True,"property owners, homeowners, real estate investors","Property owners, particularly those who are overassessed or underpaying on property taxes",0.133,0.432,0.282,0.2,0
-Ownwell,value_proposition,True,True,True,reduce your property taxes; protest and appeal property tax assessments on behalf of owners,Manage your largest asset like an investor; automate complex processes to extend access to traditional providers,0.037,0.266,0.152,0.031,0
+Ownwell,customer_segments,True,True,True,"property owners, homeowners, real estate investors","Property owners, particularly those who are overassessed or underpaying on property taxes",0.133,0.432,0.282,0.587,0
+Ownwell,value_proposition,True,True,True,reduce your property taxes; protest and appeal property tax assessments on behalf of owners,Manage your largest asset like an investor; automate complex processes to extend access to traditional providers,0.037,0.266,0.152,0.132,0
 Ownwell,channels,False,True,False,,Online solution for property owners to track their asset and expenses,0.0,0.0,0.0,,0
 Ownwell,customer_relationships,False,True,False,,"Personalized targeting using machine learning, to reach property owners who can save, and help them save more",0.0,0.0,0.0,,0
-Ownwell,revenue_model,True,True,True,contingency fee on tax savings,"$25% contingency fee when reducing taxes; Average Annual Property Savings: $1,457",0.231,0.523,0.377,0.262,1
+Ownwell,revenue_model,True,True,True,contingency fee on tax savings,"$25% contingency fee when reducing taxes; Average Annual Property Savings: $1,457",0.231,0.523,0.377,0.743,1
 Ownwell,key_resources,True,False,False,"property tax data, appeal process expertise, local agents",,0.0,0.0,0.0,,0
 Ownwell,key_activities,True,False,False,"analyze property assessments, file appeals, negotiate lower property taxes, handle entire appeal process",,0.0,0.0,0.0,,0
 Ownwell,key_partners,False,False,True,,,1.0,1.0,1.0,,2
@@ -315,7 +315,7 @@ Pilgrim Soul,key_activities,True,False,False,"identify and blend creativity-enha
 Pilgrim Soul,key_partners,True,False,False,AbstraxTech,,0.0,0.0,0.0,,0
 Pilgrim Soul,cost_structure,False,True,False,,"Highly variable cost structure due to outsourced cultivation and manufacturing, with potential for commoditization and reduced profit margins if not managed properly. In-house product development",0.0,0.0,0.0,,0
 PlayPlay,customer_segments,True,False,False,"marketing teams, communications teams, brands, media companies",,0.0,0.0,0.0,,0
-PlayPlay,value_proposition,True,True,True,video creation platform for non-video experts; create professional brand videos in minutes,"Highest quality, Enterprise-ready video communication platform",0.118,0.276,0.197,0.175,0
+PlayPlay,value_proposition,True,True,True,video creation platform for non-video experts; create professional brand videos in minutes,"Highest quality, Enterprise-ready video communication platform",0.118,0.276,0.197,0.55,0
 PlayPlay,channels,False,True,False,,"TikTok, Loom, Hopin, wOOz, Social Media, Email",0.0,0.0,0.0,,0
 PlayPlay,customer_relationships,False,True,False,,"Internal Comms, Employees, Human Resources, Candidates, Support, Clients",0.0,0.0,0.0,,0
 PlayPlay,revenue_model,False,False,True,,,1.0,1.0,1.0,,2
@@ -323,17 +323,17 @@ PlayPlay,key_resources,True,False,False,"video creation platform, template libra
 PlayPlay,key_activities,True,False,False,"video content creation, brand video production, template-based video editing",,0.0,0.0,0.0,,0
 PlayPlay,key_partners,False,False,True,,,1.0,1.0,1.0,,2
 PlayPlay,cost_structure,False,False,True,,,1.0,1.0,1.0,,2
-Scipher Medicine,customer_segments,True,True,True,"patients with autoimmune diseases, payers, PBMs, health plans, providers","Autoimmune diseases, Oncology",0.2,0.436,0.318,0.252,0
-Scipher Medicine,value_proposition,True,True,True,precision immunology; AI-powered diagnostics to predict response to anti-TNF therapies; PrismRA and PrismIBD tests; molecular diagnostics for autoimmune diseases,Precision medicine platform using RNA analysis to predict patient response to therapy,0.154,0.398,0.276,0.235,0
+Scipher Medicine,customer_segments,True,True,True,"patients with autoimmune diseases, payers, PBMs, health plans, providers","Autoimmune diseases, Oncology",0.2,0.436,0.318,0.58,0
+Scipher Medicine,value_proposition,True,True,True,precision immunology; AI-powered diagnostics to predict response to anti-TNF therapies; PrismRA and PrismIBD tests; molecular diagnostics for autoimmune diseases,Precision medicine platform using RNA analysis to predict patient response to therapy,0.154,0.398,0.276,0.423,0
 Scipher Medicine,channels,False,True,False,,Prism test pipeline developed in collaboration with payers and PBMs,0.0,0.0,0.0,,0
 Scipher Medicine,customer_relationships,False,False,True,,,1.0,1.0,1.0,,2
-Scipher Medicine,revenue_model,True,True,True,"diagnostics testing fees (payer/PBM contracts), pharma partnerships, data monetization","Monetized through pharma partnerships, data monetization business",0.308,0.596,0.452,0.319,1
-Scipher Medicine,key_resources,True,True,True,"AI/ML algorithms, molecular patient data lake (aims¨ platform), spectra¨ analysis platform, clinical lab","Proprietary Al/ML algorithms, largest patient data lake",0.312,0.478,0.395,0.293,1
-Scipher Medicine,key_activities,True,True,True,"molecular diagnostics testing, patient data lake creation, pharma data partnerships, precision drug targeting","Testing business drives creation of largest patient data lake, data analysis by spectra platform",0.25,0.361,0.305,0.351,0
-Scipher Medicine,key_partners,True,True,True,"UnitedHealth Group, aMoon, Echo, Khosla Ventures, Optum, Northpond Ventures","Payers and PBMs, pharma and biotech partnerships",0.0,0.309,0.154,0.0,0
+Scipher Medicine,revenue_model,True,True,True,"diagnostics testing fees (payer/PBM contracts), pharma partnerships, data monetization","Monetized through pharma partnerships, data monetization business",0.308,0.596,0.452,0.685,1
+Scipher Medicine,key_resources,True,True,True,"AI/ML algorithms, molecular patient data lake (aims¨ platform), spectra¨ analysis platform, clinical lab","Proprietary Al/ML algorithms, largest patient data lake",0.312,0.478,0.395,0.712,1
+Scipher Medicine,key_activities,True,True,True,"molecular diagnostics testing, patient data lake creation, pharma data partnerships, precision drug targeting","Testing business drives creation of largest patient data lake, data analysis by spectra platform",0.25,0.361,0.305,0.535,0
+Scipher Medicine,key_partners,True,True,True,"UnitedHealth Group, aMoon, Echo, Khosla Ventures, Optum, Northpond Ventures","Payers and PBMs, pharma and biotech partnerships",0.0,0.309,0.154,0.338,0
 Scipher Medicine,cost_structure,False,False,True,,,1.0,1.0,1.0,,2
-Tive,customer_segments,True,True,True,"shippers, logistics companies, supply chain managers, enterprises shipping goods",High-value & time/temperature-sensitive shipments,0.0,0.264,0.132,0.0,0
-Tive,value_proposition,True,True,True,real-time shipment visibility; every shipment matters; live supply chain tracking with sensors,"Track, monitor and take action on in-transit incidents before they escalate.",0.0,0.188,0.094,0.0,0
+Tive,customer_segments,True,True,True,"shippers, logistics companies, supply chain managers, enterprises shipping goods",High-value & time/temperature-sensitive shipments,0.0,0.264,0.132,0.371,0
+Tive,value_proposition,True,True,True,real-time shipment visibility; every shipment matters; live supply chain tracking with sensors,"Track, monitor and take action on in-transit incidents before they escalate.",0.0,0.188,0.094,0.421,0
 Tive,channels,False,False,True,,,1.0,1.0,1.0,,2
 Tive,customer_relationships,False,True,False,,Alert triggered and carrier notified. Load redirected to repair facility. Goods inspected and delivered to customer.,0.0,0.0,0.0,,0
 Tive,revenue_model,False,True,False,,$14.4B TAH (Total Addressable Market),0.0,0.0,0.0,,0
@@ -341,17 +341,17 @@ Tive,key_resources,True,False,False,"IoT tracking hardware (Tive Solo trackers),
 Tive,key_activities,True,False,False,"track shipments in real time, provide location and condition data, alert on shipment exceptions",,0.0,0.0,0.0,,0
 Tive,key_partners,False,False,True,,,1.0,1.0,1.0,,2
 Tive,cost_structure,False,False,True,,,1.0,1.0,1.0,,2
-Tomo,customer_segments,True,True,True,"home buyers, mortgage borrowers","Millennials, Cash Rich, Stock Rich, Crypto Rich",0.0,0.256,0.128,0.0,0
-Tomo,value_proposition,True,True,True,faster and cheaper mortgage; transparent mortgage process; fix the broken homebuying experience,"TomoCard: Proven Asset (Cash, Stock, Crypto) with weekly auto-pay to build credit",0.0,0.239,0.119,0.0,0
+Tomo,customer_segments,True,True,True,"home buyers, mortgage borrowers","Millennials, Cash Rich, Stock Rich, Crypto Rich",0.0,0.256,0.128,0.331,0
+Tomo,value_proposition,True,True,True,faster and cheaper mortgage; transparent mortgage process; fix the broken homebuying experience,"TomoCard: Proven Asset (Cash, Stock, Crypto) with weekly auto-pay to build credit",0.0,0.239,0.119,0.288,0
 Tomo,channels,False,False,True,,,1.0,1.0,1.0,,2
 Tomo,customer_relationships,False,True,False,,Private and Confidential,0.0,0.0,0.0,,0
 Tomo,revenue_model,False,True,False,,"$150,000,000 in 2022; $100,000,000 in 2021; 1000% Growth",0.0,0.0,0.0,,0
-Tomo,key_resources,True,True,True,"mortgage technology, underwriting infrastructure, real estate agent network","Digital data, not FICO; Bank History; Crypto; Stocks; Data",0.0,0.165,0.083,0.0,0
+Tomo,key_resources,True,True,True,"mortgage technology, underwriting infrastructure, real estate agent network","Digital data, not FICO; Bank History; Crypto; Stocks; Data",0.0,0.165,0.083,0.294,0
 Tomo,key_activities,True,False,False,"mortgage origination, pre-approval, underwriting, closing coordination",,0.0,0.0,0.0,,0
-Tomo,key_partners,True,True,True,real estate agents,Bank,0.0,0.182,0.091,0.0,0
+Tomo,key_partners,True,True,True,real estate agents,Bank,0.0,0.182,0.091,0.303,0
 Tomo,cost_structure,False,True,False,,$75 CAC,0.0,0.0,0.0,,0
 Waterplan,customer_segments,True,False,False,"companies with operational sites, corporate sustainability teams, enterprises with water risk exposure, supply chain managers",,0.0,0.0,0.0,,0
-Waterplan,value_proposition,True,True,True,water resilience planning platform; quantify water risk and build corporate water resilience; accelerate transition to a water-secure world,"Automates water risk quantification and mitigation opportunities, promoting sustainable operations.",0.143,0.269,0.206,0.216,0
+Waterplan,value_proposition,True,True,True,water resilience planning platform; quantify water risk and build corporate water resilience; accelerate transition to a water-secure world,"Automates water risk quantification and mitigation opportunities, promoting sustainable operations.",0.143,0.269,0.206,0.752,0
 Waterplan,channels,False,False,True,,,1.0,1.0,1.0,,2
 Waterplan,customer_relationships,False,False,True,,,1.0,1.0,1.0,,2
 Waterplan,revenue_model,False,False,True,,,1.0,1.0,1.0,,2
@@ -360,92 +360,92 @@ Waterplan,key_activities,True,False,False,"stressors sensing, water resilience p
 Waterplan,key_partners,True,False,False,Y Combinator,,0.0,0.0,0.0,,0
 Waterplan,cost_structure,False,False,True,,,1.0,1.0,1.0,,2
 Experify,customer_segments,True,False,False,"online businesses and brands (e-commerce), consumers / shoppers",,0.0,0.0,0.0,,0
-Experify,value_proposition,True,True,True,real-life trust for online businesses; SaaS platform to connect customers for authentic product opinions; Experify Map + Messenger enabling real conversations between product owners and prospective buyers,Authentic opinions and honest conversations around products,0.148,0.357,0.253,0.162,0
-Experify,channels,True,True,True,"embedded on participating brand websites (Experify Map), Experify Messenger","Experify.com, social media platforms (millions of users)",0.067,0.29,0.178,0.123,0
+Experify,value_proposition,True,True,True,real-life trust for online businesses; SaaS platform to connect customers for authentic product opinions; Experify Map + Messenger enabling real conversations between product owners and prospective buyers,Authentic opinions and honest conversations around products,0.148,0.357,0.253,0.539,0
+Experify,channels,True,True,True,"embedded on participating brand websites (Experify Map), Experify Messenger","Experify.com, social media platforms (millions of users)",0.067,0.29,0.178,0.444,0
 Experify,customer_relationships,False,True,False,,Securely connect with registered product owners for real authentic conversations,0.0,0.0,0.0,,0
 Experify,revenue_model,True,False,False,SaaS,,0.0,0.0,0.0,,0
-Experify,key_resources,True,True,True,"SaaS platform, Experify Map widget, Experify Messenger, user-generated content network","Talent from all over the world, offices in Zurich and Palo Alto",0.0,0.148,0.074,0.0,0
+Experify,key_resources,True,True,True,"SaaS platform, Experify Map widget, Experify Messenger, user-generated content network","Talent from all over the world, offices in Zurich and Palo Alto",0.0,0.148,0.074,0.103,0
 Experify,key_activities,True,False,False,"connect shoppers with product owners, enable authentic peer-to-peer product conversations, help brands build trust and increase conversion",,0.0,0.0,0.0,,0
-Experify,key_partners,True,True,True,"Vertex Ventures US, SonaeIM, Berkeley SkyDeck Fund","Vertex Ventures US (Lead), Berkeley SkyDeck Fund, Innosuisse & Swissnex network",0.545,0.667,0.606,0.57,1
+Experify,key_partners,True,True,True,"Vertex Ventures US, SonaeIM, Berkeley SkyDeck Fund","Vertex Ventures US (Lead), Berkeley SkyDeck Fund, Innosuisse & Swissnex network",0.545,0.667,0.606,0.841,1
 Experify,cost_structure,False,False,True,,,1.0,1.0,1.0,,2
 Mustard,customer_segments,True,False,False,"youth athletes and sports families (B2C), coaching organizations (B2B2C), professional and collegiate sports teams",,0.0,0.0,0.0,,0
-Mustard,value_proposition,True,True,True,personally adaptive physical and mental sports training; computer-vision based motion analysis and prescriptive coaching; making elite personalized coaching accessible to all,PERSONALLY ADAPTIVE PHYSICAL AND MENTAL TRAINING,0.3,0.432,0.366,0.438,1
+Mustard,value_proposition,True,True,True,personally adaptive physical and mental sports training; computer-vision based motion analysis and prescriptive coaching; making elite personalized coaching accessible to all,PERSONALLY ADAPTIVE PHYSICAL AND MENTAL TRAINING,0.3,0.432,0.366,0.611,1
 Mustard,channels,False,True,False,,"CONSUMER FREEMIUM APP (B2C), FOR COACHING ORGANIZATIONS (B2B2C)",0.0,0.0,0.0,,0
 Mustard,customer_relationships,False,False,True,,,1.0,1.0,1.0,,2
-Mustard,revenue_model,True,True,True,"consumer freemium app (B2C), B2B2C for coaching organizations","$77.6B TOTAL ADDRESSABLE MARKET, $14.7B SPENT ANNUALLY ON MOBILE APP",0.053,0.124,0.088,0.054,0
-Mustard,key_resources,True,True,True,"proprietary AI/computer vision engine, biomechanics database (40 years of Tom House data), motion analysis algorithms, elite athlete and coach network","SENSORLESS COMPUTER-VISION BASED MOTION IDENTIFICATION AND ANALYSIS SYSTEM, NATIONAL NETWORK OF ELITE ATHLETES, COACHES, AND PARTNERS",0.276,0.481,0.378,0.3,1
+Mustard,revenue_model,True,True,True,"consumer freemium app (B2C), B2B2C for coaching organizations","$77.6B TOTAL ADDRESSABLE MARKET, $14.7B SPENT ANNUALLY ON MOBILE APP",0.053,0.124,0.088,0.37,0
+Mustard,key_resources,True,True,True,"proprietary AI/computer vision engine, biomechanics database (40 years of Tom House data), motion analysis algorithms, elite athlete and coach network","SENSORLESS COMPUTER-VISION BASED MOTION IDENTIFICATION AND ANALYSIS SYSTEM, NATIONAL NETWORK OF ELITE ATHLETES, COACHES, AND PARTNERS",0.276,0.481,0.378,0.581,1
 Mustard,key_activities,True,False,False,"motion capture and analysis, prescriptive coaching delivery, coach enablement tools, mental training program development",,0.0,0.0,0.0,,0
-Mustard,key_partners,True,True,True,Hawk-Eye Innovations,"TOM HOUSE, JASON GOLDSMITH, ROCKY COLLIS, LUCAS COLLIS, CEVIN PRIHCE, MARILOU MCFARLANE",0.0,0.131,0.065,0.0,0
+Mustard,key_partners,True,True,True,Hawk-Eye Innovations,"TOM HOUSE, JASON GOLDSMITH, ROCKY COLLIS, LUCAS COLLIS, CEVIN PRIHCE, MARILOU MCFARLANE",0.0,0.131,0.065,0.173,0
 Mustard,cost_structure,False,False,True,,,1.0,1.0,1.0,,2
-Bigblue,customer_segments,True,True,True,"D2C e-commerce brands, online merchants",D2C brands,0.4,0.408,0.404,0.502,1
-Bigblue,value_proposition,True,True,True,"fulfillment for customer centric brands; SaaS-ified delivery with no fixed costs; Fast Tags (prime-like delivery badges), Delivery ETA at checkout, branded tracking experience, enterprise-grade logistics network",Fulfillment for customer-centric brands with branded tracking experience and repeat business generation,0.29,0.51,0.4,0.282,1
+Bigblue,customer_segments,True,True,True,"D2C e-commerce brands, online merchants",D2C brands,0.4,0.408,0.404,0.713,1
+Bigblue,value_proposition,True,True,True,"fulfillment for customer centric brands; SaaS-ified delivery with no fixed costs; Fast Tags (prime-like delivery badges), Delivery ETA at checkout, branded tracking experience, enterprise-grade logistics network",Fulfillment for customer-centric brands with branded tracking experience and repeat business generation,0.29,0.51,0.4,0.675,1
 Bigblue,channels,False,True,False,,"Bigblue app, website, and logistics network",0.0,0.0,0.0,,0
-Bigblue,customer_relationships,True,True,True,"branded tracking emails, loyalty-building delivery experience","Branded tracking experience, post-purchase marketing campaigns, and loyalty building",0.417,0.372,0.395,0.433,1
-Bigblue,revenue_model,True,True,True,"per-delivery fee, storage (monthly per-item fees), volume-based discounts","Per-delivery fee, storage, and volume-based discounts",0.636,0.794,0.715,0.669,1
-Bigblue,key_resources,True,True,True,"automated warehouses in France, Spain, and the UK, logistics network, fulfilment technology platform","Automated warehouses in France, Spain, and the UK, modern technologies, and logistics network",0.667,0.705,0.686,0.669,1
-Bigblue,key_activities,True,True,True,"order fulfillment, warehousing, delivery operations, branded tracking experience, returns management","Delivery operation management, order preparation & shipping, and marketing campaigns",0.188,0.315,0.251,0.19,0
+Bigblue,customer_relationships,True,True,True,"branded tracking emails, loyalty-building delivery experience","Branded tracking experience, post-purchase marketing campaigns, and loyalty building",0.417,0.372,0.395,0.8,1
+Bigblue,revenue_model,True,True,True,"per-delivery fee, storage (monthly per-item fees), volume-based discounts","Per-delivery fee, storage, and volume-based discounts",0.636,0.794,0.715,0.942,1
+Bigblue,key_resources,True,True,True,"automated warehouses in France, Spain, and the UK, logistics network, fulfilment technology platform","Automated warehouses in France, Spain, and the UK, modern technologies, and logistics network",0.667,0.705,0.686,0.931,1
+Bigblue,key_activities,True,True,True,"order fulfillment, warehousing, delivery operations, branded tracking experience, returns management","Delivery operation management, order preparation & shipping, and marketing campaigns",0.188,0.315,0.251,0.683,0
 Bigblue,key_partners,False,False,True,,,1.0,1.0,1.0,,2
 Bigblue,cost_structure,False,False,True,,,1.0,1.0,1.0,,2
-IMMO,customer_segments,True,True,True,"home sellers (residential property owners), renters / residents, institutional investors seeking residential asset exposure","Residential sellers, renters, and investors",0.308,0.458,0.383,0.428,1
-IMMO,value_proposition,True,True,True,"bridges the gap in the residential value chain: iBuys homes directly from sellers, transforms them into beautiful sustainable homes, and rents to residents; unlocks single-unit residential asset exposure at scale for institutional investors","IMMO offers a simplified residential platform with proprietary technology and data to provide beautiful, sustainable homes and rental services.",0.143,0.397,0.27,0.198,0
+IMMO,customer_segments,True,True,True,"home sellers (residential property owners), renters / residents, institutional investors seeking residential asset exposure","Residential sellers, renters, and investors",0.308,0.458,0.383,0.824,1
+IMMO,value_proposition,True,True,True,"bridges the gap in the residential value chain: iBuys homes directly from sellers, transforms them into beautiful sustainable homes, and rents to residents; unlocks single-unit residential asset exposure at scale for institutional investors","IMMO offers a simplified residential platform with proprietary technology and data to provide beautiful, sustainable homes and rental services.",0.143,0.397,0.27,0.394,0
 IMMO,channels,False,True,False,,"Digital platform for homebuyers and renters, institutional investors, and asset managers",0.0,0.0,0.0,,0
-IMMO,customer_relationships,True,True,True,digital 21st century resident experience; tech-enabled service; branded high quality,"Direct relationship between IMMO and customers, with automated and simplified real estate service stack",0.043,0.225,0.134,0.04,0
+IMMO,customer_relationships,True,True,True,digital 21st century resident experience; tech-enabled service; branded high quality,"Direct relationship between IMMO and customers, with automated and simplified real estate service stack",0.043,0.225,0.134,0.313,0
 IMMO,revenue_model,False,False,True,,,1.0,1.0,1.0,,2
 IMMO,key_resources,True,False,False,"proprietary tech stack (risk-adjusted return model, automated sourcing engine, INSTA IMMO inspection app, automated underwriting, portfolio reporting), residential property portfolio",,0.0,0.0,0.0,,0
 IMMO,key_activities,True,False,False,"property acquisition (iBuy from home sellers), refurbishment and transformation, lettings / property management, portfolio reporting for investors",,0.0,0.0,0.0,,0
 IMMO,key_partners,False,False,True,,,1.0,1.0,1.0,,2
-IMMO,cost_structure,True,True,True,"property acquisition costs, refurbishment and furnishing costs, property management costs","Not explicitly mentioned in the slides, but likely includes costs associated with technology development, marketing, and operational expenses",0.087,0.339,0.213,0.136,0
+IMMO,cost_structure,True,True,True,"property acquisition costs, refurbishment and furnishing costs, property management costs","Not explicitly mentioned in the slides, but likely includes costs associated with technology development, marketing, and operational expenses",0.087,0.339,0.213,0.411,0
 Osso VR,customer_segments,True,False,False,"surgical residents, orthopedic surgeons, medical device companies, hospitals and residency programs",,0.0,0.0,0.0,,0
-Osso VR,value_proposition,True,True,True,VR surgical training platform; hands-on procedural training in virtual reality before operating on patients; objective performance assessment,"Hands-on, collaborative, objective assessment",0.235,0.419,0.327,0.338,0
+Osso VR,value_proposition,True,True,True,VR surgical training platform; hands-on procedural training in virtual reality before operating on patients; objective performance assessment,"Hands-on, collaborative, objective assessment",0.235,0.419,0.327,0.284,0
 Osso VR,channels,False,True,False,,"Medical device companies, hospitals, residency programs",0.0,0.0,0.0,,0
 Osso VR,customer_relationships,False,True,False,,Collaborative VR training between surgeon and company reps,0.0,0.0,0.0,,0
 Osso VR,revenue_model,False,False,True,,,1.0,1.0,1.0,,2
 Osso VR,key_resources,True,False,False,"VR surgical training platform, procedure library, hardware (VR headsets), performance assessment technology",,0.0,0.0,0.0,,0
 Osso VR,key_activities,True,False,False,"develop and maintain surgical training simulations, partner with medical device companies for procedure content, deploy to hospitals and residency programs",,0.0,0.0,0.0,,0
-Osso VR,key_partners,True,True,True,"Smith & Nephew, Stryker, Medtronic, Johnson & Johnson, Endologix, Zimmer Biomet, Rush University Medical Center, Johns Hopkins University, Hospital for Special Surgery","Smith & Nephew, Stryker, Medtronic, etc.",0.211,0.377,0.294,0.248,0
+Osso VR,key_partners,True,True,True,"Smith & Nephew, Stryker, Medtronic, Johnson & Johnson, Endologix, Zimmer Biomet, Rush University Medical Center, Johns Hopkins University, Hospital for Special Surgery","Smith & Nephew, Stryker, Medtronic, etc.",0.211,0.377,0.294,0.654,0
 Osso VR,cost_structure,False,False,True,,,1.0,1.0,1.0,,2
-Playhouse,customer_segments,True,True,True,"home buyers / consumers browsing homes for sale, real estate agents",Real estate agents and consumers,0.364,0.364,0.364,0.411,1
-Playhouse,value_proposition,True,True,True,"mobile app to browse video listings of homes for sale; real estate app optimized for entertainment Ñ full screen video feed, great music, real data enabling search and details","Entertainment-focused real estate app with video feed, music, and search functionality",0.333,0.421,0.377,0.424,1
-Playhouse,channels,True,True,True,mobile app,"Mobile app, TikTok, and potentially other social media platforms",0.222,0.27,0.246,0.355,0
+Playhouse,customer_segments,True,True,True,"home buyers / consumers browsing homes for sale, real estate agents",Real estate agents and consumers,0.364,0.364,0.364,0.79,1
+Playhouse,value_proposition,True,True,True,"mobile app to browse video listings of homes for sale; real estate app optimized for entertainment Ñ full screen video feed, great music, real data enabling search and details","Entertainment-focused real estate app with video feed, music, and search functionality",0.333,0.421,0.377,0.791,1
+Playhouse,channels,True,True,True,mobile app,"Mobile app, TikTok, and potentially other social media platforms",0.222,0.27,0.246,0.559,0
 Playhouse,customer_relationships,False,True,False,,"Inbound requests from agents to list on Playhouse, potential for direct engagement",0.0,0.0,0.0,,0
-Playhouse,revenue_model,True,True,True,sell buyer leads to agents,$17B market opportunity through buyer leads sold to agents,0.4,0.548,0.474,0.439,1
+Playhouse,revenue_model,True,True,True,sell buyer leads to agents,$17B market opportunity through buyer leads sold to agents,0.4,0.548,0.474,0.75,1
 Playhouse,key_resources,True,False,False,"video listing content, real estate data, TikTok-style video feed platform",,0.0,0.0,0.0,,0
 Playhouse,key_activities,True,False,False,"curate and display video home listings, connect buyers with agents, lead generation for real estate agents",,0.0,0.0,0.0,,0
 Playhouse,key_partners,False,False,True,,,1.0,1.0,1.0,,2
 Playhouse,cost_structure,False,False,True,,,1.0,1.0,1.0,,2
-Bower,customer_segments,True,True,True,"consumers / recyclers (end users), CPG brands and FMCG companies (paying customers)","consumers, brands",0.182,0.34,0.261,0.318,0
-Bower,value_proposition,True,True,True,"recycle everything, reward yourself; #1 most downloaded recycling rewards app; rewards consumers for scanning and recycling packaging; provides CPG brands with recycling data and consumer insights","rewarding recycling at existing bins, easy to scale",0.036,0.259,0.147,0.1,0
-Bower,channels,True,True,True,mobile app,"smartphones, Bower app, geo-location technology",0.143,0.281,0.212,0.176,0
+Bower,customer_segments,True,True,True,"consumers / recyclers (end users), CPG brands and FMCG companies (paying customers)","consumers, brands",0.182,0.34,0.261,0.645,0
+Bower,value_proposition,True,True,True,"recycle everything, reward yourself; #1 most downloaded recycling rewards app; rewards consumers for scanning and recycling packaging; provides CPG brands with recycling data and consumer insights","rewarding recycling at existing bins, easy to scale",0.036,0.259,0.147,0.514,0
+Bower,channels,True,True,True,mobile app,"smartphones, Bower app, geo-location technology",0.143,0.281,0.212,0.501,0
 Bower,customer_relationships,False,True,False,,"users rewarded for scanning packages, points redeemable for money or charity",0.0,0.0,0.0,,0
-Bower,revenue_model,True,True,True,multiple revenue streams combining recycling with rewards and consumer insights,deposit value retrieved when scanning in close proximity to GPS coordinate of recycling bin,0.043,0.353,0.198,0.045,0
+Bower,revenue_model,True,True,True,multiple revenue streams combining recycling with rewards and consumer insights,deposit value retrieved when scanning in close proximity to GPS coordinate of recycling bin,0.043,0.353,0.198,0.374,0
 Bower,key_resources,True,False,False,"recycling rewards app, consumer recycling data, CPG brand partnership network",,0.0,0.0,0.0,,0
-Bower,key_activities,True,True,True,"user acquisition and engagement, scanning and recycling tracking, brand campaign management, consumer insights delivery","combining existing bins with smartphones, patented geo-location technology",0.0,0.135,0.067,0.0,0
-Bower,key_partners,True,True,True,"NestlŽ, Unilever, Coca-Cola, Mondelez, Orkla, P&G, Coop, Ellen MacArthur Foundation","P&G, Mondelez, NESPRESSO, ANGLAMARK, SKIN, Dove, BJORN AXEN, Skogaholm, HIVEA",0.056,0.275,0.165,0.056,0
+Bower,key_activities,True,True,True,"user acquisition and engagement, scanning and recycling tracking, brand campaign management, consumer insights delivery","combining existing bins with smartphones, patented geo-location technology",0.0,0.135,0.067,0.13,0
+Bower,key_partners,True,True,True,"NestlŽ, Unilever, Coca-Cola, Mondelez, Orkla, P&G, Coop, Ellen MacArthur Foundation","P&G, Mondelez, NESPRESSO, ANGLAMARK, SKIN, Dove, BJORN AXEN, Skogaholm, HIVEA",0.056,0.275,0.165,0.447,0
 Bower,cost_structure,False,False,True,,,1.0,1.0,1.0,,2
-Muck Rack,customer_segments,True,True,True,"PR professionals, communications teams, PR agencies, journalists / podcasters / content creators","Public Relations Professionals, Journalists, Content Creators",0.364,0.586,0.475,0.319,1
-Muck Rack,value_proposition,True,True,True,"smarter PR with powerful, easy-to-use software; only fully integrated PRM (Public Relations Management) solution Ñ discover journalists, send pitches, monitor coverage, collaborate, measure success","Integrated Platform with Data Feedback Loop, Highly Accurate First-Party Intelligence, Easy-to-Use Workflow Automation",0.139,0.254,0.196,0.145,0
+Muck Rack,customer_segments,True,True,True,"PR professionals, communications teams, PR agencies, journalists / podcasters / content creators","Public Relations Professionals, Journalists, Content Creators",0.364,0.586,0.475,0.819,1
+Muck Rack,value_proposition,True,True,True,"smarter PR with powerful, easy-to-use software; only fully integrated PRM (Public Relations Management) solution Ñ discover journalists, send pitches, monitor coverage, collaborate, measure success","Integrated Platform with Data Feedback Loop, Highly Accurate First-Party Intelligence, Easy-to-Use Workflow Automation",0.139,0.254,0.196,0.205,0
 Muck Rack,channels,False,True,False,,"Digital, Broadcast, Print, Podcasts, Newsletters, Social Media",0.0,0.0,0.0,,0
-Muck Rack,customer_relationships,True,True,True,free public profiles for journalists and podcasters,"Collaboration between PR Teams and Journalists, Personalized Outreach",0.154,0.433,0.294,0.156,0
+Muck Rack,customer_relationships,True,True,True,free public profiles for journalists and podcasters,"Collaboration between PR Teams and Journalists, Personalized Outreach",0.154,0.433,0.294,0.524,0
 Muck Rack,revenue_model,False,False,True,,,1.0,1.0,1.0,,2
-Muck Rack,key_resources,True,True,True,"media database, journalist profiles, pitch tools, media monitoring, analytics and reporting platform","Professional Network for Journalists, Highly Accurate Media Intelligence",0.056,0.395,0.225,0.107,0
-Muck Rack,key_activities,True,True,True,"media database maintenance, journalist profile management, PR campaign tools, monitoring and reporting","Media Monitoring, Workflow Automation, Team Collaboration",0.125,0.327,0.226,0.136,0
+Muck Rack,key_resources,True,True,True,"media database, journalist profiles, pitch tools, media monitoring, analytics and reporting platform","Professional Network for Journalists, Highly Accurate Media Intelligence",0.056,0.395,0.225,0.567,0
+Muck Rack,key_activities,True,True,True,"media database maintenance, journalist profile management, PR campaign tools, monitoring and reporting","Media Monitoring, Workflow Automation, Team Collaboration",0.125,0.327,0.226,0.434,0
 Muck Rack,key_partners,False,False,True,,,1.0,1.0,1.0,,2
 Muck Rack,cost_structure,False,False,True,,,1.0,1.0,1.0,,2
-Belgian Boys,customer_segments,True,True,True,consumers buying specialty / Belgian-inspired food products at retail,"Millennial foodies, Modern mom, Guilty snack-lover",0.0,0.269,0.134,0.0,0
-Belgian Boys,value_proposition,True,True,True,"Belgian-inspired waffles, stroopwafels, cookie bars, crepes, cheesecake, and butter cakes; ""Turn Up The Happy""; 20 SKUs across 4 categories","Indulgence, quality standards and taste, Premium ingredients, Convenient, individually-wrapped treats",0.034,0.275,0.155,0.036,0
-Belgian Boys,channels,True,True,True,"retail shelves (3,000+ retail locations)","Online retailers (e.g. Amazon), In-store presence, Partnerships with major digital retailers",0.0,0.197,0.098,0.0,0
+Belgian Boys,customer_segments,True,True,True,consumers buying specialty / Belgian-inspired food products at retail,"Millennial foodies, Modern mom, Guilty snack-lover",0.0,0.269,0.134,0.299,0
+Belgian Boys,value_proposition,True,True,True,"Belgian-inspired waffles, stroopwafels, cookie bars, crepes, cheesecake, and butter cakes; ""Turn Up The Happy""; 20 SKUs across 4 categories","Indulgence, quality standards and taste, Premium ingredients, Convenient, individually-wrapped treats",0.034,0.275,0.155,0.403,0
+Belgian Boys,channels,True,True,True,"retail shelves (3,000+ retail locations)","Online retailers (e.g. Amazon), In-store presence, Partnerships with major digital retailers",0.0,0.197,0.098,0.489,0
 Belgian Boys,customer_relationships,False,True,False,,"Build relationships through brand partnerships and trial opportunities, Active responses to changing customer needs",0.0,0.0,0.0,,0
 Belgian Boys,revenue_model,False,False,True,,,1.0,1.0,1.0,,2
 Belgian Boys,key_resources,True,False,False,"Belgian-inspired food product recipes and brand, manufacturing, distribution to retail",,0.0,0.0,0.0,,0
-Belgian Boys,key_activities,True,True,True,"product manufacturing, retail distribution, brand marketing","Merchandising multiple categories in stores, Building partnerships with major digital retailers",0.0,0.221,0.11,0.0,0
+Belgian Boys,key_activities,True,True,True,"product manufacturing, retail distribution, brand marketing","Merchandising multiple categories in stores, Building partnerships with major digital retailers",0.0,0.221,0.11,0.444,0
 Belgian Boys,key_partners,False,True,False,,"Drybar, jetBlue, popbar, snackmagic, Happy Sock, City Harvest, Consumer-Led Frontline Impact",0.0,0.0,0.0,,0
 Belgian Boys,cost_structure,False,False,True,,,1.0,1.0,1.0,,2
-LoanWell,customer_segments,True,True,True,"CDFIs (Community Development Financial Institutions), Loan Funds, Community Banks, Foundations (PRIs & Social Impact Investing), Credit Unions","Community Lenders, Small Businesses",0.056,0.282,0.169,0.135,0
-LoanWell,value_proposition,True,True,True,"branded and customizable end-to-end automated loan origination platform for mission-driven lenders Ñ intake, origination, underwriting, closing, servicing, and reporting; white-label front-end","Customizable End-to-End platform for lenders, Automated Loan Origination, Digitized Process",0.391,0.452,0.422,0.533,1
+LoanWell,customer_segments,True,True,True,"CDFIs (Community Development Financial Institutions), Loan Funds, Community Banks, Foundations (PRIs & Social Impact Investing), Credit Unions","Community Lenders, Small Businesses",0.056,0.282,0.169,0.564,0
+LoanWell,value_proposition,True,True,True,"branded and customizable end-to-end automated loan origination platform for mission-driven lenders Ñ intake, origination, underwriting, closing, servicing, and reporting; white-label front-end","Customizable End-to-End platform for lenders, Automated Loan Origination, Digitized Process",0.391,0.452,0.422,0.855,1
 LoanWell,channels,False,True,False,,"Online Platform, Custom Design",0.0,0.0,0.0,,0
 LoanWell,customer_relationships,False,True,False,,Long-term relationships with community lenders and small businesses,0.0,0.0,0.0,,0
-LoanWell,revenue_model,True,True,True,"$25KÐ$100K Annual Subscription Plan, $5KÐ$20K Integration Fee","$25k-$100k Annual Subscription Plan, $5k-$20K Integration Fee, $75K-$300K Customer LTV",0.692,0.803,0.748,0.487,1
+LoanWell,revenue_model,True,True,True,"$25KÐ$100K Annual Subscription Plan, $5KÐ$20K Integration Fee","$25k-$100k Annual Subscription Plan, $5k-$20K Integration Fee, $75K-$300K Customer LTV",0.692,0.803,0.748,0.84,1
 LoanWell,key_resources,True,False,False,"loan origination platform, white-label technology, compliance and reporting tools",,0.0,0.0,0.0,,0
-LoanWell,key_activities,True,True,True,"loan origination automation, underwriting, closing and servicing workflows, compliance reporting","Automated Loan Origination, Digitized Process, Customizable Platform",0.133,0.439,0.286,0.138,0
+LoanWell,key_activities,True,True,True,"loan origination automation, underwriting, closing and servicing workflows, compliance reporting","Automated Loan Origination, Digitized Process, Customizable Platform",0.133,0.439,0.286,0.719,0
 LoanWell,key_partners,False,True,False,,"Acme Capital, Community Banks, Foundations (PRls & SociallmpactInvesting)",0.0,0.0,0.0,,0
 LoanWell,cost_structure,False,False,True,,,1.0,1.0,1.0,,2
