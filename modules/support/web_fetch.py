@@ -11,7 +11,7 @@ from bs4 import BeautifulSoup
 
 USER_AGENT = (
     "AI-Investment-Screening/0.1 (+thesis prototype; "
-    "github.com/Constantinvonkrogh/AI-investment-screening)"
+    "github.com/cvonkrogh/Master_Thesis)"
 )
 HTTP_TIMEOUT = 10.0
 MAX_PAGE_CHARS = 8_000

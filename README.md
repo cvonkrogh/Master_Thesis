@@ -1,6 +1,6 @@
 # Master Thesis — BMC Pipeline from Pitch Decks
 
-**Thesis:** *Structuring Early-Stage Deal Flow: An Evidence-Grounded BMC Pipeline from Pitch Decks*  
+**Thesis:** *From Pitch Decks to Structured Profiles: An AI-Enabled Pipeline for Startup Screening*  
 Constantin von Krogh · BITM, University of Amsterdam
 
 This repository is the **reproducible research artifact** for the thesis. It contains a local-LLM pipeline that turns pitch-deck PDFs into structured Business Model Canvas (BMC) profiles, enriches missing fields from public websites, and finds similar startups. Everything runs via **Ollama** on your machine — no cloud LLM API.
@@ -124,6 +124,6 @@ Re-running Modules **03** and **04** may differ slightly (live web search and pa
 
 ## Citation
 
-> von Krogh, C. (2025). *Structuring Early-Stage Deal Flow: An Evidence-Grounded BMC Pipeline from Pitch Decks*. Master's thesis, University of Amsterdam.
+> von Krogh, C. (2026). *From Pitch Decks to Structured Profiles: An AI-Enabled Pipeline for Startup Screening*. Master's thesis, University of Amsterdam.
 
 Pitch decks remain the property of their respective companies; included here for academic reproducibility.
