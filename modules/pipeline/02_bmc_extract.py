@@ -1,19 +1,5 @@
 #!/usr/bin/env python3
-"""
-Module 02 — extract Business Model Canvas fields from pitch decks (9 fields).
 
-Uses Module 01 slide CSV by default (no duplicate PDF/OCR). Optional --with-pdf
-re-reads the PDF for a second text source (slower).
-
-Inputs:  output/module_01/slides.csv
-         data/pitch_decks/{deck}.pdf  (optional, --with-pdf only)
-
-Outputs: output/module_02/screening_bmc.csv  (GT order, all companies)
-
-Usage:
-    python modules/pipeline/02_bmc_extract.py
-    python modules/pipeline/02_bmc_extract.py --decks Aura,Macro
-"""
 
 from __future__ import annotations
 
