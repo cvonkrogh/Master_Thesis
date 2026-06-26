@@ -1,27 +1,5 @@
 #!/usr/bin/env python3
-"""
-Module 04 — find similar startups online and rank by BMC profile similarity.
 
-Uses the target's enriched BMC as the query profile, discovers peer startups via
-BMC-driven + competitor web search (no ground truth), extracts each peer's BMC
-from public web pages (local LLM), then ranks by core-field embedding cosine
-(customer_segments + value_proposition) minus host/mention/incumbent penalties.
-
-Inputs:
-    output/module_03/enriched_bmc.csv   — target BMC profile (Module 03)
-
-Outputs:
-    output/module_04/peers_ranked.csv          (all scored peers, all decks)
-    output/module_04/similar_top5_all_decks.csv
-    output/module_04/vc_diligence_summary.csv
-    output/module_04/search_queries.csv
-    output/module_04/peer_bmc_cache.csv        (reused peer BMC across decks)
-
-Usage:
-    python modules/pipeline/04_find_similar_startups.py --deck Aura
-    python modules/pipeline/04_find_similar_startups.py --all
-    python modules/pipeline/04_find_similar_startups.py --all --force
-"""
 
 from __future__ import annotations
 
