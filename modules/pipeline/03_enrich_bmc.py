@@ -1,19 +1,4 @@
 #!/usr/bin/env python3
-"""
-Module 03 — discover startup websites and enrich BMC from public web data (local LLM).
-
-Inputs:
-    output/module_01/slides.csv
-    output/module_02/screening_bmc.csv
-
-Outputs:
-    output/module_03/websites.csv
-    output/module_03/enriched_bmc.csv
-
-Usage:
-    python modules/pipeline/03_enrich_bmc.py
-    python modules/pipeline/03_enrich_bmc.py --decks Palta,Sable
-"""
 
 from __future__ import annotations
 
