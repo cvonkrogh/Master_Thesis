@@ -1,43 +1,5 @@
 #!/usr/bin/env python3
-"""
-Model selection benchmark — compare local Ollama models on Module 02 BMC extraction.
 
-Runs several local LLMs over a small, representative set of decks and reports,
-per model: latency (the speed question) and Module 02 quality vs the pitch-deck
-ground truth (gt_pd_bmc_50.csv). The goal is to pick ONE model for the full
-50-deck run as an explicit artefact design decision (privacy + reproducibility
-via local Ollama, balanced against feasible batch runtime).
-
-This does NOT touch the real pipeline outputs (output/module_02/...). It writes
-to a separate sandbox so your main run is untouched.
-
-What it measures per model:
-  - wall-clock seconds per deck and total (Apple Silicon latency)
-  - pred fill rate, fill-status accuracy/precision/recall/F1 vs GT
-  - lexical + embedding similarity on filled cells
-  - mean 0-2 cell score
-
-Inputs:  output/module_01/json/{deck}.slides.json  (run Module 01 first)
-         data/gt/gt_pd_bmc_50.csv                    (deck-only BMC ground truth)
-Outputs: output/model_selection/{model}/{deck}.bmc.json   (raw extractions)
-         eval/model_selection/per_deck_latency.csv
-         eval/model_selection/model_comparison.csv         (one row per model)
-         eval/model_selection/summary.json
-
-Usage:
-    python modules/pipeline/model_selection.py
-
-    python modules/pipeline/model_selection.py \
-        --models llama3.1:8b qwen2.5:7b-instruct mistral:7b \
-        --decks Aura Macro Vision
-
-Pull models first, e.g.:
-    ollama pull llama3.1:8b
-    ollama pull qwen2.5:7b-instruct
-    ollama pull mistral:7b
-    ollama pull llama3.2:3b
-    ollama pull qwen2.5:3b-instruct
-"""
 
 from __future__ import annotations
 
